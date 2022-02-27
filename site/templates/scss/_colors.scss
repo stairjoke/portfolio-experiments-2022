@@ -1,0 +1,37 @@
+// Colors
+:root {
+	--palette-0:     #000;
+	--palette-0-5:   #191815;
+	--palette-0-10:  #322f2a;
+	--palette-0-20:  #635f54;
+	--palette-0-30:  #797467;
+	--palette-0-50:  #9b8c8c;
+	--palette-0-80:  #cdc6c6;
+	--palette-0-90:  #f8f7f7;
+	--palette-0-100: #fff;
+	--palette-1-30:  #5c8d34;
+	--palette-1-40:  #64983a;
+	--palette-1-50:  #70ae3d;
+	--palette-2-30:  #d49602;
+	--palette-2-40:  #fdba1a;
+	--palette-2-60:  #fad06b;
+	--palette-3-30:  #206d97;
+	--palette-3-50:  #3189b9;
+
+	--color-error:   #FC562C;
+	--color-glow:    rgba(255, 255, 255, 0.27);
+	--color-shadow:  rgba(0, 0, 0, 0.27);
+}
+
+//@media (prefers-color-scheme: light){}
+//@media (prefers-color-scheme: dark){
+	:root {
+		--color-background: var(--palette-0-5);
+		--color-text: var(--palette-0-80);
+		--color-text-medium-contrast: var(--palette-0-50);
+		--color-text-high-contrast: var(--palette-0-100);
+		--color-text-emphasis: var(--palette-1-40);
+		--color-text-low-contrast: var(--palette-0-30);
+		--color-text-medium-contrast: var(--palette-0-50);
+	}	
+//}
