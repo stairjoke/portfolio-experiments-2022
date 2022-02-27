@@ -1,1 +1,2 @@
-# portfolio
+# Portfolio Website
+I'm building my portfolio website here, [the design is public on sketch.com Workspaces](https://sketch.cloud/s/aa00442a-f94b-4d3c-a3a6-17e4e83878c4). This portfolio will be built using the [Kirby CMS.](https://getkirby.com)
