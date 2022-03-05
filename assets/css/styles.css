@@ -56,6 +56,11 @@
   --color-brand-contrast-fill: var(--palette-0-100);
 }
 
+svg.icon {
+  aspect-ratio: 1;
+  fill: #ff00ff;
+}
+
 body {
   font-family: futura-pt, sans-serif;
   font-weight: 400;
