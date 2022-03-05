@@ -3,6 +3,7 @@
 @use '_typography.scss';
 
 @use './components/_button.scss';
+@use './components/_input.scss';
 
 body {
 	background: var(--palette-0-5);
