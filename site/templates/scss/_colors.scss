@@ -26,7 +26,7 @@
 //@media (prefers-color-scheme: light){}
 //@media (prefers-color-scheme: dark){
 	:root {
-		// color, category[, rank, state], purpose
+		// color[, category, rank, state], purpose[, variation]
 		
 		--color-page-background: var(--palette-0-5);
 		--color-element-background: var(--palette-0-10);
