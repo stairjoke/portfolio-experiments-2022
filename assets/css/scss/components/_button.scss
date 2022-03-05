@@ -3,6 +3,11 @@ button, input[type=button], input[type=submit] {
 	font-weight: 500;
 	color: var(--color-CTA-primary-blur-text);
 	background-color: var(--color-CTA-primary-blur-background);
+	line-height: 2em;
+	padding: 0 0.6667em;
+	
+	border-radius: 4px;
+	
 	border: none;
 	outline: none;
 	&:hover, &:focus, &:active {
