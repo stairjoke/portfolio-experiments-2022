@@ -1,0 +1,101 @@
+:root {
+  --palette-0: #000;
+  --palette-0-5: #191815;
+  --palette-0-10: #322f2a;
+  --palette-0-20: #635f54;
+  --palette-0-30: #797467;
+  --palette-0-50: #9b8c8c;
+  --palette-0-80: #cdc6c6;
+  --palette-0-90: #f8f7f7;
+  --palette-0-100: #fff;
+  --palette-1-30: #5c8d34;
+  --palette-1-40: #64983a;
+  --palette-1-50: #70ae3d;
+  --palette-2-30: #d49602;
+  --palette-2-40: #fdba1a;
+  --palette-2-60: #fad06b;
+  --palette-3-30: #206d97;
+  --palette-3-50: #3189b9;
+  --color-error: #FC562C;
+  --color-glow: rgba(255, 255, 255, 0.27);
+  --color-shadow: rgba(0, 0, 0, 0.27);
+}
+
+:root {
+  --color-page-background: var(--palette-0-5);
+  --color-element-background: var(--palette-0-10);
+  --color-CTA-primary-blur-background: var(--palette-1-40);
+  --color-CTA-primary-focus-background: var(--palette-1-50);
+  --color-CTA-primary-blur-text: var(--palette-1-100);
+  --color-CTA-primary-focus-text: var(--palette-1-100);
+  --color-CTA-error-blur-background: var(--palette-2-40);
+  --color-CTA-error-focus-background: var(--color-error);
+  --color-CTA-error-blur-text: var(--palette-0-5);
+  --color-CTA-error-focus-text: var(--palette-0-100);
+  --color-CTA-disabled-blur-background: var(--palette-0-20);
+  --color-CTA-disabled-focus-background: var(--palette-0-20);
+  --color-CTA-disabled-blur-text: var(--palette-0-100);
+  --color-CTA-disabled-focus-text: var(--palette-0-100);
+  --color-CTA-inline-fill: var(--palette-0-80);
+  --color-input-default-empty-blur-background: var(--palette-0-5);
+  --color-input-default-empty-blur-placeholder: var(--palette-0-30);
+  --color-input-default-empty-blur-border: transparent;
+  --color-input-default-filled-blur-background: var(--palette-0-5);
+  --color-input-default-filled-blur-text: var(--palette-0-80);
+  --color-input-default-filled-blur-border: var(--palette-1-30);
+  --color-input-default-filled-focus-background: var(--palette-0-5);
+  --color-input-default-filled-focus-text: var(--palette-0-80);
+  --color-input-default-filled-focus-border: var(--palette-3-30);
+  --color-text: var(--palette-0-80);
+  --color-text-medium-contrast: var(--palette-0-50);
+  --color-text-high-contrast: var(--palette-0-100);
+  --color-text-emphasis: var(--palette-1-40);
+  --color-text-low-contrast: var(--palette-0-30);
+  --color-text-medium-contrast: var(--palette-0-50);
+  --color-brand-fill: var(--palette-1-30);
+  --color-brand-contrast-fill: var(--palette-0-100);
+}
+
+body {
+  font-family: futura-pt, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+}
+
+p {
+  color: var(--color-text);
+  letter-spacing: 0.21176em;
+  line-height: 2em;
+  margin-bottom: 2em;
+}
+
+button, input[type=button], input[type=submit] {
+  font-weight: 500;
+  color: var(--color-CTA-primary-blur-text);
+  background-color: var(--color-CTA-primary-blur-background);
+  border: none;
+  outline: none;
+}
+button:hover, button:focus, button:active, input[type=button]:hover, input[type=button]:focus, input[type=button]:active, input[type=submit]:hover, input[type=submit]:focus, input[type=submit]:active {
+  color: var(--color-CTA-primary-focus-text);
+  background-color: var(--color-CTA-primary-focus-background);
+}
+button.error, .error button, input[type=button].error, .error input[type=button], input[type=submit].error, .error input[type=submit] {
+  color: var(--color-CTA-error-blur-text);
+  background-color: var(--color-CTA-error-blur-background);
+}
+button.error:hover, button.error:focus, button.error:active, .error button:hover, .error button:focus, .error button:active, input[type=button].error:hover, input[type=button].error:focus, input[type=button].error:active, .error input[type=button]:hover, .error input[type=button]:focus, .error input[type=button]:active, input[type=submit].error:hover, input[type=submit].error:focus, input[type=submit].error:active, .error input[type=submit]:hover, .error input[type=submit]:focus, .error input[type=submit]:active {
+  color: var(--color-CTA-error-focus-text);
+  background-color: var(--color-CTA-error-focus-background);
+}
+button[disabled], button.disabled, .disabled button, input[type=button][disabled], input[type=button].disabled, .disabled input[type=button], input[type=submit][disabled], input[type=submit].disabled, .disabled input[type=submit] {
+  color: var(--color-CTA-disabled-blur-text);
+  background-color: var(--color-CTA-disabled-blur-background);
+}
+button[disabled]:hover, button[disabled]:focus, button[disabled]:active, button.disabled:hover, button.disabled:focus, button.disabled:active, .disabled button:hover, .disabled button:focus, .disabled button:active, input[type=button][disabled]:hover, input[type=button][disabled]:focus, input[type=button][disabled]:active, input[type=button].disabled:hover, input[type=button].disabled:focus, input[type=button].disabled:active, .disabled input[type=button]:hover, .disabled input[type=button]:focus, .disabled input[type=button]:active, input[type=submit][disabled]:hover, input[type=submit][disabled]:focus, input[type=submit][disabled]:active, input[type=submit].disabled:hover, input[type=submit].disabled:focus, input[type=submit].disabled:active, .disabled input[type=submit]:hover, .disabled input[type=submit]:focus, .disabled input[type=submit]:active {
+  color: var(--color-CTA-disabled-focus-text);
+  background-color: var(--color-CTA-disabled-focus-background);
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -9,7 +9,7 @@ button, input[type=button], input[type=submit] {
 		color: var(--color-CTA-primary-focus-text);
 		background-color: var(--color-CTA-primary-focus-background);
 	}
-	.error, .error & {
+	&.error, .error & {
 		color: var(--color-CTA-error-blur-text);
 		background-color: var(--color-CTA-error-blur-background);
 		&:hover, &:focus, &:active {
@@ -17,7 +17,7 @@ button, input[type=button], input[type=submit] {
 			background-color: var(--color-CTA-error-focus-background);
 		}
 	}
-	&[disabled], .disabled, .disabled & {
+	&[disabled], &.disabled, .disabled & {
 		color: var(--color-CTA-disabled-blur-text);
 		background-color: var(--color-CTA-disabled-blur-background);
 		&:hover, &:focus, &:active {
