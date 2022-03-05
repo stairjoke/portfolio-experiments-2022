@@ -106,4 +106,8 @@ button[disabled]:hover, button[disabled]:focus, button[disabled]:active, button.
   background-color: var(--color-CTA-disabled-focus-background);
 }
 
+body {
+  background: var(--palette-0-5);
+}
+
 /*# sourceMappingURL=styles.css.map */
