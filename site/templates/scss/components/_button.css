@@ -1,0 +1,28 @@
+// Buttons
+button, input[type=button], input[type=submit] {
+	font-weight: 500;
+	color: var(--color-CTA-primary-blur-text);
+	background-color: var(--color-CTA-primary-blur-background);
+	border: none;
+	outline: none;
+	&:hover, &:focus, &:active {
+		color: var(--color-CTA-primary-focus-text);
+		background-color: var(--color-CTA-primary-focus-background);
+	}
+	.error, .error & {
+		color: var(--color-CTA-error-blur-text);
+		background-color: var(--color-CTA-error-blur-background);
+		&:hover, &:focus, &:active {
+			color: var(--color-CTA-error-focus-text);
+			background-color: var(--color-CTA-error-focus-background);
+		}
+	}
+	&[disabled], .disabled, .disabled & {
+		color: var(--color-CTA-disabled-blur-text);
+		background-color: var(--color-CTA-disabled-blur-background);
+		&:hover, &:focus, &:active {
+			color: var(--color-CTA-disabled-focus-text);
+			background-color: var(--color-CTA-disabled-focus-background);
+		}
+	}
+}
