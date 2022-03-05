@@ -26,8 +26,8 @@
   --color-element-background: var(--palette-0-10);
   --color-CTA-primary-blur-background: var(--palette-1-40);
   --color-CTA-primary-focus-background: var(--palette-1-50);
-  --color-CTA-primary-blur-text: var(--palette-1-100);
-  --color-CTA-primary-focus-text: var(--palette-1-100);
+  --color-CTA-primary-blur-text: var(--palette-0-100);
+  --color-CTA-primary-focus-text: var(--palette-0-100);
   --color-CTA-error-blur-background: var(--palette-2-40);
   --color-CTA-error-focus-background: var(--color-error);
   --color-CTA-error-blur-text: var(--palette-0-5);
@@ -74,6 +74,9 @@ button, input[type=button], input[type=submit] {
   font-weight: 500;
   color: var(--color-CTA-primary-blur-text);
   background-color: var(--color-CTA-primary-blur-background);
+  line-height: 2em;
+  padding: 0 0.6667em;
+  border-radius: 4px;
   border: none;
   outline: none;
 }
