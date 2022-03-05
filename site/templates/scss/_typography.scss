@@ -1,1 +1,14 @@
 // Typography
+body {
+	font-family: futura-pt, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 18px;
+}
+
+p {
+	color: var(--color-text);
+	letter-spacing: 2.1176em;
+	line-height: 2em;
+	margin-bottom: 2em;
+}
