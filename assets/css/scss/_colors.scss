@@ -48,17 +48,13 @@
 		
 		--color-CTA-inline-fill: var(--palette-0-80);
 		
-		--color-input-default-empty-blur-background: var(--palette-0-5);
-		--color-input-default-empty-blur-placeholder: var(--palette-0-30);
-		--color-input-default-empty-blur-border: transparent;
-		
-		--color-input-default-filled-blur-background: var(--palette-0-5);
-		--color-input-default-filled-blur-text: var(--palette-0-80);
+		--color-input-default-placeholder: var(--palette-0-30);
+		--color-input-default-background: var(--palette-0-5);
+		--color-input-default-text: var(--palette-0-80);
+		--color-input-default-blur-border: transparent;
+		--color-input-default-focus-border: var(--palette-3-30);
 		--color-input-default-filled-blur-border: var(--palette-1-30);
-		
-		--color-input-default-filled-focus-background: var(--palette-0-5);
-		--color-input-default-filled-focus-text: var(--palette-0-80);
-		--color-input-default-filled-focus-border: var(--palette-3-30);
+		--color-input-default-error-border: var(--palette-2-40);
 		
 		--color-text: var(--palette-0-80);
 		--color-text-medium-contrast: var(--palette-0-50);
