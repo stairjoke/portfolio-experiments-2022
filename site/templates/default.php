@@ -52,7 +52,7 @@
 			<button disabled>disabled button</button>
 			<p>Inputs</p>
 			<form>
-				<div class="m-inputWrapper">
+				<div class="m-input">
 					<label for="email">Please enter your email address:</label>
 					<input name="email" type="email" placeholder="placeholder" />
 					<svg class="icon a-inputErrorIndicator">
