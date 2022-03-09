@@ -24,6 +24,7 @@
 
     background-color: var(--color-input-default-background);
     border-bottom: solid 2px var(--color-input-default-blur-border);
+
     &:not(:placeholder-shown) {
       &:not(:valid) {
         border-bottom-color: var(--color-input-default-error-border);
