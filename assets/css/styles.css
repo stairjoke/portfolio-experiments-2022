@@ -66,11 +66,11 @@ body {
   font-size: 18px;
   color: var(--color-text);
   line-height: 2em;
+  letter-spacing: 0.02117em;
 }
 
 p {
   color: var(--color-text);
-  letter-spacing: 0.02117em;
   line-height: 2em;
   margin-bottom: 2em;
 }
@@ -81,6 +81,7 @@ button, input[type=button], input[type=submit] {
   background-color: var(--color-CTA-primary-blur-background);
   line-height: 2em;
   padding: 0 0.6667em;
+  font-size: 1rem;
   border-radius: 4px;
   border: none;
   outline: none;
@@ -111,6 +112,8 @@ input[type=number],
 input[type=password],
 input[type=tel],
 input[type=text] {
+  font-size: 1rem;
+  line-height: 2em;
   border: none;
   outline: none;
   border-radius: 0;

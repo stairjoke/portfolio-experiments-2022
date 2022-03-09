@@ -4,12 +4,14 @@ input[type=number],
 input[type=password],
 input[type=tel],
 input[type=text] {
+  font-size: 1rem;
+  line-height: 2em;
 	border: none;
 	outline: none;
 	border-radius: 0;
-	
+
 	color: var(--color-text);
-	
+
 	background-color: var(--color-input-default-background);
 	border-bottom: solid 2px var(--color-input-default-blur-border);
 	&:not(:placeholder-shown) {
@@ -21,7 +23,7 @@ input[type=text] {
 	&:hover, &:focus {
 		&:not(:placeholder-shown) {
 			border-bottom-color: var(--color-input-default-focus-border);
-		}	
+		}
 		border-bottom-color: var(--color-input-default-focus-border);
 	}
 	&::placeholder {
