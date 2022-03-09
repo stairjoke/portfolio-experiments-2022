@@ -5,9 +5,10 @@ button, input[type=button], input[type=submit] {
 	background-color: var(--color-CTA-primary-blur-background);
 	line-height: 2em;
 	padding: 0 0.6667em;
-	
+  font-size: 1rem;
+
 	border-radius: 4px;
-	
+
 	border: none;
 	outline: none;
 	&:hover, &:focus, &:active {
