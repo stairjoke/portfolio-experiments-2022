@@ -27,27 +27,27 @@
 //@media (prefers-color-scheme: dark){
 	:root {
 		// color[, category, rank, state], purpose[, variation]
-		
+
 		--color-page-background: var(--palette-0-5);
 		--color-element-background: var(--palette-0-10);
-		
+
 		--color-CTA-primary-blur-background: var(--palette-1-40);
 		--color-CTA-primary-focus-background: var(--palette-1-50);
 		--color-CTA-primary-blur-text: var(--palette-0-100);
 		--color-CTA-primary-focus-text: var(--palette-0-100);
-		
+
 		--color-CTA-error-blur-background: var(--palette-2-40);
 		--color-CTA-error-focus-background: var(--color-error);
 		--color-CTA-error-blur-text: var(--palette-0-5);
 		--color-CTA-error-focus-text: var(--palette-0-100);
-		
+
 		--color-CTA-disabled-blur-background: var(--palette-0-20);
 		--color-CTA-disabled-focus-background: var(--palette-0-20);
 		--color-CTA-disabled-blur-text: var(--palette-0-100);
 		--color-CTA-disabled-focus-text: var(--palette-0-100);
-		
+
 		--color-CTA-inline-fill: var(--palette-0-80);
-		
+
 		--color-input-default-placeholder: var(--palette-0-30);
 		--color-input-default-background: var(--palette-0-5);
 		--color-input-default-text: var(--palette-0-80);
@@ -55,20 +55,19 @@
 		--color-input-default-focus-border: var(--palette-3-30);
 		--color-input-default-filled-blur-border: var(--palette-1-30);
 		--color-input-default-error-border: var(--palette-2-40);
-		
+
 		--color-text: var(--palette-0-80);
 		--color-text-medium-contrast: var(--palette-0-50);
 		--color-text-high-contrast: var(--palette-0-100);
 		--color-text-emphasis: var(--palette-1-40);
 		--color-text-low-contrast: var(--palette-0-30);
 		--color-text-medium-contrast: var(--palette-0-50);
-		
+
 		--color-brand-fill: var(--palette-1-30);
 		--color-brand-contrast-fill: var(--palette-0-100);
-	}	
+	}
 //}
 
 svg.icon {
 	aspect-ratio: 1;
-	fill: #ff00ff;
 }
