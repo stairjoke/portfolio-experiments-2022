@@ -56,7 +56,6 @@
 
 svg.icon {
   aspect-ratio: 1;
-  fill: #ff00ff;
 }
 
 body {
@@ -98,75 +97,111 @@ button.error:hover, button.error:focus, button.error:active, .error button:hover
   color: var(--color-CTA-error-focus-text);
   background-color: var(--color-CTA-error-focus-background);
 }
-button[disabled], button.disabled, .disabled button, input[type=button][disabled], input[type=button].disabled, .disabled input[type=button], input[type=submit][disabled], input[type=submit].disabled, .disabled input[type=submit] {
+button[disabled], input[type=button][disabled], input[type=submit][disabled] {
   color: var(--color-CTA-disabled-blur-text);
   background-color: var(--color-CTA-disabled-blur-background);
 }
-button[disabled]:hover, button[disabled]:focus, button[disabled]:active, button.disabled:hover, button.disabled:focus, button.disabled:active, .disabled button:hover, .disabled button:focus, .disabled button:active, input[type=button][disabled]:hover, input[type=button][disabled]:focus, input[type=button][disabled]:active, input[type=button].disabled:hover, input[type=button].disabled:focus, input[type=button].disabled:active, .disabled input[type=button]:hover, .disabled input[type=button]:focus, .disabled input[type=button]:active, input[type=submit][disabled]:hover, input[type=submit][disabled]:focus, input[type=submit][disabled]:active, input[type=submit].disabled:hover, input[type=submit].disabled:focus, input[type=submit].disabled:active, .disabled input[type=submit]:hover, .disabled input[type=submit]:focus, .disabled input[type=submit]:active {
+button[disabled]:hover, button[disabled]:focus, button[disabled]:active, input[type=button][disabled]:hover, input[type=button][disabled]:focus, input[type=button][disabled]:active, input[type=submit][disabled]:hover, input[type=submit][disabled]:focus, input[type=submit][disabled]:active {
   color: var(--color-CTA-disabled-focus-text);
   background-color: var(--color-CTA-disabled-focus-background);
 }
 
-input[type=email],
-input[type=number],
-input[type=password],
-input[type=tel],
-input[type=text] {
+.m-inputWrapper {
+  --input-height: 2rem;
+  position: relative;
+}
+.m-inputWrapper label {
+  display: block;
+}
+.m-inputWrapper input[type=email],
+.m-inputWrapper input[type=number],
+.m-inputWrapper input[type=password],
+.m-inputWrapper input[type=tel],
+.m-inputWrapper input[type=text] {
   font-size: 1rem;
-  line-height: 2em;
+  line-height: var(--input-height);
   border: none;
   outline: none;
   border-radius: 0;
+  display: inline-block;
+  margin: 0 0;
   color: var(--color-text);
   background-color: var(--color-input-default-background);
   border-bottom: solid 2px var(--color-input-default-blur-border);
 }
-input[type=email]:not(:placeholder-shown),
-input[type=number]:not(:placeholder-shown),
-input[type=password]:not(:placeholder-shown),
-input[type=tel]:not(:placeholder-shown),
-input[type=text]:not(:placeholder-shown) {
+.m-inputWrapper input[type=email]:not(:placeholder-shown),
+.m-inputWrapper input[type=number]:not(:placeholder-shown),
+.m-inputWrapper input[type=password]:not(:placeholder-shown),
+.m-inputWrapper input[type=tel]:not(:placeholder-shown),
+.m-inputWrapper input[type=text]:not(:placeholder-shown) {
   border-bottom-color: var(--color-input-default-filled-blur-border);
 }
-input[type=email]:not(:placeholder-shown):not(:valid),
-input[type=number]:not(:placeholder-shown):not(:valid),
-input[type=password]:not(:placeholder-shown):not(:valid),
-input[type=tel]:not(:placeholder-shown):not(:valid),
-input[type=text]:not(:placeholder-shown):not(:valid) {
+.m-inputWrapper input[type=email]:not(:placeholder-shown):not(:valid),
+.m-inputWrapper input[type=number]:not(:placeholder-shown):not(:valid),
+.m-inputWrapper input[type=password]:not(:placeholder-shown):not(:valid),
+.m-inputWrapper input[type=tel]:not(:placeholder-shown):not(:valid),
+.m-inputWrapper input[type=text]:not(:placeholder-shown):not(:valid) {
   border-bottom-color: var(--color-input-default-error-border);
 }
-input[type=email]:hover, input[type=email]:focus,
-input[type=number]:hover,
-input[type=number]:focus,
-input[type=password]:hover,
-input[type=password]:focus,
-input[type=tel]:hover,
-input[type=tel]:focus,
-input[type=text]:hover,
-input[type=text]:focus {
+.m-inputWrapper input[type=email]:not(:placeholder-shown):not(:valid):not(:hover :focus) + .a-inputErrorIndicator,
+.m-inputWrapper input[type=number]:not(:placeholder-shown):not(:valid):not(:hover :focus) + .a-inputErrorIndicator,
+.m-inputWrapper input[type=password]:not(:placeholder-shown):not(:valid):not(:hover :focus) + .a-inputErrorIndicator,
+.m-inputWrapper input[type=tel]:not(:placeholder-shown):not(:valid):not(:hover :focus) + .a-inputErrorIndicator,
+.m-inputWrapper input[type=text]:not(:placeholder-shown):not(:valid):not(:hover :focus) + .a-inputErrorIndicator {
+  display: block;
+}
+.m-inputWrapper input[type=email]:hover, .m-inputWrapper input[type=email]:focus,
+.m-inputWrapper input[type=number]:hover,
+.m-inputWrapper input[type=number]:focus,
+.m-inputWrapper input[type=password]:hover,
+.m-inputWrapper input[type=password]:focus,
+.m-inputWrapper input[type=tel]:hover,
+.m-inputWrapper input[type=tel]:focus,
+.m-inputWrapper input[type=text]:hover,
+.m-inputWrapper input[type=text]:focus {
   border-bottom-color: var(--color-input-default-focus-border);
 }
-input[type=email]:hover:not(:placeholder-shown), input[type=email]:focus:not(:placeholder-shown),
-input[type=number]:hover:not(:placeholder-shown),
-input[type=number]:focus:not(:placeholder-shown),
-input[type=password]:hover:not(:placeholder-shown),
-input[type=password]:focus:not(:placeholder-shown),
-input[type=tel]:hover:not(:placeholder-shown),
-input[type=tel]:focus:not(:placeholder-shown),
-input[type=text]:hover:not(:placeholder-shown),
-input[type=text]:focus:not(:placeholder-shown) {
+.m-inputWrapper input[type=email]:hover:not(:placeholder-shown), .m-inputWrapper input[type=email]:focus:not(:placeholder-shown),
+.m-inputWrapper input[type=number]:hover:not(:placeholder-shown),
+.m-inputWrapper input[type=number]:focus:not(:placeholder-shown),
+.m-inputWrapper input[type=password]:hover:not(:placeholder-shown),
+.m-inputWrapper input[type=password]:focus:not(:placeholder-shown),
+.m-inputWrapper input[type=tel]:hover:not(:placeholder-shown),
+.m-inputWrapper input[type=tel]:focus:not(:placeholder-shown),
+.m-inputWrapper input[type=text]:hover:not(:placeholder-shown),
+.m-inputWrapper input[type=text]:focus:not(:placeholder-shown) {
   border-bottom-color: var(--color-input-default-focus-border);
 }
-input[type=email]::placeholder,
-input[type=number]::placeholder,
-input[type=password]::placeholder,
-input[type=tel]::placeholder,
-input[type=text]::placeholder {
+.m-inputWrapper input[type=email]::placeholder,
+.m-inputWrapper input[type=number]::placeholder,
+.m-inputWrapper input[type=password]::placeholder,
+.m-inputWrapper input[type=tel]::placeholder,
+.m-inputWrapper input[type=text]::placeholder {
   color: var(--color-input-default-placeholder);
+}
+.m-inputWrapper input {
+  padding: 0;
+  width: 100%;
+}
+.m-inputWrapper .a-inputErrorIndicator {
+  display: none;
+  position: absolute;
+  right: 0;
+  bottom: calc(var(--input-height) / 2);
+  transform: translateY(50%);
+  fill: var(--color-CTA-error-blur-background);
+  width: 24px;
 }
 
 body {
   background: var(--palette-0-5);
+}
+
+img, svg {
+  margin: 0;
+  line-height: 100%;
+  letter-spacing: 0;
+  word-spacing: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,32 +1,62 @@
 // Inputs
-input[type=email],
-input[type=number],
-input[type=password],
-input[type=tel],
-input[type=text] {
-  font-size: 1rem;
-  line-height: 2em;
-	border: none;
-	outline: none;
-	border-radius: 0;
+.m-inputWrapper {
+  --input-height: 2rem;
+  position: relative;
 
-	color: var(--color-text);
+  label {
+    display: block;
+  }
 
-	background-color: var(--color-input-default-background);
-	border-bottom: solid 2px var(--color-input-default-blur-border);
-	&:not(:placeholder-shown) {
-		&:not(:valid) {
-			border-bottom-color: var(--color-input-default-error-border);
-		}
-		border-bottom-color: var(--color-input-default-filled-blur-border);
-	}
-	&:hover, &:focus {
-		&:not(:placeholder-shown) {
-			border-bottom-color: var(--color-input-default-focus-border);
-		}
-		border-bottom-color: var(--color-input-default-focus-border);
-	}
-	&::placeholder {
-		color: var(--color-input-default-placeholder);
-	}
+  input[type=email],
+  input[type=number],
+  input[type=password],
+  input[type=tel],
+  input[type=text] {
+    font-size: 1rem;
+    line-height: var(--input-height);
+    border: none;
+    outline: none;
+    border-radius: 0;
+    display: inline-block;
+    margin: 0 0;
+
+    color: var(--color-text);
+
+    background-color: var(--color-input-default-background);
+    border-bottom: solid 2px var(--color-input-default-blur-border);
+    &:not(:placeholder-shown) {
+      &:not(:valid) {
+        border-bottom-color: var(--color-input-default-error-border);
+        &:not(:hover :focus) + .a-inputErrorIndicator {
+          display: block;
+        }
+      }
+      border-bottom-color: var(--color-input-default-filled-blur-border);
+    }
+    &:hover, &:focus {
+      &:not(:placeholder-shown) {
+        border-bottom-color: var(--color-input-default-focus-border);
+      }
+      border-bottom-color: var(--color-input-default-focus-border);
+    }
+    &::placeholder {
+      color: var(--color-input-default-placeholder);
+    }
+  }
+
+  input {
+    padding: 0;
+    width: 100%;
+  }
+
+  .a-inputErrorIndicator {
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: calc(var(--input-height) / 2);
+    transform: translateY(50%);
+
+    fill: var(--color-CTA-error-blur-background);
+    width: 24px;
+  }
 }
