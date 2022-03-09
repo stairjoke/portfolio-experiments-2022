@@ -48,13 +48,17 @@
 			<p>Buttons</p>
 			<button>label</button>
 			<button class="error">error</button>
-			<div class="error"><button>error in div</button></div>
-			<button class="disabled">disabled</button>
-			<div class="disabled"><button>disabled in div</button></div>
+			<div class="error"><button>error in node</button></div>
 			<button disabled>disabled button</button>
 			<p>Inputs</p>
 			<form>
-				<input type="email" placeholder="placeholder" />
+				<div class="m-inputWrapper">
+					<label for="email">Please enter your email address:</label>
+					<input name="email" type="email" placeholder="placeholder" />
+					<svg class="icon a-inputErrorIndicator">
+						<use xlink:href="#error"></use>
+					</svg>
+				</div>
 			</form>
 		</div>
 	</body>
