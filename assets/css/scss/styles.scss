@@ -8,3 +8,10 @@
 body {
 	background: var(--palette-0-5);
 }
+
+img, svg {
+  margin: 0;
+  line-height: 100%;
+  letter-spacing: 0;
+  word-spacing: 0;
+}
