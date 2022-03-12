@@ -1,0 +1,8 @@
+// Spacing
+:root {
+	--grid-base: 12px;
+	--space-XS: var(--grid-base);
+	--space-XS-no-collapse: calc(var(--space-XS) / 2);
+	--space-S: calc(var(--grid-base) * 1.5);
+	--space-S-no-collapse: calc(var(--space-S) / 2);
+}
