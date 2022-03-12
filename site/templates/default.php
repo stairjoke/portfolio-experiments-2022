@@ -45,11 +45,13 @@
 		</svg>
 		<?= $page->title()->html() ?>
 		<div>
+
 			<p>Buttons</p>
 			<button>label</button>
 			<button class="error">error</button>
 			<div class="error"><button>error in node</button></div>
 			<button disabled>disabled button</button>
+
 			<p>Inputs</p>
 			<form>
 				<div class="m-input">
@@ -60,6 +62,25 @@
 					</svg>
 				</div>
 			</form>
+
+			<p>Tags</p>
+			<ul class="m-tagList">
+				<li><span class="tagHash">#</span><span class="tag">tag</span></li>
+				<li><span class="tagHash">#</span><span class="tag">tag</span></li>
+				<li><span class="tagHash">#</span><span class="tag">tag</span></li>
+				<li><span class="tagHash">#</span><span class="tag">tag</span></li>
+				<li><span class="tagHash">#</span><span class="tag">tag</span></li>
+				<li><span class="tagHash">#</span><span class="tag">tag</span></li>
+				<li><span class="tagHash">#</span><span class="tag">tag</span></li>
+				<li><span class="tagHash">#</span><span class="tag">tag</span></li>
+				<li><span class="tagHash">#</span><span class="tag">tag</span></li>
+				<li><span class="tagHash">#</span><span class="tag">tag</span></li>
+				<li><span class="tagHash">#</span><span class="tag">tag</span></li>
+				<li><span class="tagHash">#</span><span class="tag">tag</span></li>
+				<li><span class="tagHash">#</span><span class="tag">tag</span></li>
+				<li><span class="tagHash">#</span><span class="tag">tag</span></li>
+				<li><span class="tagHash">#</span><span class="tag">tag</span></li>
+			</ul>
 		</div>
 	</body>
 </html>

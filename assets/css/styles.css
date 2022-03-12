@@ -58,11 +58,27 @@ svg.icon {
   aspect-ratio: 1;
 }
 
+:root {
+  --border-radius: 4px;
+  --border-radius-L: 1rem;
+}
+
+:root {
+  --grid-base: 12px;
+  --space-XS: var(--grid-base);
+  --space-XS-no-collapse: calc(var(--space-XS) / 2);
+  --space-S: calc(var(--grid-base) * 1.5);
+  --space-S-no-collapse: calc(var(--space-S) / 2);
+}
+
+html {
+  font-size: 18px;
+}
+
 body {
   font-family: futura-pt, sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 18px;
   color: var(--color-text);
   line-height: 2em;
   letter-spacing: 0.02117em;
@@ -79,9 +95,9 @@ button, input[type=button], input[type=submit] {
   color: var(--color-CTA-primary-blur-text);
   background-color: var(--color-CTA-primary-blur-background);
   line-height: 2em;
-  padding: 0 0.6667em;
+  padding: 0 var(--space-XS);
   font-size: 1rem;
-  border-radius: 4px;
+  border-radius: var(--border-radius);
   border: none;
   outline: none;
 }
@@ -191,6 +207,27 @@ button[disabled]:hover, button[disabled]:focus, button[disabled]:active, input[t
   transform: translateY(50%);
   fill: var(--color-CTA-error-blur-background);
   width: 24px;
+}
+
+ul.m-tagList {
+  margin: 0 calc(var(--space-XS-no-collapse) * -1);
+  padding: 0;
+  list-style: none;
+  font-size: 0;
+}
+ul.m-tagList li {
+  font-size: 1rem;
+  display: inline-block;
+  background-color: var(--color-element-background);
+  border-radius: var(--border-radius-L);
+  padding: 0 var(--space-XS);
+  margin: var(--space-XS) var(--space-S-no-collapse);
+}
+ul.m-tagList li span.tagHash {
+  color: var(--color-text-medium-contrast);
+}
+ul.m-tagList li span.tag {
+  color: var(--color-text);
 }
 
 body {
