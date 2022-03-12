@@ -1,9 +1,12 @@
 //Styles
 @use '_colors.scss';
+@use '_sizes.scss';
+@use '_spacing.scss';
 @use '_typography.scss';
 
 @use './components/_button.scss';
 @use './components/_input.scss';
+@use './components/_tags.scss';
 
 body {
 	background: var(--palette-0-5);
