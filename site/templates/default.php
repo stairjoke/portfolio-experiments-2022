@@ -64,22 +64,16 @@
 			</form>
 
 			<p>Tags</p>
-			<ul class="m-tagList">
-				<li><span class="tagHash">#</span><span class="tag">tag</span></li>
-				<li><span class="tagHash">#</span><span class="tag">tag</span></li>
-				<li><span class="tagHash">#</span><span class="tag">tag</span></li>
-				<li><span class="tagHash">#</span><span class="tag">tag</span></li>
-				<li><span class="tagHash">#</span><span class="tag">tag</span></li>
-				<li><span class="tagHash">#</span><span class="tag">tag</span></li>
-				<li><span class="tagHash">#</span><span class="tag">tag</span></li>
-				<li><span class="tagHash">#</span><span class="tag">tag</span></li>
-				<li><span class="tagHash">#</span><span class="tag">tag</span></li>
-				<li><span class="tagHash">#</span><span class="tag">tag</span></li>
-				<li><span class="tagHash">#</span><span class="tag">tag</span></li>
-				<li><span class="tagHash">#</span><span class="tag">tag</span></li>
-				<li><span class="tagHash">#</span><span class="tag">tag</span></li>
-				<li><span class="tagHash">#</span><span class="tag">tag</span></li>
-				<li><span class="tagHash">#</span><span class="tag">tag</span></li>
+			<ul class="m-tagList" style="max-width: 500px">
+				<li><a href="#"><span class="tagHash" aria-hidden="true">#</span><span class="tag">tag</span></a></li>
+				<li><a href="#"><span class="tagHash" aria-hidden="true">#</span><span class="tag">tag</span></a></li>
+				<li><a href="#"><span class="tagHash" aria-hidden="true">#</span><span class="tag">tag</span></a></li>
+				<li><a href="#"><span class="tagHash" aria-hidden="true">#</span><span class="tag">tag</span></a></li>
+				<li><a href="#"><span class="tagHash" aria-hidden="true">#</span><span class="tag">tag</span></a></li>
+				<li><a href="#"><span class="tagHash" aria-hidden="true">#</span><span class="tag">tag</span></a></li>
+				<li><a href="#"><span class="tagHash" aria-hidden="true">#</span><span class="tag">tag</span></a></li>
+				<li><a href="#"><span class="tagHash" aria-hidden="true">#</span><span class="tag">tag</span></a></li>
+				<li><a href="#"><span class="tagHash" aria-hidden="true">#</span><span class="tag">tag</span></a></li>
 			</ul>
 		</div>
 	</body>
