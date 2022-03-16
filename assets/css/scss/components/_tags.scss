@@ -1,24 +1,34 @@
 // Tags
 ul.m-tagList {
-	margin: 0 calc(var(--space-XS-no-collapse) * (-1));
+	margin: 0 calc(var(--space-S-no-collapse) * (-1));
 	padding: 0;
 	list-style: none;
 	font-size: 0;
-	
+
 	li {
-		font-size: 1rem;
-		display: inline-block;
-		background-color: var(--color-element-background);
-		border-radius: var(--border-radius-L);
-		padding: 0 var(--space-XS);
-		margin: var(--space-XS) var(--space-S-no-collapse);
-		span {
-			&.tagHash {
-					color: var(--color-text-medium-contrast);
-			}
-			&.tag {
-				color: var(--color-text);
-			}
-		}
+    display: inline;
+    a {
+      font-size: 1rem;
+      display: inline-block;
+      background-color: var(--color-element-background);
+      border-radius: var(--border-radius-L);
+
+      display: inline-block;
+      padding: 0 var(--space-XS);
+      margin: var(--space-XS) var(--space-S-no-collapse);
+
+      &, &:link, &:hover, &:focus, &:active {
+        color: var(--color-text);
+        text-decoration: none;
+        .tagHash {
+            color: var(--color-text-medium-contrast);
+        }
+      }
+      &:hover, &:focus, &:active {
+        .tag {
+          text-decoration: underline;
+        }
+      }
+    }
 	}
 }

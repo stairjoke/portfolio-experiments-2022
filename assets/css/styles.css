@@ -210,24 +210,32 @@ button[disabled]:hover, button[disabled]:focus, button[disabled]:active, input[t
 }
 
 ul.m-tagList {
-  margin: 0 calc(var(--space-XS-no-collapse) * -1);
+  margin: 0 calc(var(--space-S-no-collapse) * -1);
   padding: 0;
   list-style: none;
   font-size: 0;
 }
 ul.m-tagList li {
+  display: inline;
+}
+ul.m-tagList li a {
   font-size: 1rem;
   display: inline-block;
   background-color: var(--color-element-background);
   border-radius: var(--border-radius-L);
+  display: inline-block;
   padding: 0 var(--space-XS);
   margin: var(--space-XS) var(--space-S-no-collapse);
 }
-ul.m-tagList li span.tagHash {
+ul.m-tagList li a, ul.m-tagList li a:link, ul.m-tagList li a:hover, ul.m-tagList li a:focus, ul.m-tagList li a:active {
+  color: var(--color-text);
+  text-decoration: none;
+}
+ul.m-tagList li a .tagHash, ul.m-tagList li a:link .tagHash, ul.m-tagList li a:hover .tagHash, ul.m-tagList li a:focus .tagHash, ul.m-tagList li a:active .tagHash {
   color: var(--color-text-medium-contrast);
 }
-ul.m-tagList li span.tag {
-  color: var(--color-text);
+ul.m-tagList li a:hover .tag, ul.m-tagList li a:focus .tag, ul.m-tagList li a:active .tag {
+  text-decoration: underline;
 }
 
 body {
