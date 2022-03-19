@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title><?= $page->title()->html() ?>, <?= $site->title()->html() ?></title>
+		<title>Template, Wenzel's Portfolio</title>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="https://use.typekit.net/vez5lsq.css">
-		<?= css('assets/css/styles.css') ?>
+		<link rel="stylesheet" href="assets/css/styles.css">
 	</head>
 	<body>
 		<svg xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" style="position: absolute; width: 0; height: 0" id="__SVG_SPRITE_NODE__">
@@ -43,7 +43,16 @@
 				<path d="M0,2.73934667 L0,45.2606533 C0,46.7735099 1.22636917,48 2.73934667,48 L45.2606533,48 C46.7735099,48 48,46.7736308 48,45.2606533 L48,2.73934667 C48,1.22636917 46.7735099,0 45.2606533,0 L2.73934667,0 C1.22636917,0 0,1.22636917 0,2.73934667 Z M22,13.3259816 L14.561262,13.3259816 C13.8141758,13.3259816 13.2065712,13.9452762 13.2065712,14.7067358 L13.2065712,22 L7,22 L7,14.7067358 C7,10.4573626 10.3921008,7 14.561262,7 L22,7 L22,13.3259816 L22,13.3259816 Z M41,33.2932642 C41,37.5426374 37.6078992,41 33.438738,41 L26,41 L26,34.6740184 L33.438738,34.6740184 C34.1858242,34.6740184 34.7934288,34.0547238 34.7934288,33.2932642 L34.7934288,26 L41,26 L41,33.2932642 L41,33.2932642 Z"></path>
 			</symbol>
 		</svg>
-		<?= $page->title()->html() ?>
+		<h1>Template</h1>
+		<article>
+			<header>
+				<h2>Section Title (H2)</h2>
+				<time>date</time>
+			</header>
+		</article>
+		<h3 class="L">Article Title (H3 - L)</h3><!-- H3 is L by default -->
+		<h3 class="M">Article Title (H3 - M)</h3>
+		<h3 class="S">Article Title (H3 - S)</h3>
 		<div>
 
 			<p>Buttons</p>
