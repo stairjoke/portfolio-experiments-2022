@@ -1,20 +1,3 @@
-//Styles
-@use '_colors.scss';
-@use '_sizes.scss';
-@use '_spacing.scss';
-@use '_typography.scss';
+// Styles
 
-@use './components/_button.scss';
-@use './components/_input.scss';
-@use './components/_tags.scss';
-
-body {
-	background: var(--palette-0-5);
-}
-
-img, svg {
-  margin: 0;
-  line-height: 100%;
-  letter-spacing: 0;
-  word-spacing: 0;
-}
+@import "https://export.sketch.com/shares/13a85460-d5e2-4254-b386-bd6c32501846/tokens/css";
