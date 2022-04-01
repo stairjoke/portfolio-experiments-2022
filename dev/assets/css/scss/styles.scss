@@ -55,17 +55,26 @@ header {
 	line-height: var(--line-height-M);
 	a#logo {
 		flex: 1;
-	}
-	a#logo span {
-		display: inline-block;
-		vertical-align: top;
-	}
-	a#logo svg {
-		height: var(--line-height-M);
-		aspect-ratio: 1;
-		display: inline-block;
-		fill: var(--color-text);
-		margin-right: .5rem;
+		span {
+			display: inline-block;
+			vertical-align: top;
+			transform: translateX(calc(-100% - .5rem));
+			opacity: 0;
+			transition-property: opacity transform;
+			transition-duration: 180ms;
+			transition-timing-function: ease-out;
+		}
+		&:hover span {
+			transform: translateX(0);
+			opacity: 1;
+		}
+		svg {
+			height: var(--line-height-M);
+			aspect-ratio: 1;
+			display: inline-block;
+			fill: var(--color-text);
+			margin-right: .5rem;
+		}
 	}
 	nav {
 		flex: 1;

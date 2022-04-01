@@ -63,6 +63,15 @@ header a#logo {
 header a#logo span {
   display: inline-block;
   vertical-align: top;
+  transform: translateX(calc(-100% - 0.5rem));
+  opacity: 0;
+  transition-property: opacity transform;
+  transition-duration: 180ms;
+  transition-timing-function: ease-out;
+}
+header a#logo:hover span {
+  transform: translateX(0);
+  opacity: 1;
 }
 header a#logo svg {
   height: var(--line-height-M);
