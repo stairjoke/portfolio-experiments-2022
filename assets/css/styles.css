@@ -1,3 +1,88 @@
-@import "https://export.sketch.com/shares/13a85460-d5e2-4254-b386-bd6c32501846/tokens/css";
+:root {
+  --line-height-M: 2rem;
+  --line-height-S: 1.3rem;
+  --color-accent-1: RGB(112, 174, 61);
+  --color-accent-1-hover: RGB(138, 197, 89);
+  --color-background: #333;
+  --color-text: #ddd;
+}
+@supports (color: color(display-p3 1 1 1)) {
+  :root {
+    --color-accent-1: color(display-p3 0.4392 0.6823 0.2392);
+    --color-accent-1-hover: color(display-p3 0.5411 0.7725 0.349);
+  }
+}
+
+html {
+  font-family: skolar-sans-latin, sans-serif;
+  font-size: 17px;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  line-height: var(--line-height-S);
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  margin: 0;
+  padding: 1rem;
+}
+
+header, main, footer {
+  width: 100%;
+  margin: 0 auto;
+}
+
+h1, h2, h3 {
+  font-family: ff-kava-web-pro;
+  letter-spacing: 1px;
+}
+
+a, a:link, a:active, a:visited {
+  text-decoration: none;
+  color: var(--color-accent-1);
+  color: var(--color-accent-1);
+}
+
+a:hover, a:focus {
+  text-decoration: underline;
+  color: var(--color-accent-1-hover);
+  color: var(--color-accent-1-hover);
+}
+
+header {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  line-height: var(--line-height-M);
+}
+header a#logo {
+  flex: 1;
+}
+header a#logo span {
+  display: inline-block;
+  vertical-align: top;
+}
+header a#logo svg {
+  height: var(--line-height-M);
+  aspect-ratio: 1;
+  display: inline-block;
+  fill: var(--color-text);
+  margin-right: 0.5rem;
+}
+header nav {
+  flex: 1;
+  text-align: right;
+}
+header nav ul, header nav li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+header nav li {
+  display: inline-block;
+  margin-left: 1rem;
+}
 
 /*# sourceMappingURL=styles.css.map */
