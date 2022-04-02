@@ -12,13 +12,13 @@
 		--color-accent-1-hover: color(display-p3 0.5411 0.7725 0.349); //P3
 	}
 	
-	--color-background: #333;
-	--color-text: #ddd;
+	--color-background: #191815;
+	--color-text: #cdc6c6;
 }
 
 html {
 	font-family: skolar-sans-latin, sans-serif;
-	font-size: 17px;
+	font-size: 1.0625em; //assuming 16px default, this is 17px
 	font-weight: 300;
 	margin: 0;
 	padding: 0;
@@ -54,7 +54,6 @@ header {
 	justify-content: space-between;
 	line-height: var(--line-height-M);
 	a#logo {
-		flex: 1;
 		span {
 			display: inline-block;
 			vertical-align: top;
@@ -79,6 +78,9 @@ header {
 	nav {
 		flex: 1;
 		text-align: right;
+		&.left {
+			text-align: left;
+		}
 		ul, li {
 			list-style: none;
 			margin: 0;
