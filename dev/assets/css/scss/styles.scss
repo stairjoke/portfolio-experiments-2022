@@ -14,6 +14,9 @@
 	
 	--color-background: #191815;
 	--color-text: #cdc6c6;
+	
+	--color-ukraineFlag-top: #005abb;
+	--color-ukraineFlag-bottom: #fdd400;
 }
 
 html {
@@ -73,6 +76,12 @@ header {
 			display: inline-block;
 			fill: var(--color-text);
 			margin-right: .5rem;
+			transition-property: fill;
+			transition-duration: 500ms;
+			transition-timing-function: ease-out;
+		}
+		&:hover svg {
+			fill: url(#ukraineFlag);
 		}
 	}
 	nav {

@@ -5,6 +5,8 @@
   --color-accent-1-hover: RGB(138, 197, 89);
   --color-background: #191815;
   --color-text: #cdc6c6;
+  --color-ukraineFlag-top: #005abb;
+  --color-ukraineFlag-bottom: #fdd400;
 }
 @supports (color: color(display-p3 1 1 1)) {
   :root {
@@ -76,6 +78,12 @@ header a#logo svg {
   display: inline-block;
   fill: var(--color-text);
   margin-right: 0.5rem;
+  transition-property: fill;
+  transition-duration: 500ms;
+  transition-timing-function: ease-out;
+}
+header a#logo:hover svg {
+  fill: url(#ukraineFlag);
 }
 header nav {
   flex: 1;
