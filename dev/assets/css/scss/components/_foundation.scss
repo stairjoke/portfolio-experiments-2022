@@ -1,0 +1,56 @@
+//Foundation
+:root {
+	--line-height-M: 2rem;
+	--line-height-S: 1.3rem;
+	
+	--color-accent-1: RGB(112, 174, 61); //re-mapped to sRGB
+	--color-accent-1-hover: RGB(138, 197, 89); //re-mapped to sRGB
+	
+	@supports (color: color(display-p3 1 1 1)) {
+		--color-accent-1: color(display-p3 0.4392 0.6823 0.2392); //P3
+		--color-accent-1-hover: color(display-p3 0.5411 0.7725 0.349); //P3
+	}
+	
+	--color-background: #31302e;
+	--color-element-background: #3f3d3b;
+	--color-text: #cdc6c6;
+	
+	--color-ukraineFlag-top: #005abb;
+	--color-ukraineFlag-bottom: #fdd400;
+	
+	--border-radius-M: 0.5rem;
+}
+
+
+html {
+	font-family: skolar-sans-latin, "Skolar Sans Latin", sans-serif;
+	font-size: 1.0625em; //assuming 16px default, this is 17px
+	font-weight: 300;
+	margin: 0;
+	padding: 0;
+	line-height: var(--line-height-S);
+}
+body {
+	background-color: var(--color-background);
+	color: var(--color-text);
+	margin: 0;
+	padding: 1rem;
+}
+header, main, footer {
+	width: 100%;
+	margin: 0 auto;
+}
+h1, h2, h3 {
+	font-family: ff-kava-web-pro;
+	letter-spacing: 1px;
+}
+a, a:link, a:active, a:visited {
+	text-decoration: none;
+	color: var(--color-accent-1);
+	color: var(--color-accent-1);
+}
+a:hover, a:focus {
+	text-decoration: underline;
+	color: var(--color-accent-1-hover);
+	color: var(--color-accent-1-hover);
+}

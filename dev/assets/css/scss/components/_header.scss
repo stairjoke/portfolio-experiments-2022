@@ -1,0 +1,74 @@
+// Header
+header {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	line-height: var(--line-height-M);
+	a#logo {
+		position: relative;
+		span {
+			display: inline-block;
+			vertical-align: top;
+			transform: translateX(calc(var(--line-height-M) * 1.29 * .7));
+			opacity: 0;
+			transition-property: opacity transform;
+			transition-duration: 180ms;
+			transition-timing-function: ease-out;
+			padding: 0 0.5rem;
+			border-radius: var(--border-radius-M);
+		}
+		&:hover span {
+			transform: translateX(calc(var(--line-height-M) * 1.29)); //1.29 = aspect ratio of logo
+			opacity: 1;
+			background-color: var(--color-element-background);
+		}
+		svg {
+			position: absolute;
+			z-index: 1000;
+			height: var(--line-height-M);
+			aspect-ratio: 1;
+			display: inline-block;
+			//fill: var(--color-text);
+			fill: url(#ukraineFlag);
+			margin-right: .5rem;
+			transition-property: fill;
+			transition-duration: 500ms;
+			transition-timing-function: ease-out;
+		}
+	}
+	nav {
+		flex: 1;
+		text-align: right;
+		&.left {
+			text-align: left;
+		}
+		ul, li {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		li {
+			display: inline-block;
+			a {
+				display: inline-block;
+				padding: 0 0.5rem;
+				background-color: transparent;
+				border-radius: var(--border-radius-M);
+				transition-property: background-color;
+				transition-duration: 250ms;
+				transition-timing-function: ease-out;
+				&:hover, &:focus {
+					background-color: var(--color-element-background);
+					transition-duration: 110ms;
+				}
+			}
+		}
+	}
+	a, a:link, a:active, a:visited {
+		color: var(--color-text);
+	}
+	a:hover, a:focus {
+		text-decoration: none;
+		color: var(--color-accent-1-hover);
+	}
+}
