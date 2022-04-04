@@ -1,3 +1,14 @@
 // Styles 
 @use "components/_foundation.scss";
 @use "components/_header.scss";
+
+main {
+	section.splash {
+		height: 80vh;
+		
+		&#home-splash {
+			background-color: var(--color-accent-1);
+			color: var(--color-text-high-contrast);
+		}
+	}
+}

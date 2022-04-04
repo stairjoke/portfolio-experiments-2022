@@ -6,6 +6,7 @@
   --color-background: #31302e;
   --color-element-background: #3f3d3b;
   --color-text: #cdc6c6;
+  --color-text-high-contrast: white;
   --color-ukraineFlag-top: #005abb;
   --color-ukraineFlag-bottom: #fdd400;
   --border-radius-M: 0.5rem;
@@ -30,7 +31,7 @@ body {
   background-color: var(--color-background);
   color: var(--color-text);
   margin: 0;
-  padding: 1rem;
+  padding: 0;
 }
 
 header, main, footer {
@@ -56,6 +57,11 @@ a:hover, a:focus {
 }
 
 header {
+  position: sticky;
+  top: 0;
+  padding: 1rem 1rem 1.225rem 1rem;
+  box-sizing: border-box;
+  background-color: var(--color-background);
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
@@ -126,6 +132,14 @@ header a, header a:link, header a:active, header a:visited {
 header a:hover, header a:focus {
   text-decoration: none;
   color: var(--color-accent-1-hover);
+}
+
+main section.splash {
+  height: 80vh;
+}
+main section.splash#home-splash {
+  background-color: var(--color-accent-1);
+  color: var(--color-text-high-contrast);
 }
 
 /*# sourceMappingURL=styles.css.map */
