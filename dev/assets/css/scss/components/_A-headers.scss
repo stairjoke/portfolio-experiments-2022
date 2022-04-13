@@ -11,7 +11,7 @@ h1 {
 	font-size: 6rem;
 	color: var(--color-text-high-contrast);
 	line-height: 111%;
-	text-shadow: 0 0 120px var(--color-shadow);
+	text-shadow: 0 0 var(--layout-vertical-margin-L) var(--color-shadow);
 	margin: 0 0 var(--layout-vertical-margin-M) 0;
 	
 	@media (max-width: 414px) {

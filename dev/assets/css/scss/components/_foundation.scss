@@ -17,7 +17,7 @@
 	
 	--color-text: #cdc6c6;
 	--color-text-high-contrast: white;
-	--color-shadow: rgba(0,0,0,0.27);
+	--color-shadow: rgba(0,0,0,0.06);
 	
 	--color-ukraineFlag-top: #005abb;
 	--color-ukraineFlag-bottom: #fdd400;
@@ -25,6 +25,9 @@
 	--border-radius-M: 0.5rem;
 	
 	--layout-column: calc((100vw - (12*2rem))/11);
+	@media (max-width: 1024px) {
+		--layout-column: calc((100vw - (10*2rem))/9);
+	}
 	--layout-gutter: 2rem;
 	
 	--layout-vertical-margin-SX: 12px;

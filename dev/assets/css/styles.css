@@ -8,7 +8,7 @@
   --color-element-background: rgba(255,255,255,0.09);
   --color-text: #cdc6c6;
   --color-text-high-contrast: white;
-  --color-shadow: rgba(0,0,0,0.27);
+  --color-shadow: rgba(0,0,0,0.06);
   --color-ukraineFlag-top: #005abb;
   --color-ukraineFlag-bottom: #fdd400;
   --border-radius-M: 0.5rem;
@@ -23,6 +23,11 @@
   :root {
     --color-accent-1: color(display-p3 0.4392 0.6823 0.2392);
     --color-accent-1-hover: color(display-p3 0.5411 0.7725 0.349);
+  }
+}
+@media (max-width: 1024px) {
+  :root {
+    --layout-column: calc((100vw - (10*2rem))/9);
   }
 }
 
@@ -95,7 +100,7 @@ h1 {
   font-size: 6rem;
   color: var(--color-text-high-contrast);
   line-height: 111%;
-  text-shadow: 0 0 120px var(--color-shadow);
+  text-shadow: 0 0 var(--layout-vertical-margin-L) var(--color-shadow);
   margin: 0 0 var(--layout-vertical-margin-M) 0;
 }
 @media (max-width: 414px) {
