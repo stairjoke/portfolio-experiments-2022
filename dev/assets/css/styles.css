@@ -1,17 +1,209 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 8 | @use "components/_O-home-splash.scss";
- *   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
- *   '
- *   styles.scss 8:1  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 8 \2502  @use \"components/_O-home-splash.scss\";\a   \2502  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   styles.scss 8:1  root stylesheet";
+:root {
+  --line-height-M: 2rem;
+  --line-height-S: 1.3rem;
+  --color-accent-1: RGB(112, 174, 61);
+  --color-accent-1-hover: RGB(138, 197, 89);
+  --color-background: #31302e;
+  --color-background-high-opacity: rgba(49,48,46,0.8);
+  --color-element-background: rgba(255,255,255,0.09);
+  --color-text: #cdc6c6;
+  --color-text-high-contrast: white;
+  --color-shadow: rgba(0,0,0,0.27);
+  --color-ukraineFlag-top: #005abb;
+  --color-ukraineFlag-bottom: #fdd400;
+  --border-radius-M: 0.5rem;
+  --layout-column: calc((100vw - (12*2rem))/11);
+  --layout-gutter: 2rem;
+  --layout-vertical-margin-SX: 12px;
+  --layout-vertical-margin-S: 36px;
+  --layout-vertical-margin-M: 60px;
+  --layout-vertical-margin-L: 120px;
 }
+@supports (color: color(display-p3 1 1 1)) {
+  :root {
+    --color-accent-1: color(display-p3 0.4392 0.6823 0.2392);
+    --color-accent-1-hover: color(display-p3 0.5411 0.7725 0.349);
+  }
+}
+
+html {
+  font-family: futura-pt, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.0625em;
+  margin: 0;
+  padding: 0;
+  line-height: var(--line-height-S);
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  margin: 0;
+  padding: 0;
+}
+
+header, main, footer {
+  width: 100%;
+  margin: 0 auto;
+}
+
+main {
+  margin-top: calc(-2.25rem - var(--line-height-M));
+  padding-top: calc(2.25rem + var(--line-height-M));
+}
+main .splash {
+  margin-top: calc(-2.25rem - var(--line-height-M));
+}
+
+a, a:link, a:active, a:visited {
+  text-decoration: none;
+  color: var(--color-accent-1);
+  color: var(--color-accent-1);
+}
+
+a:hover, a:focus {
+  text-decoration: underline;
+  color: var(--color-accent-1-hover);
+  color: var(--color-accent-1-hover);
+}
+
+.floater {
+  position: relative;
+}
+.floater.center-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%, 0);
+}
+.floater.center-Y {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+h1, h2, h3 {
+  font-family: all-round-gothic, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0.04rem;
+}
+
+h1 {
+  text-align: center;
+  font-size: 6rem;
+  color: var(--color-text-high-contrast);
+  text-align: center;
+  line-height: 111%;
+  text-shadow: 0 0 120px var(--color-shadow);
+  margin: 0 0 var(--layout-vertical-margin-M) 0;
+}
+
+p {
+  color: var(--color-text);
+  font-family: futura-pt, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+}
+h1 + p.teaser {
+  font-size: 1.33rem;
+  color: var(--color-text-high-contrast);
+}
+
+header {
+  position: sticky;
+  top: 0;
+  padding: 1rem 1rem 1.225rem 1rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  line-height: var(--line-height-M);
+}
+@supports (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)) {
+  header {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+}
+header a#logo {
+  position: relative;
+}
+header a#logo span {
+  display: inline-block;
+  vertical-align: top;
+  transform: translateX(calc(var(--line-height-M) * 1.29 * 0.7));
+  opacity: 0;
+  transition-property: opacity transform;
+  transition-duration: 180ms;
+  transition-timing-function: ease-out;
+  padding: 0 0.5rem;
+  border-radius: var(--border-radius-M);
+}
+header a#logo:hover span {
+  transform: translateX(calc(var(--line-height-M) * 1.29));
+  opacity: 1;
+  background-color: var(--color-element-background);
+}
+header a#logo svg {
+  position: absolute;
+  z-index: 1000;
+  height: var(--line-height-M);
+  aspect-ratio: 1;
+  display: inline-block;
+  fill: url(#ukraineFlag);
+  margin-right: 0.5rem;
+  transition-property: fill;
+  transition-duration: 500ms;
+  transition-timing-function: ease-out;
+}
+header nav {
+  flex: 1;
+  text-align: right;
+}
+header nav.left {
+  text-align: left;
+}
+header nav ul, header nav li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+header nav li {
+  display: inline-block;
+}
+header nav li a {
+  display: inline-block;
+  padding: 0 0.75rem;
+  background-color: transparent;
+  border-radius: var(--border-radius-M);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: ease-out;
+}
+header nav li a:hover, header nav li a:focus {
+  background-color: var(--color-element-background);
+  transition-duration: 110ms;
+}
+header a, header a:link, header a:active, header a:visited {
+  color: var(--color-text-high-contrast);
+}
+header a:hover, header a:focus {
+  text-decoration: none;
+  color: var(--color-text-high-contrast);
+}
+
+main {
+  height: 200vh;
+}
+main section.splash {
+  height: 80vh;
+}
+main section.splash#home-splash {
+  background-color: var(--color-accent-1);
+  color: var(--color-text-high-contrast);
+}
+
+/*# sourceMappingURL=styles.css.map */
