@@ -1,1 +1,12 @@
 // Atom — Floating abstraction
+
+.floater-XY {
+	display: inline-block;
+	position: relative;
+	
+	&.center-center {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%, 0);
+	}
+}

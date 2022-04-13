@@ -44,7 +44,7 @@ header, main, footer {
 }
 main {
 	margin-top: calc(-2.25rem - var(--line-height-M));
-	padding-top: calc(-2.25rem - var(--line-height-M));
+	padding-top: calc(2.25rem + var(--line-height-M));
 	
 	.splash {
 		margin-top: calc(-2.25rem - var(--line-height-M));

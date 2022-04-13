@@ -42,7 +42,7 @@ header, main, footer {
 
 main {
   margin-top: calc(-2.25rem - var(--line-height-M));
-  padding-top: calc(-2.25rem - var(--line-height-M));
+  padding-top: calc(2.25rem + var(--line-height-M));
 }
 main .splash {
   margin-top: calc(-2.25rem - var(--line-height-M));
@@ -63,6 +63,16 @@ a:hover, a:focus {
   text-decoration: underline;
   color: var(--color-accent-1-hover);
   color: var(--color-accent-1-hover);
+}
+
+.floater-XY {
+  display: inline-block;
+  position: relative;
+}
+.floater-XY.center-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%, 0);
 }
 
 header {
