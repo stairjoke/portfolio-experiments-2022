@@ -25,9 +25,10 @@
 
 
 html {
-	font-family: skolar-sans-latin, "Skolar Sans Latin", sans-serif;
+	font-family: futura-pt,sans-serif;
+	font-weight: 400;
+	font-style: normal;
 	font-size: 1.0625em; //assuming 16px default, this is 17px
-	font-weight: 300;
 	margin: 0;
 	padding: 0;
 	line-height: var(--line-height-S);
@@ -49,8 +50,4 @@ main {
 	.splash {
 		margin-top: calc(-2.25rem - var(--line-height-M));
 	}
-}
-h1, h2, h3 {
-	font-family: ff-kava-web-pro;
-	letter-spacing: 1px;
 }
