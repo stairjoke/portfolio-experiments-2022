@@ -5,6 +5,12 @@ header {
 	padding: 1rem 1rem 1.225rem 1rem;
 	box-sizing: border-box;
 	background-color: var(--color-background);
+	@supports (backdrop-filter: blur(50px)) or
+					(-webkit-backdrop-filter: blur(10px)) {
+		background-color: var(--color-background-high-opacity);
+		-webkit-backdrop-filter: blur(10px); //Safari still uses the prefix
+		backdrop-filter: blur(50px);
+	}
 	
 	display: flex;
 	flex-wrap: nowrap;
