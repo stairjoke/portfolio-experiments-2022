@@ -4,6 +4,9 @@
 @use "components/_A-floaters.scss";
 @use "components/_A-headers.scss";
 @use "components/_A-text-blocks.scss";
+
+@use "components/_O-home-splash.scss";
+
 @use "components/_header.scss";
 
 // Header switch to fixed instead o fsticky, add JS for isScrolled to show header?
