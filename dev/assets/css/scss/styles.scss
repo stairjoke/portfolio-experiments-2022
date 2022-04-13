@@ -1,5 +1,7 @@
 // Styles 
 @use "components/_foundation.scss";
+@use "components/_A-link.scss";
+@use "components/_A-floaters.scss";
 @use "components/_header.scss";
 
 // Header switch to fixed instead o fsticky, add JS for isScrolled to show header?

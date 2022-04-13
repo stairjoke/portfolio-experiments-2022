@@ -1,0 +1,11 @@
+// Atom — link
+a, a:link, a:active, a:visited {
+	text-decoration: none;
+	color: var(--color-accent-1);
+	color: var(--color-accent-1);
+}
+a:hover, a:focus {
+	text-decoration: underline;
+	color: var(--color-accent-1-hover);
+	color: var(--color-accent-1-hover);
+}
