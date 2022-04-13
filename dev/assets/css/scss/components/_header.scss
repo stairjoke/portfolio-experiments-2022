@@ -4,12 +4,10 @@ header {
 	top: 0;
 	padding: 1rem 1rem 1.225rem 1rem;
 	box-sizing: border-box;
-	background-color: var(--color-background);
-	@supports (backdrop-filter: blur(50px)) or
-					(-webkit-backdrop-filter: blur(10px)) {
-		background-color: var(--color-background-high-opacity);
+	@supports (backdrop-filter: blur(10px)) or
+			  (-webkit-backdrop-filter: blur(10px)) {
 		-webkit-backdrop-filter: blur(10px); //Safari still uses the prefix
-		backdrop-filter: blur(50px);
+		backdrop-filter: blur(10px);
 	}
 	
 	display: flex;
@@ -63,7 +61,7 @@ header {
 			display: inline-block;
 			a {
 				display: inline-block;
-				padding: 0 0.5rem;
+				padding: 0 0.75rem;
 				background-color: transparent;
 				border-radius: var(--border-radius-M);
 				transition-property: background-color;
@@ -77,10 +75,10 @@ header {
 		}
 	}
 	a, a:link, a:active, a:visited {
-		color: var(--color-text);
+		color: var(--color-text-high-contrast);
 	}
 	a:hover, a:focus {
 		text-decoration: none;
-		color: var(--color-accent-1-hover);
+		color: var(--color-text-high-contrast);
 	}
 }

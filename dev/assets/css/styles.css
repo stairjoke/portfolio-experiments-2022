@@ -4,8 +4,8 @@
   --color-accent-1: RGB(112, 174, 61);
   --color-accent-1-hover: RGB(138, 197, 89);
   --color-background: #31302e;
-  --color-background-high-opacity: rgba(49,48,46,0.9);
-  --color-element-background: #3f3d3b;
+  --color-background-high-opacity: rgba(49,48,46,0.8);
+  --color-element-background: rgba(255,255,255,0.09);
   --color-text: #cdc6c6;
   --color-text-high-contrast: white;
   --color-ukraineFlag-top: #005abb;
@@ -62,17 +62,15 @@ header {
   top: 0;
   padding: 1rem 1rem 1.225rem 1rem;
   box-sizing: border-box;
-  background-color: var(--color-background);
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
   line-height: var(--line-height-M);
 }
-@supports (backdrop-filter: blur(50px)) or (-webkit-backdrop-filter: blur(10px)) {
+@supports (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)) {
   header {
-    background-color: var(--color-background-high-opacity);
     -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(50px);
+    backdrop-filter: blur(10px);
   }
 }
 header a#logo {
@@ -123,7 +121,7 @@ header nav li {
 }
 header nav li a {
   display: inline-block;
-  padding: 0 0.5rem;
+  padding: 0 0.75rem;
   background-color: transparent;
   border-radius: var(--border-radius-M);
   transition-property: background-color;
@@ -135,11 +133,11 @@ header nav li a:hover, header nav li a:focus {
   transition-duration: 110ms;
 }
 header a, header a:link, header a:active, header a:visited {
-  color: var(--color-text);
+  color: var(--color-text-high-contrast);
 }
 header a:hover, header a:focus {
   text-decoration: none;
-  color: var(--color-accent-1-hover);
+  color: var(--color-text-high-contrast);
 }
 
 main {
