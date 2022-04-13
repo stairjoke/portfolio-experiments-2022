@@ -49,11 +49,12 @@ header, main, footer {
 }
 
 main {
-  margin-top: calc(-2.25rem - var(--line-height-M));
-  padding-top: calc(2.25rem + var(--line-height-M));
+  margin-top: calc(var(--layout-gutter) * -2 - var(--line-height-M));
+  padding-top: calc(var(--layout-gutter) * 2 + var(--line-height-M));
 }
 main .splash {
-  margin-top: calc(-2.25rem - var(--line-height-M));
+  margin-top: calc(var(--layout-gutter) * -2 - var(--line-height-M));
+  padding-top: calc(var(--layout-gutter) * 2 + var(--line-height-M));
 }
 
 a, a:link, a:active, a:visited {
@@ -86,16 +87,21 @@ h1, h2, h3 {
   font-weight: 700;
   font-style: normal;
   letter-spacing: 0.04rem;
+  -webkit-text-size-adjust: none;
 }
 
 h1 {
   text-align: center;
   font-size: 6rem;
   color: var(--color-text-high-contrast);
-  text-align: center;
   line-height: 111%;
   text-shadow: 0 0 120px var(--color-shadow);
   margin: 0 0 var(--layout-vertical-margin-M) 0;
+}
+@media (max-width: 414px) {
+  h1 {
+    font-size: 2rem;
+  }
 }
 
 p {
@@ -110,8 +116,17 @@ p {
 h1 + p.teaser {
   font-size: 1.33rem;
   color: var(--color-text-high-contrast);
+  margin: var(--layout-vertical-margin-M) var(--layout-gutter);
 }
 
+#home-splash {
+  padding-bottom: var(--layout-vertical-margin-L);
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
 #home-splash p.teaser {
   margin: 0 auto;
   max-width: calc(var(--layout-column) * 3 + var(--layout-gutter) * 2);
@@ -120,7 +135,7 @@ h1 + p.teaser {
 header {
   position: sticky;
   top: 0;
-  padding: 1rem 1rem 1.225rem 1rem;
+  padding: var(--layout-gutter);
   box-sizing: border-box;
   display: flex;
   flex-wrap: nowrap;
@@ -202,9 +217,6 @@ header a:hover, header a:focus {
 
 main {
   height: 200vh;
-}
-main section.splash {
-  height: 80vh;
 }
 main section.splash#home-splash {
   background-color: var(--color-accent-1);

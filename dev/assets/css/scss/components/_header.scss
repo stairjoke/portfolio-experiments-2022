@@ -2,7 +2,7 @@
 header {
 	position: sticky;
 	top: 0;
-	padding: 1rem 1rem 1.225rem 1rem;
+	padding: var(--layout-gutter);
 	box-sizing: border-box;
 	@supports (backdrop-filter: blur(10px)) or
 			  (-webkit-backdrop-filter: blur(10px)) {

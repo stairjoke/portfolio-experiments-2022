@@ -11,5 +11,6 @@ p {
 	h1 + &.teaser {
 		font-size: 1.33rem;
 		color: var(--color-text-high-contrast);
+		margin: var(--layout-vertical-margin-M) var(--layout-gutter);
 	}
 }

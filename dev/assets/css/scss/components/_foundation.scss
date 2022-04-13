@@ -54,10 +54,11 @@ header, main, footer {
 	margin: 0 auto;
 }
 main {
-	margin-top: calc(-2.25rem - var(--line-height-M));
-	padding-top: calc(2.25rem + var(--line-height-M));
+	margin-top: calc(var(--layout-gutter)*-2 - var(--line-height-M));
+	padding-top: calc(var(--layout-gutter)*2 + var(--line-height-M));
 	
 	.splash {
-		margin-top: calc(-2.25rem - var(--line-height-M));
+		margin-top: calc(var(--layout-gutter)*-2 - var(--line-height-M));
+		padding-top: calc(var(--layout-gutter)*2 + var(--line-height-M));
 	}
 }
