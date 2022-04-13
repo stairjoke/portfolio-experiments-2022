@@ -1,0 +1,15 @@
+// Atom — Text Blocks
+p {
+	color: var(--color-text);
+	font-family: futura-pt,sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 1rem;
+	letter-spacing: 0.02em;
+	line-height: 1.5em;
+	
+	h1 + &.teaser {
+		font-size: 1.33rem;
+		color: var(--color-text-high-contrast);
+	}
+}
