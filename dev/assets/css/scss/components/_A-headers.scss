@@ -10,6 +10,7 @@ h1 {
 	font-size: 6rem;
 	color: var(--color-text-high-contrast);
 	text-align: center;
-	line-height: 162%;
-	text-shadow: 0 0 120px rgba(0,0,0,0.27);
+	line-height: 111%;
+	text-shadow: 0 0 120px var(--color-shadow);
+	margin: 0 0 var(--layout-vertical-margin-M) 0;
 }
