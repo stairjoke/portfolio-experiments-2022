@@ -14,13 +14,23 @@
 	--color-background: #31302e;
 	--color-background-high-opacity: rgba(49,48,46,0.8);
 	--color-element-background: rgba(255,255,255,0.09);
+	
 	--color-text: #cdc6c6;
 	--color-text-high-contrast: white;
+	--color-shadow: rgba(0,0,0,0.27);
 	
 	--color-ukraineFlag-top: #005abb;
 	--color-ukraineFlag-bottom: #fdd400;
 	
 	--border-radius-M: 0.5rem;
+	
+	--layout-column: calc((100vw - (12*2rem))/11);
+	--layout-gutter: 2rem;
+	
+	--layout-vertical-margin-SX: 12px;
+	--layout-vertical-margin-S: 36px;
+	--layout-vertical-margin-M: 60px;
+	--layout-vertical-margin-L: 120px;
 }
 
 
