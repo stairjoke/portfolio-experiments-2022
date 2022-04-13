@@ -1,1 +1,7 @@
 // Organism — Homepage Splash
+#home-splash {
+	p.teaser {
+		margin: 0 auto;
+		max-width: calc(var(--layout-column)*3 + var(--layout-gutter)*2);
+	}
+}

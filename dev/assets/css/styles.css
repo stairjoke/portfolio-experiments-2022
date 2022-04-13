@@ -112,6 +112,11 @@ h1 + p.teaser {
   color: var(--color-text-high-contrast);
 }
 
+#home-splash p.teaser {
+  margin: 0 auto;
+  max-width: calc(var(--layout-column) * 3 + var(--layout-gutter) * 2);
+}
+
 header {
   position: sticky;
   top: 0;
