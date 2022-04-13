@@ -8,9 +8,16 @@
   --color-element-background: rgba(255,255,255,0.09);
   --color-text: #cdc6c6;
   --color-text-high-contrast: white;
+  --color-shadow: rgba(0,0,0,0.27);
   --color-ukraineFlag-top: #005abb;
   --color-ukraineFlag-bottom: #fdd400;
   --border-radius-M: 0.5rem;
+  --layout-column: calc((100vw - (12*2rem))/11);
+  --layout-gutter: 2rem;
+  --layout-vertical-margin-SX: 12px;
+  --layout-vertical-margin-S: 36px;
+  --layout-vertical-margin-M: 60px;
+  --layout-vertical-margin-L: 120px;
 }
 @supports (color: color(display-p3 1 1 1)) {
   :root {
@@ -20,9 +27,10 @@
 }
 
 html {
-  font-family: skolar-sans-latin, "Skolar Sans Latin", sans-serif;
+  font-family: futura-pt, sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 1.0625em;
-  font-weight: 300;
   margin: 0;
   padding: 0;
   line-height: var(--line-height-S);
@@ -48,11 +56,6 @@ main .splash {
   margin-top: calc(-2.25rem - var(--line-height-M));
 }
 
-h1, h2, h3 {
-  font-family: ff-kava-web-pro;
-  letter-spacing: 1px;
-}
-
 a, a:link, a:active, a:visited {
   text-decoration: none;
   color: var(--color-accent-1);
@@ -65,14 +68,48 @@ a:hover, a:focus {
   color: var(--color-accent-1-hover);
 }
 
-.floater-XY {
-  display: inline-block;
+.floater {
   position: relative;
 }
-.floater-XY.center-center {
+.floater.center-center {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%, 0);
+}
+.floater.center-Y {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+h1, h2, h3 {
+  font-family: all-round-gothic, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0.04rem;
+}
+
+h1 {
+  text-align: center;
+  font-size: 6rem;
+  color: var(--color-text-high-contrast);
+  text-align: center;
+  line-height: 111%;
+  text-shadow: 0 0 120px var(--color-shadow);
+  margin: 0 0 var(--layout-vertical-margin-M) 0;
+}
+
+p {
+  color: var(--color-text);
+  font-family: futura-pt, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+}
+h1 + p.teaser {
+  font-size: 1.33rem;
+  color: var(--color-text-high-contrast);
 }
 
 header {
