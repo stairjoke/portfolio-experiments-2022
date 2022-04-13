@@ -40,6 +40,14 @@ header, main, footer {
   margin: 0 auto;
 }
 
+main {
+  margin-top: calc(-2.25rem - var(--line-height-M));
+  padding-top: calc(-2.25rem - var(--line-height-M));
+}
+main .splash {
+  margin-top: calc(-2.25rem - var(--line-height-M));
+}
+
 h1, h2, h3 {
   font-family: ff-kava-web-pro;
   letter-spacing: 1px;
