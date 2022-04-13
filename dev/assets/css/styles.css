@@ -4,6 +4,7 @@
   --color-accent-1: RGB(112, 174, 61);
   --color-accent-1-hover: RGB(138, 197, 89);
   --color-background: #31302e;
+  --color-background-high-opacity: rgba(49,48,46,0.9);
   --color-element-background: #3f3d3b;
   --color-text: #cdc6c6;
   --color-text-high-contrast: white;
@@ -66,6 +67,13 @@ header {
   flex-wrap: nowrap;
   justify-content: space-between;
   line-height: var(--line-height-M);
+}
+@supports (backdrop-filter: blur(50px)) or (-webkit-backdrop-filter: blur(10px)) {
+  header {
+    background-color: var(--color-background-high-opacity);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(50px);
+  }
 }
 header a#logo {
   position: relative;
@@ -134,6 +142,9 @@ header a:hover, header a:focus {
   color: var(--color-accent-1-hover);
 }
 
+main {
+  height: 200vh;
+}
 main section.splash {
   height: 80vh;
 }
