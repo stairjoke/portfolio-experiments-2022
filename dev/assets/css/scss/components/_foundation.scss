@@ -38,17 +38,17 @@ $layout-breakpoint-XL: 1100px;
 	--layout-vertical-margin-L: 120px;
 }
 
-#layout-viz {
+#layout-viz:target {
 	.column {
-		background-color: rgba(255,0,0,0.2);
-		outline: solid rgba(200,0,0,0.5) 1px;
-		position: absolute;
+		background-color: rgba(255,0,0,0.05);
+		outline: solid rgba(200,0,0,0.15) 1px;
+		position: fixed;
 		top: 0;
 		bottom: 0;
 		width: var(--layout-column);
 		pointer-events: none;
 		text-align: center;
-		color: white;
+		color: rgba(255,255,255,.5);
 	}
 	#c1 {
 		left: var(--layout-gutter);
