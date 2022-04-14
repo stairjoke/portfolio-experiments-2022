@@ -31,6 +31,59 @@
   }
 }
 
+#layout-viz .column {
+  background-color: rgba(255, 0, 0, 0.2);
+  outline: solid rgba(200, 0, 0, 0.5) 1px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: var(--layout-column);
+  pointer-events: none;
+}
+#layout-viz #c1 {
+  left: var(--layout-gutter);
+}
+#layout-viz #c2 {
+  left: calc(var(--layout-gutter) * 2 + var(--layout-column));
+}
+#layout-viz #c3 {
+  left: calc(var(--layout-gutter) * 3 + var(--layout-column) * 2);
+}
+#layout-viz #c4 {
+  left: calc(var(--layout-gutter) * 4 + var(--layout-column) * 3);
+}
+#layout-viz #c5 {
+  left: calc(var(--layout-gutter) * 5 + var(--layout-column) * 4);
+}
+#layout-viz #c6 {
+  left: calc(var(--layout-gutter) * 6 + var(--layout-column) * 5);
+}
+#layout-viz #c7 {
+  left: calc(var(--layout-gutter) * 7 + var(--layout-column) * 6);
+}
+#layout-viz #c8 {
+  left: calc(var(--layout-gutter) * 8 + var(--layout-column) * 7);
+}
+#layout-viz #c9 {
+  left: calc(var(--layout-gutter) * 9 + var(--layout-column) * 8);
+}
+#layout-viz #c10 {
+  left: calc(var(--layout-gutter) * 10 + var(--layout-column) * 9);
+}
+@media (max-width: 1024px) {
+  #layout-viz #c10 {
+    display: none;
+  }
+}
+#layout-viz #c11 {
+  left: calc(var(--layout-gutter) * 11 + var(--layout-column) * 10);
+}
+@media (max-width: 1024px) {
+  #layout-viz #c11 {
+    display: none;
+  }
+}
+
 html {
   font-family: futura-pt, sans-serif;
   font-weight: 400;
