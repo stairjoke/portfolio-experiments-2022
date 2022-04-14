@@ -153,40 +153,10 @@ header {
     backdrop-filter: blur(10px);
   }
 }
-header a#logo {
-  position: relative;
-}
-header a#logo span {
-  display: inline-block;
-  vertical-align: top;
-  transform: translateX(calc(var(--line-height-M) * 1.29 * 0.7));
-  opacity: 0;
-  transition-property: opacity transform;
-  transition-duration: 180ms;
-  transition-timing-function: ease-out;
-  padding: 0 0.5rem;
-  border-radius: var(--border-radius-M);
-}
-header a#logo:hover span {
-  transform: translateX(calc(var(--line-height-M) * 1.29));
-  opacity: 1;
-  background-color: var(--color-element-background);
-}
-header a#logo svg {
-  position: absolute;
-  z-index: 1000;
-  height: var(--line-height-M);
-  aspect-ratio: 1;
-  display: inline-block;
-  fill: url(#ukraineFlag);
-  margin-right: 0.5rem;
-  transition-property: fill;
-  transition-duration: 500ms;
-  transition-timing-function: ease-out;
-}
 header nav {
   flex: 1;
   text-align: right;
+  height: var(--line-height-M);
 }
 header nav.left {
   text-align: left;
@@ -195,9 +165,41 @@ header nav ul, header nav li {
   list-style: none;
   margin: 0;
   padding: 0;
+  vertical-align: top;
+  font-size: 0;
 }
 header nav li {
   display: inline-block;
+  font-size: 1rem;
+}
+header nav li a#logo {
+  height: var(--line-height-M);
+  /*
+  &:hover span {
+  	transform: translateX(calc(var(--line-height-M) * 1.29)); //1.29 = aspect ratio of logo
+  	opacity: 1;
+  	background-color: var(--color-element-background);
+  }
+  */
+}
+header nav li a#logo span {
+  display: inline-block;
+  vertical-align: top;
+}
+header nav li a#logo svg {
+  height: var(--line-height-M);
+  aspect-ratio: 1;
+  display: inline-block;
+  fill: url(#ukraineFlag);
+  margin-right: 0.75rem;
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: ease-out;
+}
+header nav li a#logo:hover svg, header nav li a#logo:focus svg {
+  transform: scale(0.75);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.5, 2.5, 0.75, 0.5);
 }
 header nav li a {
   display: inline-block;
@@ -211,6 +213,12 @@ header nav li a {
 header nav li a:hover, header nav li a:focus {
   background-color: var(--color-element-background);
   transition-duration: 110ms;
+}
+header nav li:first-child a {
+  margin-left: -0.75rem;
+}
+header nav li:last-child a {
+  margin-right: -0.75rem;
 }
 header a, header a:link, header a:active, header a:visited {
   color: var(--color-text-high-contrast);
