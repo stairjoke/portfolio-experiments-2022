@@ -1,4 +1,6 @@
 //Foundation
+$layout-breakpoint-XL: 1100px;
+
 :root {
 	--line-height-M: 2rem;
 	--line-height-S: 1.3rem;
@@ -25,7 +27,7 @@
 	--border-radius-M: 0.5rem;
 	
 	--layout-column: calc((100vw - (12*2rem))/11);
-	@media (max-width: 1024px) {
+	@media (max-width: #{$layout-breakpoint-XL}) {
 		--layout-column: calc((100vw - (10*2rem))/9);
 	}
 	--layout-gutter: 2rem;
@@ -45,6 +47,8 @@
 		bottom: 0;
 		width: var(--layout-column);
 		pointer-events: none;
+		text-align: center;
+		color: white;
 	}
 	#c1 {
 		left: var(--layout-gutter);
@@ -75,13 +79,13 @@
 	}
 	#c10 {
 		left: calc(var(--layout-gutter)*10 + var(--layout-column)*9);
-		@media (max-width: 1024px) {
+		@media (max-width: #{$layout-breakpoint-XL}) {
 			display: none;
 		}
 	}
 	#c11 {
 		left: calc(var(--layout-gutter)*11 + var(--layout-column)*10);
-		@media (max-width: 1024px) {
+		@media (max-width: #{$layout-breakpoint-XL}) {
 			display: none;
 		}
 	}

@@ -25,7 +25,7 @@
     --color-accent-1-hover: color(display-p3 0.5411 0.7725 0.349);
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
   :root {
     --layout-column: calc((100vw - (10*2rem))/9);
   }
@@ -39,6 +39,8 @@
   bottom: 0;
   width: var(--layout-column);
   pointer-events: none;
+  text-align: center;
+  color: white;
 }
 #layout-viz #c1 {
   left: var(--layout-gutter);
@@ -70,7 +72,7 @@
 #layout-viz #c10 {
   left: calc(var(--layout-gutter) * 10 + var(--layout-column) * 9);
 }
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
   #layout-viz #c10 {
     display: none;
   }
@@ -78,7 +80,7 @@
 #layout-viz #c11 {
   left: calc(var(--layout-gutter) * 11 + var(--layout-column) * 10);
 }
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
   #layout-viz #c11 {
     display: none;
   }
@@ -184,6 +186,11 @@ h1 + p.teaser {
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
+}
+#home-splash h1 {
+  max-width: calc(var(--layout-column) * 9 + var(--layout-gutter) * 8);
+  margin-left: auto;
+  margin-right: auto;
 }
 #home-splash p.teaser {
   margin: 0 auto;
