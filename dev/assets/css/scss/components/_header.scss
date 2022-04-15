@@ -1,5 +1,5 @@
 // Header
-// To Do: Mobile
+@use "foundation";
 
 header {
 	position: sticky;
@@ -18,7 +18,9 @@ header {
 	line-height: var(--line-height-M);
 	
 	nav {
-		flex: 1;
+		&.flex-grow {
+			flex-grow: 1;
+		}
 		text-align: right;
 		&.left {
 			text-align: left;
@@ -35,6 +37,17 @@ header {
 		li {
 			display: inline-block;
 			font-size: 1rem;
+			
+			&.optional-1, & .optional-1 {
+				@media (max-width: #{foundation.$layout-breakpoint-nav-1}){
+					display: none;
+				}
+			}
+			&.optional-2, & .optional-2 {
+				@media (max-width: #{foundation.$layout-breakpoint-nav-2}){
+					display: none;
+				}
+			}
 			
 			a#logo {
 				height: var(--line-height-M);

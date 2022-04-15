@@ -261,9 +261,11 @@ header {
   }
 }
 header nav {
-  flex: 1;
   text-align: right;
   height: var(--line-height-M);
+}
+header nav.flex-grow {
+  flex-grow: 1;
 }
 header nav.left {
   text-align: left;
@@ -278,6 +280,16 @@ header nav ul, header nav li {
 header nav li {
   display: inline-block;
   font-size: 1rem;
+}
+@media (max-width: 540px) {
+  header nav li.optional-1, header nav li .optional-1 {
+    display: none;
+  }
+}
+@media (max-width: 413px) {
+  header nav li.optional-2, header nav li .optional-2 {
+    display: none;
+  }
 }
 header nav li a#logo {
   height: var(--line-height-M);
