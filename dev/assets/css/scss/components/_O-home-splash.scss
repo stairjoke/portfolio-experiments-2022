@@ -8,6 +8,7 @@
 	align-items: center;
 	justify-content: center;
 	box-sizing: border-box;
+	overflow: hidden;
 	
 	h1 {
 		max-width: calc(var(--layout-column)*9 + var(--layout-gutter)*8);
@@ -27,6 +28,52 @@
 		@media (min-width: #{foundation.$layout-breakpoint-M}) and
 			   (max-width: 744px) {
 			max-width: calc(var(--layout-column)*5 + var(--layout-gutter)*4);
+		}
+	}
+	a.button {
+		display: block;
+		
+		width: calc(var(--layout-column)*3 + var(--layout-gutter)*2);
+		@media (min-width: #{foundation.$layout-breakpoint-M}) and
+			   (max-width: 744px) {
+			width: calc(var(--layout-column)*5 + var(--layout-gutter)*4);
+		}
+		line-height: 3em;
+		
+		margin: 0 auto;
+		margin-top: var(--layout-vertical-margin-S);
+		
+		border: none;
+		outline: none;
+		background: transparent;
+		background-color: transparent;
+		transition-property: background-color box-shadow;
+		transition-duration: 500ms;
+		transition-timing-function: ease-out;
+		
+		font-family: futura-pt,sans-serif;
+		font-size: 1.33rem;
+		color: var(--color-text-high-contrast);
+		text-align: center;
+		
+		background-color: var(--color-accent-1-darkened-fill);
+		border-radius: 2px;
+		
+		box-shadow: 0 0 var(--layout-vertical-margin-M) var(--color-shadow);
+		
+		cursor: url('../img/cursor-heart.png'), auto;
+		cursor: -webkit-image-set(
+		  url('../img/cursor-heart.png') 1x,
+		  url('../img/cursor-heart@2x.png') 2x,
+		  url('../img/cursor-heart@3x.png') 3x
+		), auto;
+		
+		&:hover, &:focus {
+			background-color: var(--color-accent-1-hover-fill);
+			transition-duration: 50ms;
+			text-decoration: none;
+			transition-timing-function: ease-in;
+			box-shadow: 0 0 var(--layout-vertical-margin-M) var(--color-glow);
 		}
 	}
 }
