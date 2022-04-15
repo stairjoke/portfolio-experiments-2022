@@ -30,9 +30,8 @@
     --layout-column: calc((100vw - (10*var(--layout-gutter)))/9);
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   :root {
-    --layout-gutter: 2rem;
     --layout-column: calc((100vw - (4*var(--layout-gutter)))/3);
   }
 }
@@ -43,7 +42,18 @@
   }
 }
 
+#layout-viz {
+  display: none;
+}
+#layout-viz .column {
+  display: none;
+}
+
+#layout-viz:target {
+  display: block;
+}
 #layout-viz:target .column {
+  display: block;
   background-color: rgba(255, 0, 0, 0.05);
   outline: solid rgba(200, 0, 0, 0.15) 1px;
   position: fixed;
@@ -175,7 +185,7 @@ h1 {
     font-size: 5rem;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   h1 {
     font-size: 3rem;
   }
@@ -214,16 +224,21 @@ h1 + p.teaser {
   margin-left: auto;
   margin-right: auto;
 }
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   #home-splash h1 {
     max-width: calc(var(--layout-column) * 3 + var(--layout-gutter) * 2);
+  }
+}
+@media (max-width: 744px) {
+  #home-splash h1 {
+    font-size: 10.6vw;
   }
 }
 #home-splash p.teaser {
   margin: 0 auto;
   max-width: calc(var(--layout-column) * 3 + var(--layout-gutter) * 2);
 }
-@media (min-width: 768px) and (max-width: 1100px) {
+@media (min-width: 600px) and (max-width: 744px) {
   #home-splash p.teaser {
     max-width: calc(var(--layout-column) * 5 + var(--layout-gutter) * 4);
   }
