@@ -1,6 +1,7 @@
 //Foundation
 $layout-breakpoint-L: 1100px;
 $layout-breakpoint-M: 768px;
+$layout-breakpoint-S: 480px;
 
 :root {
 	--line-height-M: 2rem;
@@ -27,11 +28,28 @@ $layout-breakpoint-M: 768px;
 	
 	--border-radius-M: 0.5rem;
 	
-	--layout-column: calc((100vw - (12*2rem))/11);
-	@media (max-width: #{$layout-breakpoint-L}) {
-		--layout-column: calc((100vw - (10*2rem))/9);
-	}
+	//Default: 11 columns
 	--layout-gutter: 2rem;
+	--layout-column: calc((100vw - (12*var(--layout-gutter)))/11);
+	
+	//Large: 9 columns
+	@media (max-width: #{$layout-breakpoint-L}) {
+		--layout-column: calc((100vw - (10*var(--layout-gutter)))/9);
+	}
+	
+	//Medium: 3 columns
+	@media (max-width: #{$layout-breakpoint-M}) {
+		--layout-gutter: 2rem;
+		--layout-column: calc((100vw - (4*var(--layout-gutter)))/3);
+		
+	}
+	
+	//Small: 3 columns, reduced gutter
+	@media (max-width: #{$layout-breakpoint-S}) {
+		--layout-gutter: 1rem;
+		--layout-column: calc((100vw - (4*var(--layout-gutter)))/3);
+		
+	}
 	
 	--layout-vertical-margin-SX: 12px;
 	--layout-vertical-margin-S: 36px;

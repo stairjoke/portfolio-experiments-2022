@@ -24,7 +24,7 @@ h1 {
 		font-size: 3rem;
 	}
 	
-	@media (max-width: 414px) {
+	@media (max-width: #{foundation.$layout-breakpoint-S}) {
 		font-size: 2rem;
 	}
 }

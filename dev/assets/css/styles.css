@@ -12,8 +12,8 @@
   --color-ukraineFlag-top: #005abb;
   --color-ukraineFlag-bottom: #fdd400;
   --border-radius-M: 0.5rem;
-  --layout-column: calc((100vw - (12*2rem))/11);
   --layout-gutter: 2rem;
+  --layout-column: calc((100vw - (12*var(--layout-gutter)))/11);
   --layout-vertical-margin-SX: 12px;
   --layout-vertical-margin-S: 36px;
   --layout-vertical-margin-M: 60px;
@@ -27,7 +27,19 @@
 }
 @media (max-width: 1100px) {
   :root {
-    --layout-column: calc((100vw - (10*2rem))/9);
+    --layout-column: calc((100vw - (10*var(--layout-gutter)))/9);
+  }
+}
+@media (max-width: 768px) {
+  :root {
+    --layout-gutter: 2rem;
+    --layout-column: calc((100vw - (4*var(--layout-gutter)))/3);
+  }
+}
+@media (max-width: 480px) {
+  :root {
+    --layout-gutter: 1rem;
+    --layout-column: calc((100vw - (4*var(--layout-gutter)))/3);
   }
 }
 
@@ -168,7 +180,7 @@ h1 {
     font-size: 3rem;
   }
 }
-@media (max-width: 414px) {
+@media (max-width: 480px) {
   h1 {
     font-size: 2rem;
   }
@@ -202,9 +214,19 @@ h1 + p.teaser {
   margin-left: auto;
   margin-right: auto;
 }
+@media (max-width: 480px) {
+  #home-splash h1 {
+    max-width: calc(var(--layout-column) * 3 + var(--layout-gutter) * 2);
+  }
+}
 #home-splash p.teaser {
   margin: 0 auto;
   max-width: calc(var(--layout-column) * 3 + var(--layout-gutter) * 2);
+}
+@media (min-width: 768px) and (max-width: 1100px) {
+  #home-splash p.teaser {
+    max-width: calc(var(--layout-column) * 5 + var(--layout-gutter) * 4);
+  }
 }
 
 header {
