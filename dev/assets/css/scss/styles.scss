@@ -5,8 +5,9 @@
 @use "components/_A-headers";
 @use "components/_A-text-blocks";
 
-@use "components/_O-home-splash.scss";
+@use "components/_M-H2.scss";
 
+@use "components/_O-home-splash.scss";
 @use "components/_O-header.scss";
 
 // Header switch to fixed instead o fsticky, add JS for isScrolled to show header?
