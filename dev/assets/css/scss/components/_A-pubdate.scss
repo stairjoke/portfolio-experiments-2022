@@ -1,3 +1,18 @@
 // Atom — Publication Date TIME element
+@use "foundation";
 
-time[pubdate=pubdate] {}
+.pubdate {
+	display: block;
+	@include foundation.layout-full-width;
+	margin-top: -1em;
+	text-align: right;
+	position: relative;
+	z-index: 1;
+}
+time[pubdate=pubdate] {
+	display: inline-block;
+	background-color: var(--color-element-background);
+	padding: 0 var(--layout-vertical-margin-XS);
+	line-height: var(--line-height-M);
+	box-shadow: 0 0 var(--layout-vertical-margin-XS) var(--color-shadow-strong);
+}

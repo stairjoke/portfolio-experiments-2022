@@ -22,12 +22,12 @@ $layout-breakpoint-S: 480px;
 	}
 	
 	--color-background: #31302e;
-	--color-background-high-opacity: rgba(49,48,46,0.8);
-	--color-element-background: rgba(255,255,255,0.09);
+	--color-element-background: rgb(58, 57, 54);
 	
 	--color-text: #cdc6c6;
 	--color-text-high-contrast: white;
 	--color-shadow: rgba(0,0,0,0.06);
+	--color-shadow-strong: rgba(0,0,0,0.27);
 	--color-glow: rgba(255,255,255,0.06);
 	
 	--color-ukraineFlag-top: #005abb;
@@ -55,8 +55,8 @@ $layout-breakpoint-S: 480px;
 		--layout-column: calc((100vw - (4*var(--layout-gutter)))/3);
 	}
 	
-	--layout-vertical-margin-SX: 0.6667rem;
-	--layout-vertical-margin-S: calc(var(--layout-vertical-margin-SX)*2);
+	--layout-vertical-margin-XS: 0.6667rem;
+	--layout-vertical-margin-S: calc(var(--layout-vertical-margin-XS)*2);
 	--layout-vertical-margin-M: calc(var(--layout-vertical-margin-S)*2);
 	--layout-vertical-margin-L: calc(var(--layout-vertical-margin-M)*2);
 	--layout-vertical-margin-XL: calc(var(--layout-vertical-margin-L)*2);

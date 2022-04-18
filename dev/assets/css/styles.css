@@ -6,19 +6,19 @@
   --color-accent-1-hover-fill: RGB(119, 183, 67);
   --color-accent-1-darkened-fill: RGB(104, 162, 57);
   --color-background: #31302e;
-  --color-background-high-opacity: rgba(49,48,46,0.8);
-  --color-element-background: rgba(255,255,255,0.09);
+  --color-element-background: rgb(58, 57, 54);
   --color-text: #cdc6c6;
   --color-text-high-contrast: white;
   --color-shadow: rgba(0,0,0,0.06);
+  --color-shadow-strong: rgba(0,0,0,0.27);
   --color-glow: rgba(255,255,255,0.06);
   --color-ukraineFlag-top: #005abb;
   --color-ukraineFlag-bottom: #fdd400;
   --border-radius-M: 0.5rem;
   --layout-gutter: 2rem;
   --layout-column: calc((100vw - (12*var(--layout-gutter)))/11);
-  --layout-vertical-margin-SX: 0.6667rem;
-  --layout-vertical-margin-S: calc(var(--layout-vertical-margin-SX)*2);
+  --layout-vertical-margin-XS: 0.6667rem;
+  --layout-vertical-margin-S: calc(var(--layout-vertical-margin-XS)*2);
   --layout-vertical-margin-M: calc(var(--layout-vertical-margin-S)*2);
   --layout-vertical-margin-L: calc(var(--layout-vertical-margin-M)*2);
   --layout-vertical-margin-XL: calc(var(--layout-vertical-margin-L)*2);
@@ -144,6 +144,9 @@ main .splash {
   margin-top: calc(var(--layout-gutter) * -2 - var(--line-height-M));
   padding-top: calc(var(--layout-gutter) * 2 + var(--line-height-M));
 }
+main section:not(:first-child) {
+  margin-top: var(--layout-vertical-margin-XL);
+}
 
 a, a:link, a:active, a:visited {
   text-decoration: none;
@@ -208,11 +211,17 @@ h1 {
 }
 
 h2 {
-  margin: var(--layout-vertical-margin-XL) auto var(--layout-vertical-margin-L) auto;
+  position: relative;
+  z-index: 2;
+  margin-top: 0;
+  margin-bottom: var(--layout-vertical-margin-L);
+  margin-left: auto;
+  margin-right: auto;
   width: calc(var(--layout-column) * 9 + var(--layout-gutter) * 8);
   background-color: var(--color-element-background);
   box-sizing: border-box;
   padding: 0 1rem;
+  box-shadow: 0 0 var(--layout-vertical-margin-XS) var(--color-shadow-strong);
 }
 @media (max-width: 600px) {
   h2 {
@@ -235,14 +244,71 @@ h1 + p.teaser {
   margin: var(--layout-vertical-margin-M) var(--layout-gutter);
 }
 
+.pubdate {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: calc(var(--layout-column) * 9 + var(--layout-gutter) * 8);
+  margin-top: -1em;
+  text-align: right;
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 600px) {
+  .pubdate {
+    width: calc(var(--layout-column) * 3 + var(--layout-gutter) * 2);
+  }
+}
+
+time[pubdate=pubdate] {
+  display: inline-block;
+  background-color: var(--color-element-background);
+  padding: 0 var(--layout-vertical-margin-XS);
+  line-height: var(--line-height-M);
+  box-shadow: 0 0 var(--layout-vertical-margin-XS) var(--color-shadow-strong);
+}
+
+nav.breadcrumb {
+  margin-left: auto;
+  margin-right: auto;
+  width: calc(var(--layout-column) * 9 + var(--layout-gutter) * 8);
+}
+h2 + nav.breadcrumb {
+  margin-top: calc(var(--layout-vertical-margin-L) * -1 + var(--layout-vertical-margin-XS));
+  margin-bottom: var(--layout-vertical-margin-L);
+}
+@media (max-width: 600px) {
+  nav.breadcrumb {
+    width: calc(var(--layout-column) * 3 + var(--layout-gutter) * 2);
+  }
+}
+nav.breadcrumb ul, nav.breadcrumb ol, nav.breadcrumb li {
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+  font-size: 0;
+}
+nav.breadcrumb li {
+  display: inline-block;
+  font-size: 1rem;
+}
+
 #home-splash {
   padding-bottom: var(--layout-vertical-margin-L);
-  min-height: 90vh;
+  min-height: 100vh;
+  transition-property: min-height;
+  transition-duration: 2s;
+  transition-timing-function: ease-in-out;
   display: flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
   overflow: hidden;
+}
+.scrolled #home-splash {
+  min-height: 0;
 }
 #home-splash h1 {
   max-width: calc(var(--layout-column) * 9 + var(--layout-gutter) * 8);
@@ -302,9 +368,11 @@ h1 + p.teaser {
 
 header {
   position: sticky;
+  z-index: 100;
   top: 0;
   padding: var(--layout-gutter);
   box-sizing: border-box;
+  background-color: var(--color-accent-1);
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
@@ -314,6 +382,7 @@ header {
   header {
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
+    background-color: transparent;
   }
 }
 header nav {
@@ -386,7 +455,7 @@ header nav li a {
   transition-timing-function: ease-out;
 }
 header nav li a:hover, header nav li a:focus {
-  background-color: var(--color-element-background);
+  background-color: rgba(255, 255, 255, 0.16);
   transition-duration: 110ms;
 }
 header nav li:first-child a {

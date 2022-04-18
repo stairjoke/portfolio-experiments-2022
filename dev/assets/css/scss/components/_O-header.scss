@@ -3,13 +3,16 @@
 
 header {
 	position: sticky;
+	z-index: 100;
 	top: 0;
 	padding: var(--layout-gutter);
 	box-sizing: border-box;
+	background-color: var(--color-accent-1);
 	@supports (backdrop-filter: blur(10px)) or
 			  (-webkit-backdrop-filter: blur(10px)) {
 		-webkit-backdrop-filter: blur(10px); //Safari still uses the prefix
 		backdrop-filter: blur(10px);
+		background-color: transparent;
 	}
 	
 	display: flex;
@@ -99,7 +102,7 @@ header {
 				transition-duration: 250ms;
 				transition-timing-function: ease-out;
 				&:hover, &:focus {
-					background-color: var(--color-element-background);
+					background-color: rgba(255,255,255,0.16);
 					transition-duration: 110ms;
 				}
 			}

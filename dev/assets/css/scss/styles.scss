@@ -4,10 +4,11 @@
 @use "components/_A-floaters";
 @use "components/_A-headers";
 @use "components/_A-text-blocks";
-@use "components/_A-pubdate.scss";
+@use "components/_A-pubdate";
+@use "components/_A-breadbrumb-navigation";
 
-@use "components/_O-home-splash.scss";
-@use "components/_O-header.scss";
+@use "components/_O-home-splash";
+@use "components/_O-header";
 
 // Header switch to fixed instead o fsticky, add JS for isScrolled to show header?
 

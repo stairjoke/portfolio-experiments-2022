@@ -34,10 +34,13 @@ h1 {
 	text-shadow: 0 0 var(--layout-vertical-margin-L) var(--color-shadow);
 }
 h2 {
+	position: relative;
+	z-index: 2;
 	margin-top: 0;
 	margin-bottom: var(--layout-vertical-margin-L);
 	@include foundation.layout-full-width;
 	background-color: var(--color-element-background);
 	box-sizing: border-box;
 	padding: 0 1rem;
+	box-shadow: 0 0 var(--layout-vertical-margin-XS) var(--color-shadow-strong);
 }
