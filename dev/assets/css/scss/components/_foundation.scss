@@ -61,6 +61,14 @@ $layout-breakpoint-S: 480px;
 	--layout-vertical-margin-L: calc(var(--layout-vertical-margin-M)*2);
 	--layout-vertical-margin-XL: calc(var(--layout-vertical-margin-L)*2);
 }
+@mixin layout-full-width() {
+	margin-left: auto;
+	margin-right: auto;
+	width: calc(var(--layout-column)*9 + var(--layout-gutter)*8);
+	@media (max-width: #{$layout-breakpoint-M}) {
+		width: calc(var(--layout-column)*3 + var(--layout-gutter)*2);
+	}
+}
 
 #layout-viz {
 	display: none;
@@ -149,5 +157,9 @@ main {
 	.splash {
 		margin-top: calc(var(--layout-gutter)*-2 - var(--line-height-M));
 		padding-top: calc(var(--layout-gutter)*2 + var(--line-height-M));
+	}
+	
+	section:not(:first-child) {
+		margin-top: var(--layout-vertical-margin-XL);
 	}
 }
