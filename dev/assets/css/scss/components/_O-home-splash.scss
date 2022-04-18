@@ -15,9 +15,6 @@
 		@media (max-width: #{foundation.$layout-breakpoint-M}) {
 			max-width: calc(var(--layout-column)*3 + var(--layout-gutter)*2);
 		}
-		@media (max-width: 744px) {
-			font-size: 10.6vw;
-		}
 		margin-left: auto;
 		margin-right: auto;
 	}

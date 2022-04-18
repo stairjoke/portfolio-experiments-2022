@@ -59,6 +59,7 @@ $layout-breakpoint-S: 480px;
 	--layout-vertical-margin-S: 36px;
 	--layout-vertical-margin-M: 60px;
 	--layout-vertical-margin-L: 120px;
+	--layout-vertical-margin-XL: 240px;
 }
 
 #layout-viz {
@@ -71,8 +72,8 @@ $layout-breakpoint-S: 480px;
 	display: block;
 	.column {
 		display: block;
-		background-color: rgba(255,0,0,0.05);
-		outline: solid rgba(200,0,0,0.15) 1px;
+		background-color: rgba(255,0,0,0.1);
+		outline: solid rgba(200,0,0,0.2) 1px;
 		position: fixed;
 		top: 0;
 		bottom: 0;

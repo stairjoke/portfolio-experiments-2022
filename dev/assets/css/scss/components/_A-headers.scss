@@ -8,23 +8,38 @@ h1, h2, h3 {
 	letter-spacing: 0.04rem;
 	-webkit-text-size-adjust: none;
 }
-h1 {
-	text-align: center;
+h1, h2 {
 	font-size: 6rem;
-	color: var(--color-text-high-contrast);
-	line-height: 111%;
-	text-shadow: 0 0 var(--layout-vertical-margin-L) var(--color-shadow);
-	margin: 0 0 var(--layout-vertical-margin-M) 0;
-	
 	@media (max-width: #{foundation.$layout-breakpoint-L}) {
 		font-size: 5rem;
 	}
+	@media (max-width: 744px) {
+		font-size: 10.6vw;
+	}
 	
-	@media (max-width: #{foundation.$layout-breakpoint-M}) {
+/*	@media (max-width: #{foundation.$layout-breakpoint-M}) {
 		font-size: 3rem;
 	}
 	
 	@media (max-width: #{foundation.$layout-breakpoint-S}) {
 		font-size: 2rem;
+	} */
+	
+	color: var(--color-text-high-contrast);
+	line-height: 111%;
+	margin: 0 0 var(--layout-vertical-margin-M) 0;
+}
+h1 {
+	text-align: center;
+	text-shadow: 0 0 var(--layout-vertical-margin-L) var(--color-shadow);
+}
+h2 {
+	margin: var(--layout-vertical-margin-XL) auto var(--layout-vertical-margin-L) auto;
+	width: calc(var(--layout-column)*9 + var(--layout-gutter)*8);
+	@media (max-width: #{foundation.$layout-breakpoint-M}) {
+		width: calc(var(--layout-column)*3 + var(--layout-gutter)*2);
 	}
+	background-color: var(--color-element-background);
+	box-sizing: border-box;
+	padding: 0 1rem;
 }
