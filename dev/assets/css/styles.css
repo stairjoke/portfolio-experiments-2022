@@ -17,7 +17,8 @@
   --border-radius-M: 0.5rem;
   --layout-gutter: 2rem;
   --layout-column: calc((100vw - (12*var(--layout-gutter)))/11);
-  --layout-vertical-margin-XS: 0.6667rem;
+  --layout-vertical-margin-XXS: 0.3333rem;
+  --layout-vertical-margin-XS: calc(var(--layout-vertical-margin-XXS)*2);
   --layout-vertical-margin-S: calc(var(--layout-vertical-margin-XS)*2);
   --layout-vertical-margin-M: calc(var(--layout-vertical-margin-S)*2);
   --layout-vertical-margin-L: calc(var(--layout-vertical-margin-M)*2);
@@ -46,6 +47,47 @@
     --layout-gutter: 1rem;
     --layout-column: calc((100vw - (4*var(--layout-gutter)))/3);
   }
+}
+
+html {
+  font-family: futura-pt, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.0625em;
+  margin: 0;
+  padding: 0;
+  line-height: var(--line-height-S);
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  margin: 0;
+  padding: 0;
+}
+
+header, main, footer {
+  width: 100%;
+  margin: 0 auto;
+}
+
+main {
+  margin-top: calc(var(--layout-gutter) * -2 - var(--line-height-M));
+  padding-top: calc(var(--layout-gutter) * 2 + var(--line-height-M));
+}
+main .splash {
+  margin-top: calc(var(--layout-gutter) * -2 - var(--line-height-M));
+  padding-top: calc(var(--layout-gutter) * 2 + var(--line-height-M));
+}
+main section:not(:first-child) {
+  margin-top: var(--layout-vertical-margin-XL);
+}
+
+.inline-icon {
+  height: var(--line-height-M);
+}
+.inline-icon._12-36 {
+  aspect-ratio: 12/36;
 }
 
 #layout-viz {
@@ -112,40 +154,6 @@
   #layout-viz:target #c11 {
     display: none;
   }
-}
-
-html {
-  font-family: futura-pt, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1.0625em;
-  margin: 0;
-  padding: 0;
-  line-height: var(--line-height-S);
-}
-
-body {
-  background-color: var(--color-background);
-  color: var(--color-text);
-  margin: 0;
-  padding: 0;
-}
-
-header, main, footer {
-  width: 100%;
-  margin: 0 auto;
-}
-
-main {
-  margin-top: calc(var(--layout-gutter) * -2 - var(--line-height-M));
-  padding-top: calc(var(--layout-gutter) * 2 + var(--line-height-M));
-}
-main .splash {
-  margin-top: calc(var(--layout-gutter) * -2 - var(--line-height-M));
-  padding-top: calc(var(--layout-gutter) * 2 + var(--line-height-M));
-}
-main section:not(:first-child) {
-  margin-top: var(--layout-vertical-margin-XL);
 }
 
 a, a:link, a:active, a:visited {
@@ -293,6 +301,21 @@ nav.breadcrumb ul, nav.breadcrumb ol, nav.breadcrumb li {
 nav.breadcrumb li {
   display: inline-block;
   font-size: 1rem;
+}
+nav.breadcrumb li a {
+  display: inline-block;
+  padding: 0 var(--layout-vertical-margin-XXS);
+  line-height: var(--line-height-M);
+  vertical-align: top;
+  color: var(--color-text);
+  text-decoration: underline;
+}
+nav.breadcrumb li a:link, nav.breadcrumb li a:active, nav.breadcrumb li a:visited {
+  color: var(--color-text-high-contrast);
+  text-decoration: none;
+}
+nav.breadcrumb li a:hover, nav.breadcrumb li a:focus {
+  text-decoration: underline;
 }
 
 #home-splash {
