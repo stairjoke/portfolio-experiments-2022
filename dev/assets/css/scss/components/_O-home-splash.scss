@@ -47,7 +47,7 @@
 		outline: none;
 		background: transparent;
 		background-color: transparent;
-		transition-property: background-color box-shadow;
+		transition-property: background-color box-shadow transform;
 		transition-duration: 500ms;
 		transition-timing-function: ease-out;
 		
@@ -59,7 +59,7 @@
 		background-color: var(--color-accent-1-darkened-fill);
 		border-radius: 2px;
 		
-		box-shadow: 0 0 var(--layout-vertical-margin-M) var(--color-shadow);
+		box-shadow: 0 0 var(--layout-vertical-margin-L) var(--color-accent-1-hover-fill);
 		
 		cursor: url('../img/cursor-heart.png'), auto;
 		cursor: -webkit-image-set(
@@ -69,11 +69,12 @@
 		), auto;
 		
 		&:hover, &:focus {
+			transform: scale(1.02);
 			background-color: var(--color-accent-1-hover-fill);
-			transition-duration: 50ms;
+			transition-duration: 110ms;
 			text-decoration: none;
 			transition-timing-function: ease-in;
-			box-shadow: 0 0 var(--layout-vertical-margin-M) var(--color-glow);
+			box-shadow: 0 0 var(--layout-vertical-margin-L) var(--color-accent-1-darkened-fill);
 		}
 	}
 }
