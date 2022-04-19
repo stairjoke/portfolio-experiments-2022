@@ -20,7 +20,7 @@ $layout-breakpoint-S: 480px;
 		--color-accent-1-hover-fill: color(display-p3 0.476 0.735 0.265); //P3
 		--color-accent-1-darkened-fill: color(display-p3 0.409 0.636 0.224); //P3
 	}
-	
+		
 	--color-background: #31302e;
 	--color-element-background: rgb(58, 57, 54);
 	
@@ -71,6 +71,11 @@ $layout-breakpoint-S: 480px;
 	}
 }
 
+::selection {
+	background-color: var(--color-text-selection, black);
+	color: var(--color-text-high-contrast)
+}
+
 html {
 	font-family: futura-pt,sans-serif;
 	font-weight: 400;
@@ -79,6 +84,7 @@ html {
 	margin: 0;
 	padding: 0;
 	line-height: var(--line-height-S);
+	accent-color: var(--color-accent-1);
 }
 body {
 	background-color: var(--color-background);
@@ -101,6 +107,7 @@ main {
 	
 	section:not(:first-child) {
 		margin-top: var(--layout-vertical-margin-XL);
+		--color-text-selection: var(--color-accent-1);
 	}
 }
 
