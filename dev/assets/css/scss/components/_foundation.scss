@@ -128,6 +128,8 @@ main {
 	}
 }
 #layout-viz:target {
+	position: absolute;
+	z-index: 1000;
 	display: block;
 	.column {
 		display: block;

@@ -25,9 +25,7 @@ header {
 			flex-grow: 1;
 		}
 		text-align: right;
-		&.left {
-			text-align: left;
-		}
+		
 		height: var(--line-height-M);
 		
 		ul, li {
