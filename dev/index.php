@@ -7,8 +7,8 @@
 		<link rel="stylesheet" href="https://use.typekit.net/xyc8fjn.css">
 		<link rel="stylesheet" href="assets/css/styles.css">
 		
-		<meta name="theme-color" content="color(display-p3 0.4392 0.6823 0.2392 / 1)" media="(prefers-color-scheme: light)">
-		<meta name="theme-color" content="color(display-p3 0.343 0.533 0.187 / 1)" media="(prefers-color-scheme: dark)">
+		<meta name="theme-color" content="#31302e" media="(prefers-color-scheme: light)">
+		<meta name="theme-color" content="#31302e" media="(prefers-color-scheme: dark)">
 		
 	</head>
 	<body>
