@@ -2,6 +2,7 @@
   --line-height-M: 2rem;
   --line-height-S: 1.3rem;
   --color-accent-1: RGB(112, 174, 61);
+  --color-accent-1-transparent: rgba(112, 174, 61, 0.8);
   --color-accent-1-hover: RGB(138, 197, 89);
   --color-accent-1-hover-fill: RGB(119, 183, 67);
   --color-accent-1-darkened-fill: RGB(104, 162, 57);
@@ -27,6 +28,7 @@
 @supports (color: color(display-p3 1 1 1)) {
   :root {
     --color-accent-1: color(display-p3 0.4392 0.6823 0.2392);
+    --color-accent-1-transparent: color(display-p3 0.4392 0.6823 0.2392 / 0.8);
     --color-accent-1-hover: color(display-p3 0.5411 0.7725 0.349);
     --color-accent-1-hover-fill: color(display-p3 0.476 0.735 0.265);
     --color-accent-1-darkened-fill: color(display-p3 0.409 0.636 0.224);
@@ -330,7 +332,7 @@ nav.breadcrumb li a:hover, nav.breadcrumb li a:focus {
 
 #home-splash {
   padding-bottom: var(--layout-vertical-margin-L);
-  min-height: 80vh;
+  min-height: 90vh;
   transition-property: min-height;
   transition-duration: 2s;
   transition-timing-function: ease-in-out;
@@ -400,23 +402,24 @@ nav.breadcrumb li a:hover, nav.breadcrumb li a:focus {
 }
 
 header {
+  /*
   position: sticky;
   z-index: 100;
   top: 0;
+  */
   padding: var(--layout-gutter);
   box-sizing: border-box;
-  background-color: var(--color-accent-1);
+  /*
+  @supports (backdrop-filter: blur(10px)) or
+  		  (-webkit-backdrop-filter: blur(10px)) {
+  	-webkit-backdrop-filter: blur(10px); //Safari still uses the prefix
+  	backdrop-filter: blur(10px);
+  }
+  */
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
   line-height: var(--line-height-M);
-}
-@supports (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)) {
-  header {
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    background-color: rgba(0, 0, 0, 0.225);
-  }
 }
 header nav {
   text-align: right;

@@ -10,12 +10,15 @@ $layout-breakpoint-S: 480px;
 	--line-height-S: 1.3rem;
 	
 	--color-accent-1: RGB(112, 174, 61); //re-mapped to sRGB
+	--color-accent-1-transparent: rgba(112, 174, 61, 0.8);
+	
 	--color-accent-1-hover: RGB(138, 197, 89); //re-mapped to sRGB
 	--color-accent-1-hover-fill: RGB(119, 183, 67); //re-mapped to sRGB
 	--color-accent-1-darkened-fill: RGB(104, 162, 57); //re-mapped to sRGB
 	
 	@supports (color: color(display-p3 1 1 1)) {
 		--color-accent-1: color(display-p3 0.4392 0.6823 0.2392); //P3
+		--color-accent-1-transparent: color(display-p3 0.4392 0.6823 0.2392 / 0.8);
 		--color-accent-1-hover: color(display-p3 0.5411 0.7725 0.349); //P3
 		--color-accent-1-hover-fill: color(display-p3 0.476 0.735 0.265); //P3
 		--color-accent-1-darkened-fill: color(display-p3 0.409 0.636 0.224); //P3
