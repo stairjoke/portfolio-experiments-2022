@@ -2,7 +2,7 @@
 # ------------
 .nova
 **/.DS_Store
-Icon
+**/Icon
 
 # Temporary files
 # ---------------
