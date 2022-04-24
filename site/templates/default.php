@@ -91,6 +91,7 @@
 			<section>
 				<?php
 					if($page->has('Published')){
+					//https://forum.getkirby.com/t/translating-date-formats/23435
 						?>
 						<div class="pubdate">
 							<time datetime="<?= $page->published()->toDate('d.m.Y') ?>" pubdate="pubdate"><?= $page->published()->toDate('F l, Y') ?></time>
