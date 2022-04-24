@@ -79,27 +79,7 @@
 				</g>
 			</symbol>
 		</svg>
-		<header>
-			<nav>
-				<ul>
-					<li class="optional-1">
-						<a id="logo" href=""><svg>
-								<use xlink:href="#logo"></use>
-							</svg><span>Home</span></a>
-					</li>
-					<li>
-						<a href="">🇩🇪<span class="optional-2"> Auf deutsch ansehen</span></a>
-					</li>
-				</ul>
-			</nav>
-			<nav class="flex-grow">
-				<ul>
-					<li><a href="">Home</a></li>
-					<li><a href="">Projects</a></li>
-					<li><a href="">Blog</a></li>
-				</ul>
-			</nav>
-		</header>
+		<?php snippet('Header') ?>
 		<main>
 			<section class=splash id=home-splash>
 				<div>
@@ -109,9 +89,14 @@
 				</div>
 			</section>
 			<section>
-				<div class="pubdate">
-					<time datetime="2022-04-18" pubdate="pubdate">April 18, 2022</time>
-				</div>
+				<?php
+					if($page->has('Published')){
+						?>
+						<div class="pubdate">
+							<time datetime="<?= $page->published()->toDate('d.m.Y') ?>" pubdate="pubdate"><?= $page->published()->toDate('F l, Y') ?></time>
+						</div><?php
+					}
+				?>
 				<h2>Latest Content</h2>
 				<nav class="breadcrumb">
 					<ol>
