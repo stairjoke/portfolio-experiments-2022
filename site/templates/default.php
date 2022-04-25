@@ -81,13 +81,15 @@
 		</svg>
 		<?php snippet('Header') ?>
 		<main>
-			<section class=splash id=home-splash>
-				<div>
-					<h1>Hi, I'm Wenzel, a coding&nbsp;designer.</h1>
-					<p class="teaser">I'm passionate about good design, dry code, and learning new skills. I thrive at the intersection of art and technology.</p>
-					<a class="button" href="">Hire me!</a>
-				</div>
-			</section>
+			<?php
+				if($page->has('Splash')){
+				?>
+				<section class=splash id="<?= $page->splash() ?>">
+					<?php snippet('splash_' . $page->splash()->value()); ?>
+				</section>
+				<?php
+				}
+			?>
 			<section>
 				<?php
 					if($page->has('Published')){
