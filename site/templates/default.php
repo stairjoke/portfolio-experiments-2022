@@ -3,10 +3,15 @@
 	<?php snippet('html-head') ?>
 	<body>
 		<?php snippet('svg-sprite') ?>
-		<?php snippet('Header') ?>
+		<?php
+			if($page->splash()->exists()) {
+				snippet('static-header');
+			}
+		?>
 		<main>
+			
 			<?php
-				if($page->has('Splash')){
+				if($page->splash()->exists()){
 				?>
 				<section class=splash id="<?= $page->splash() ?>">
 					<?php snippet('splash_' . $page->splash()->value()); ?>

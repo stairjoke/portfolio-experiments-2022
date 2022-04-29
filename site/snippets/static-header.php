@@ -1,5 +1,5 @@
 <?php
-//Header Snippet
+//Static Header
 ?>
 <header>
 	<?php snippet('main-navigation') ?>
