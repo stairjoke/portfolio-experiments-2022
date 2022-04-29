@@ -264,7 +264,7 @@ h1 + p.teaser {
   margin-left: auto;
   margin-right: auto;
   width: calc(var(--layout-column) * 9 + var(--layout-gutter) * 8);
-  margin-top: -1em;
+  margin-top: calc(var(--line-height-M) * -1);
   text-align: right;
   position: relative;
   z-index: 1;
