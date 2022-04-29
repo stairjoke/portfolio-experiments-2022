@@ -10,4 +10,8 @@ Splash: home-splash
 
 ----
 
+Static_Header_Appearance: Accent
+
+----
+
 Headline: Latest Content

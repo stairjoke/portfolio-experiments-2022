@@ -16,21 +16,24 @@ header {
 		backdrop-filter: blur(10px);
 	}
 	*/
-	
-	
+
+  &.accent {
+    background-color: var(--color-accent-1);
+  }
+
 	display: flex;
 	flex-wrap: nowrap;
 	justify-content: space-between;
 	line-height: var(--line-height-M);
-	
+
 	nav {
 		&.flex-grow {
 			flex-grow: 1;
 		}
 		text-align: right;
-		
+
 		height: var(--line-height-M);
-		
+
 		ul, li {
 			list-style: none;
 			margin: 0;
@@ -41,7 +44,7 @@ header {
 		li {
 			display: inline-block;
 			font-size: 1rem;
-			
+
 			&.optional-1, & .optional-1 {
 				@media (max-width: #{foundation.$layout-breakpoint-nav-1}){
 					display: none;
@@ -52,10 +55,10 @@ header {
 					display: none;
 				}
 			}
-			
+
 			a#logo {
 				height: var(--line-height-M);
-				
+
 				span {
 					display: inline-block;
 					vertical-align: top;
@@ -81,7 +84,7 @@ header {
 					//fill: var(--color-text);
 					fill: url(#ukraineFlag);
 					margin-right: .75rem;
-					
+
 					transition-property: transform;
 					transition-duration: 250ms;
 					transition-timing-function: ease-out;
