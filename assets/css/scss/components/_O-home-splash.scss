@@ -3,7 +3,9 @@
 
 #home-splash {
 	padding-bottom: var(--layout-vertical-margin-L);
-	min-height: 90vh;
+
+  //height of splash = 90vh - height of Header
+	min-height: calc(90vh - var(--layout-gutter)*2 - var(--line-height-M));
 	transition-property: min-height;
 	transition-duration: 2s;
 	transition-timing-function: ease-in-out;
@@ -15,7 +17,7 @@
 	justify-content: center;
 	box-sizing: border-box;
 	overflow: hidden;
-	
+
 	h1 {
 		max-width: calc(var(--layout-column)*9 + var(--layout-gutter)*8);
 		@media (max-width: #{foundation.$layout-breakpoint-M}) {
@@ -24,7 +26,7 @@
 		margin-left: auto;
 		margin-right: auto;
 	}
-	
+
 	p.teaser {
 		margin: 0 auto;
 		max-width: calc(var(--layout-column)*3 + var(--layout-gutter)*2);
@@ -35,17 +37,17 @@
 	}
 	a.button {
 		display: block;
-		
+
 		width: calc(var(--layout-column)*3 + var(--layout-gutter)*2);
 		@media (min-width: #{foundation.$layout-breakpoint-M}) and
 			   (max-width: 744px) {
 			width: calc(var(--layout-column)*5 + var(--layout-gutter)*4);
 		}
 		line-height: 3em;
-		
+
 		margin: 0 auto;
 		margin-top: var(--layout-vertical-margin-S);
-		
+
 		border: none;
 		outline: none;
 		background: transparent;
@@ -53,24 +55,24 @@
 		transition-property: background-color box-shadow transform;
 		transition-duration: 500ms;
 		transition-timing-function: ease-out;
-		
+
 		font-family: futura-pt,sans-serif;
 		font-size: 1.33rem;
 		color: var(--color-text-high-contrast);
 		text-align: center;
-		
+
 		background-color: var(--color-accent-1-darkened-fill);
 		border-radius: 2px;
-		
+
 		box-shadow: 0 0 var(--layout-vertical-margin-L) var(--color-accent-1-hover-fill);
-		
+
 		cursor: url('../img/cursor-heart.png'), auto;
 		cursor: -webkit-image-set(
 		  url('../img/cursor-heart.png') 1x,
 		  url('../img/cursor-heart@2x.png') 2x,
 		  url('../img/cursor-heart@3x.png') 3x
 		), auto;
-		
+
 		&:hover, &:focus {
 			transform: scale(1.02);
 			background-color: var(--color-accent-1-hover-fill);

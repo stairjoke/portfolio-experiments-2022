@@ -2,23 +2,26 @@
 @use "foundation";
 
 header {
-	/*
-	position: sticky;
-	z-index: 100;
-	top: 0;
-	*/
 	padding: var(--layout-gutter);
 	box-sizing: border-box;
-	/*
-	@supports (backdrop-filter: blur(10px)) or
-			  (-webkit-backdrop-filter: blur(10px)) {
-		-webkit-backdrop-filter: blur(10px); //Safari still uses the prefix
-		backdrop-filter: blur(10px);
-	}
-	*/
-
   &.accent {
     background-color: var(--color-accent-1);
+  }
+
+  &.sticky {
+    position: sticky;
+
+    //Place just below splash, but above everything else on page
+    z-index: 100;
+    top: 0;
+
+    background-color: var(--color-background);
+
+    @supports (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)) {
+        -webkit-backdrop-filter: blur(10px); //Safari still uses the prefix
+        backdrop-filter: blur(10px);
+        background-color: var(--color-background-transparent);
+      }
   }
 
 	display: flex;

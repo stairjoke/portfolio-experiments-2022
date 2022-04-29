@@ -7,6 +7,7 @@
   --color-accent-1-hover-fill: RGB(119, 183, 67);
   --color-accent-1-darkened-fill: RGB(104, 162, 57);
   --color-background: #31302e;
+  --color-background-transparent: rgba(49, 48, 46, 0.6);
   --color-element-background: rgb(58, 57, 54);
   --color-text: #cdc6c6;
   --color-text-high-contrast: white;
@@ -79,17 +80,11 @@ header, main, footer {
   margin: 0 auto;
 }
 
-main {
-  margin-top: calc(var(--layout-gutter) * -2 - var(--line-height-M));
-  padding-top: calc(var(--layout-gutter) * 2 + var(--line-height-M));
-}
 main .splash {
   margin-top: calc(var(--layout-gutter) * -2 - var(--line-height-M));
   padding-top: calc(var(--layout-gutter) * 2 + var(--line-height-M));
-}
-main section:not(:first-child) {
-  margin-top: var(--layout-vertical-margin-XL);
-  --color-text-selection: var(--color-accent-1);
+  position: relative;
+  z-index: 101;
 }
 
 .inline-icon {
@@ -332,7 +327,7 @@ nav.breadcrumb li a:hover, nav.breadcrumb li a:focus {
 
 #home-splash {
   padding-bottom: var(--layout-vertical-margin-L);
-  min-height: 90vh;
+  min-height: calc(90vh - var(--layout-gutter) * 2 - var(--line-height-M));
   transition-property: min-height;
   transition-duration: 2s;
   transition-timing-function: ease-in-out;
@@ -402,24 +397,28 @@ nav.breadcrumb li a:hover, nav.breadcrumb li a:focus {
 }
 
 header {
-  /*
-  position: sticky;
-  z-index: 100;
-  top: 0;
-  */
   padding: var(--layout-gutter);
   box-sizing: border-box;
-  /*
-  @supports (backdrop-filter: blur(10px)) or
-  		  (-webkit-backdrop-filter: blur(10px)) {
-  	-webkit-backdrop-filter: blur(10px); //Safari still uses the prefix
-  	backdrop-filter: blur(10px);
-  }
-  */
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
   line-height: var(--line-height-M);
+}
+header.accent {
+  background-color: var(--color-accent-1);
+}
+header.sticky {
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  background-color: var(--color-background);
+}
+@supports (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)) {
+  header.sticky {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: var(--color-background-transparent);
+  }
 }
 header nav {
   text-align: right;

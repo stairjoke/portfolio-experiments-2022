@@ -9,7 +9,7 @@
 			}
 		?>
 		<main>
-			
+			<?php snippet('sticky-header'); ?>
 			<?php
 				if($page->splash()->exists()){
 				?>

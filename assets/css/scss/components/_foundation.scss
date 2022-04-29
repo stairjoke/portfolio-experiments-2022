@@ -8,14 +8,14 @@ $layout-breakpoint-S: 480px;
 :root {
 	--line-height-M: 2rem;
 	--line-height-S: 1.3rem;
-	
+
 	--color-accent-1: RGB(112, 174, 61); //re-mapped to sRGB
 	--color-accent-1-transparent: rgba(112, 174, 61, 0.8);
-	
+
 	--color-accent-1-hover: RGB(138, 197, 89); //re-mapped to sRGB
 	--color-accent-1-hover-fill: RGB(119, 183, 67); //re-mapped to sRGB
 	--color-accent-1-darkened-fill: RGB(104, 162, 57); //re-mapped to sRGB
-	
+
 	@supports (color: color(display-p3 1 1 1)) {
 		--color-accent-1: color(display-p3 0.4392 0.6823 0.2392); //P3
 		--color-accent-1-transparent: color(display-p3 0.4392 0.6823 0.2392 / 0.8);
@@ -23,41 +23,42 @@ $layout-breakpoint-S: 480px;
 		--color-accent-1-hover-fill: color(display-p3 0.476 0.735 0.265); //P3
 		--color-accent-1-darkened-fill: color(display-p3 0.409 0.636 0.224); //P3
 	}
-		
+
 	--color-background: #31302e;
+  --color-background-transparent: rgba(49, 48, 46, 0.6);
 	--color-element-background: rgb(58, 57, 54);
-	
+
 	--color-text: #cdc6c6;
 	--color-text-high-contrast: white;
 	--color-shadow: rgba(0,0,0,0.06);
 	--color-shadow-strong: rgba(0,0,0,0.27);
 	--color-glow: rgba(255,255,255,0.06);
-	
+
 	--color-ukraineFlag-top: #005abb;
 	--color-ukraineFlag-bottom: #fdd400;
-	
+
 	--border-radius-M: 0.5rem;
-	
+
 	//Default: 11 columns
 	--layout-gutter: 2rem;
 	--layout-column: calc((100vw - (12*var(--layout-gutter)))/11);
-	
+
 	//Large: 9 columns
 	@media (max-width: #{$layout-breakpoint-L}) {
 		--layout-column: calc((100vw - (10*var(--layout-gutter)))/9);
 	}
-	
+
 	//Medium: 3 columns
 	@media (max-width: #{$layout-breakpoint-M}) {
 		--layout-column: calc((100vw - (4*var(--layout-gutter)))/3);
 	}
-	
+
 	//Small: 3 columns, reduced gutter
 	@media (max-width: #{$layout-breakpoint-S}) {
 		--layout-gutter: 1rem;
 		--layout-column: calc((100vw - (4*var(--layout-gutter)))/3);
 	}
-	
+
 	--layout-vertical-margin-XXS: 0.3333rem;
 	--layout-vertical-margin-XS: calc(var(--layout-vertical-margin-XXS)*2);
 	--layout-vertical-margin-S: calc(var(--layout-vertical-margin-XS)*2);
@@ -100,23 +101,20 @@ header, main, footer {
 	margin: 0 auto;
 }
 main {
-	margin-top: calc(var(--layout-gutter)*-2 - var(--line-height-M));
-	padding-top: calc(var(--layout-gutter)*2 + var(--line-height-M));
-	
 	.splash {
+    //Pull on top of sticky navigation
 		margin-top: calc(var(--layout-gutter)*-2 - var(--line-height-M));
 		padding-top: calc(var(--layout-gutter)*2 + var(--line-height-M));
-	}
-	
-	section:not(:first-child) {
-		margin-top: var(--layout-vertical-margin-XL);
-		--color-text-selection: var(--color-accent-1);
+
+    //Place above sticky header navigation
+    position: relative;
+    z-index: 101;
 	}
 }
 
 .inline-icon {
 	height: var(--line-height-M);
-	
+
 	&._12-36 {
 		aspect-ratio: 12 / 36;
 	}
