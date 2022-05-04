@@ -1,0 +1,13 @@
+// Organism - H2
+@use "foundation";
+
+.o-h2 {
+	margin: var(--layout-vertical-margin-XL) auto var(--layout-vertical-margin-L) auto;
+	
+	&:has(.pubdate) {
+		//If this organism contains a .pubdate component, it's margin-top shall be reduced by 1 line-height-M
+		margin-top: calc(var(--layout-vertical-margin-XL) - var(--line-height-M));
+	}
+	
+	@include foundation.layout-full-width;
+}
