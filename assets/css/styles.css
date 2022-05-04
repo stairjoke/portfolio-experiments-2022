@@ -586,12 +586,17 @@ article.teaser .column {
   order: 1;
   margin-right: var(--layout-gutter);
   align-self: stretch;
+  display: flex;
+  flex-direction: column;
 }
 @media (max-width: 600px) {
   article.teaser .column {
     order: 2;
     margin-top: var(--layout-vertical-margin-M);
   }
+}
+article.teaser .column a.button {
+  margin-top: auto;
 }
 
 main {
