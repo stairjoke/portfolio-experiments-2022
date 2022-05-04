@@ -4,6 +4,8 @@
 .pubdate {
 	display: block;
 	text-align: right;
+  @include foundation.layout-full-width;
+
 	position: relative;
 	z-index: 1;
 }

@@ -39,7 +39,6 @@ h2 {
 	margin-top: 0;
 	margin-bottom: var(--layout-vertical-margin-L);
 	@include foundation.layout-full-width;
-  box-sizing: border-box;
 
   transition-property: padding background-color box-shadow;
   transition-timing-function: var(--transition-timing-functino);
@@ -48,7 +47,6 @@ h2 {
   &:hover {
     transition-duration: var(--transition-duration-in);
     background-color: var(--color-element-background);
-    box-sizing: border-box;
     padding: 0 1rem;
     box-shadow: 0 0 var(--layout-vertical-margin-XS) var(--color-shadow-strong);
   }

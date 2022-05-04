@@ -236,7 +236,6 @@ h2 {
   margin-left: auto;
   margin-right: auto;
   width: calc(var(--layout-column) * 9 + var(--layout-gutter) * 8);
-  box-sizing: border-box;
   transition-property: padding background-color box-shadow;
   transition-timing-function: var(--transition-timing-functino);
   transition-duration: var(--transition-duration-out);
@@ -251,7 +250,6 @@ h2 {
 h2:hover {
   transition-duration: var(--transition-duration-in);
   background-color: var(--color-element-background);
-  box-sizing: border-box;
   padding: 0 1rem;
   box-shadow: 0 0 var(--layout-vertical-margin-XS) var(--color-shadow-strong);
 }
@@ -274,8 +272,16 @@ h1 + p.teaser {
 .pubdate {
   display: block;
   text-align: right;
+  margin-left: auto;
+  margin-right: auto;
+  width: calc(var(--layout-column) * 9 + var(--layout-gutter) * 8);
   position: relative;
   z-index: 1;
+}
+@media (max-width: 600px) {
+  .pubdate {
+    width: calc(var(--layout-column) * 3 + var(--layout-gutter) * 2);
+  }
 }
 
 time[pubdate=pubdate] {
@@ -332,17 +338,9 @@ nav.breadcrumb li a:hover, nav.breadcrumb li a:focus {
 
 .o-h2 {
   margin: var(--layout-vertical-margin-XL) auto var(--layout-vertical-margin-L) auto;
-  margin-left: auto;
-  margin-right: auto;
-  width: calc(var(--layout-column) * 9 + var(--layout-gutter) * 8);
 }
 .o-h2:has(.pubdate) {
   margin-top: calc(var(--layout-vertical-margin-XL) - var(--line-height-M));
-}
-@media (max-width: 600px) {
-  .o-h2 {
-    width: calc(var(--layout-column) * 3 + var(--layout-gutter) * 2);
-  }
 }
 
 #home-splash {
