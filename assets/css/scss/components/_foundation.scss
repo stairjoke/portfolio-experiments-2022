@@ -30,12 +30,17 @@ $layout-breakpoint-S: 480px;
 
 	--color-text: #cdc6c6;
 	--color-text-high-contrast: white;
+  --color-text-selection: var(--color-accent-1);
 	--color-shadow: rgba(0,0,0,0.06);
 	--color-shadow-strong: rgba(0,0,0,0.27);
 	--color-glow: rgba(255,255,255,0.06);
 
 	--color-ukraineFlag-top: #005abb;
 	--color-ukraineFlag-bottom: #fdd400;
+
+  --transition-duration-in: 110ms;
+  --transition-duration-out: 250ms;
+  --transition-timing-functino: ease-out;
 
 	--border-radius-M: 0.5rem;
 
@@ -76,7 +81,7 @@ $layout-breakpoint-S: 480px;
 }
 
 ::selection {
-	background-color: var(--color-text-selection, black);
+	background-color: var(--color-text-selection);
 	color: var(--color-text-high-contrast)
 }
 
