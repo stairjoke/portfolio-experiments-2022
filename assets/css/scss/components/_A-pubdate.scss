@@ -9,8 +9,10 @@
 }
 time[pubdate=pubdate] {
 	display: inline-block;
-	background-color: var(--color-element-background);
-	padding: 0 var(--layout-vertical-margin-XS);
 	line-height: var(--line-height-M);
-	box-shadow: 0 0 var(--layout-vertical-margin-XS) var(--color-shadow-strong);
+  /*
+  padding: 0 var(--layout-vertical-margin-XS);
+	background-color: var(--color-element-background);
+  box-shadow: 0 0 var(--layout-vertical-margin-XS) var(--color-shadow-strong);
+  */
 }
