@@ -11,11 +11,15 @@
   --color-element-background: rgb(58, 57, 54);
   --color-text: #cdc6c6;
   --color-text-high-contrast: white;
+  --color-text-selection: var(--color-accent-1);
   --color-shadow: rgba(0,0,0,0.06);
   --color-shadow-strong: rgba(0,0,0,0.27);
   --color-glow: rgba(255,255,255,0.06);
   --color-ukraineFlag-top: #005abb;
   --color-ukraineFlag-bottom: #fdd400;
+  --transition-duration-in: 110ms;
+  --transition-duration-out: 250ms;
+  --transition-timing-functino: ease-out;
   --border-radius-M: 0.5rem;
   --layout-gutter: 2rem;
   --layout-column: calc((100vw - (12*var(--layout-gutter)))/11);
@@ -53,7 +57,7 @@
 }
 
 ::selection {
-  background-color: var(--color-text-selection, black);
+  background-color: var(--color-text-selection);
   color: var(--color-text-high-contrast);
 }
 
@@ -232,16 +236,24 @@ h2 {
   margin-left: auto;
   margin-right: auto;
   width: calc(var(--layout-column) * 9 + var(--layout-gutter) * 8);
-  background-color: var(--color-element-background);
   box-sizing: border-box;
-  padding: 0 1rem;
-  box-shadow: 0 0 var(--layout-vertical-margin-XS) var(--color-shadow-strong);
+  transition-property: padding background-color box-shadow;
+  transition-timing-function: var(--transition-timing-functino);
+  transition-duration: var(--transition-duration-out);
+  text-shadow: 0 0 var(--layout-vertical-margin-XS) var(--color-shadow-strong);
   text-transform: uppercase;
 }
 @media (max-width: 600px) {
   h2 {
     width: calc(var(--layout-column) * 3 + var(--layout-gutter) * 2);
   }
+}
+h2:hover {
+  transition-duration: var(--transition-duration-in);
+  background-color: var(--color-element-background);
+  box-sizing: border-box;
+  padding: 0 1rem;
+  box-shadow: 0 0 var(--layout-vertical-margin-XS) var(--color-shadow-strong);
 }
 
 p {
@@ -268,10 +280,12 @@ h1 + p.teaser {
 
 time[pubdate=pubdate] {
   display: inline-block;
-  background-color: var(--color-element-background);
-  padding: 0 var(--layout-vertical-margin-XS);
   line-height: var(--line-height-M);
-  box-shadow: 0 0 var(--layout-vertical-margin-XS) var(--color-shadow-strong);
+  /*
+   padding: 0 var(--layout-vertical-margin-XS);
+  background-color: var(--color-element-background);
+   box-shadow: 0 0 var(--layout-vertical-margin-XS) var(--color-shadow-strong);
+   */
 }
 
 nav.breadcrumb {
@@ -332,6 +346,7 @@ nav.breadcrumb li a:hover, nav.breadcrumb li a:focus {
 }
 
 #home-splash {
+  --color-text-selection: black;
   padding-bottom: var(--layout-vertical-margin-L);
   min-height: calc(90vh - var(--layout-gutter) * 2 - var(--line-height-M));
   transition-property: min-height;
