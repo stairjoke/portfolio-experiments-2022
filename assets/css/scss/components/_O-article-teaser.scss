@@ -3,7 +3,12 @@
 
 article.teaser {
 	@include foundation.layout-full-width;
+	
 	display: flex;
+	@media (max-width: #{foundation.$layout-breakpoint-M}) {
+		display: block;
+	}
+	
 	overflow: hidden;
 	width: calc(var(--layout-column)*9 + var(--layout-gutter)*8);
 	@media (max-width: #{foundation.$layout-breakpoint-M}) {
@@ -12,15 +17,22 @@ article.teaser {
 	
 	img {
 		order: 2;
+		
 		width: calc(var(--layout-column)*6 + var(--layout-gutter)*5);
-		/*
 		@media (max-width: #{foundation.$layout-breakpoint-M}) {
+			order: 1;
 			width: calc(var(--layout-column)*3 + var(--layout-gutter)*2);
 		}
-		*/
+		height: auto;
+		align-self: start;
 	}
 	.column {
 		order: 1;
+		@media (max-width: #{foundation.$layout-breakpoint-M}) {
+			order: 2;
+			margin-top: var(--layout-vertical-margin-M);
+		}
 		margin-right: var(--layout-gutter);
+		align-self: stretch;
 	}
 }
