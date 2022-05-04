@@ -1,0 +1,26 @@
+// Organism - Article Teaser
+@use "foundation";
+
+article.teaser {
+	@include foundation.layout-full-width;
+	display: flex;
+	overflow: hidden;
+	width: calc(var(--layout-column)*9 + var(--layout-gutter)*8);
+	@media (max-width: #{foundation.$layout-breakpoint-M}) {
+		width: calc(var(--layout-column)*3 + var(--layout-gutter)*2);
+	}
+	
+	img {
+		order: 2;
+		width: calc(var(--layout-column)*6 + var(--layout-gutter)*5);
+		/*
+		@media (max-width: #{foundation.$layout-breakpoint-M}) {
+			width: calc(var(--layout-column)*3 + var(--layout-gutter)*2);
+		}
+		*/
+	}
+	.column {
+		order: 1;
+		margin-right: var(--layout-gutter);
+	}
+}

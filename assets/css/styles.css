@@ -39,7 +39,7 @@
     --color-accent-1-darkened-fill: color(display-p3 0.409 0.636 0.224);
   }
 }
-@media (max-width: 1100px) {
+@media (max-width: 1400px) {
   :root {
     --layout-column: calc((100vw - (10*var(--layout-gutter)))/9);
   }
@@ -152,7 +152,7 @@ main .splash {
 #layout-viz:target #c10 {
   left: calc(var(--layout-gutter) * 10 + var(--layout-column) * 9);
 }
-@media (max-width: 1100px) {
+@media (max-width: 1400px) {
   #layout-viz:target #c10 {
     display: none;
   }
@@ -160,7 +160,7 @@ main .splash {
 #layout-viz:target #c11 {
   left: calc(var(--layout-gutter) * 11 + var(--layout-column) * 10);
 }
-@media (max-width: 1100px) {
+@media (max-width: 1400px) {
   #layout-viz:target #c11 {
     display: none;
   }
@@ -197,6 +197,7 @@ h1, h2, h3 {
   font-style: normal;
   letter-spacing: 0.04rem;
   -webkit-text-size-adjust: none;
+  margin: 0;
 }
 
 h1, h2 {
@@ -212,7 +213,7 @@ h1, h2 {
   line-height: 111%;
   margin: 0 0 var(--layout-vertical-margin-M) 0;
 }
-@media (max-width: 1100px) {
+@media (max-width: 1400px) {
   h1, h2 {
     font-size: 5rem;
   }
@@ -252,6 +253,32 @@ h2:hover {
   background-color: var(--color-element-background);
   padding: 0 1rem;
   box-shadow: 0 0 var(--layout-vertical-margin-XS) var(--color-shadow-strong);
+}
+
+h3 {
+  font-size: 4rem;
+  line-height: 1.3em;
+}
+h3.S {
+  font-size: 2rem;
+}
+@media (max-width: 1920px) {
+  h3 {
+    font-size: 3rem;
+  }
+  h3.S {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 1400px) {
+  h3 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 600px) {
+  h3 {
+    font-size: 1rem;
+  }
 }
 
 p {
@@ -521,6 +548,38 @@ header a, header a:link, header a:active, header a:visited {
 header a:hover, header a:focus {
   text-decoration: none;
   color: var(--color-text-high-contrast);
+}
+
+article.teaser {
+  margin-left: auto;
+  margin-right: auto;
+  width: calc(var(--layout-column) * 9 + var(--layout-gutter) * 8);
+  display: flex;
+  overflow: hidden;
+  width: calc(var(--layout-column) * 9 + var(--layout-gutter) * 8);
+}
+@media (max-width: 600px) {
+  article.teaser {
+    width: calc(var(--layout-column) * 3 + var(--layout-gutter) * 2);
+  }
+}
+@media (max-width: 600px) {
+  article.teaser {
+    width: calc(var(--layout-column) * 3 + var(--layout-gutter) * 2);
+  }
+}
+article.teaser img {
+  order: 2;
+  width: calc(var(--layout-column) * 6 + var(--layout-gutter) * 5);
+  /*
+  @media (max-width: 600px) {
+  	width: calc(var(--layout-column)*3 + var(--layout-gutter)*2);
+  }
+  */
+}
+article.teaser .column {
+  order: 1;
+  margin-right: var(--layout-gutter);
 }
 
 main {

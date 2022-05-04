@@ -7,6 +7,7 @@ h1, h2, h3 {
 	font-style: normal;
 	letter-spacing: 0.04rem;
 	-webkit-text-size-adjust: none;
+  margin: 0;
 }
 h1, h2 {
 	font-size: 6rem;
@@ -53,4 +54,23 @@ h2 {
 
   text-shadow: 0 0 var(--layout-vertical-margin-XS) var(--color-shadow-strong);
 	text-transform: uppercase;
+}
+h3 {
+  font-size: 4rem;
+  line-height: 1.3em;
+  &.S {
+    font-size: 2rem;
+  }
+  @media (max-width: #{foundation.$layout-breakpoint-XL}) {
+    font-size: 3rem;
+    &.S {
+      font-size: 1rem;
+    }
+  }
+  @media (max-width: #{foundation.$layout-breakpoint-L}) {
+    font-size: 2rem;
+  }
+  @media (max-width: #{foundation.$layout-breakpoint-M}) {
+    font-size: 1rem;
+  }
 }
