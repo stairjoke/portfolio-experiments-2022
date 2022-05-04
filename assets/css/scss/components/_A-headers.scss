@@ -41,6 +41,10 @@ h2 {
 	margin-bottom: var(--layout-vertical-margin-L);
 	@include foundation.layout-full-width;
 
+  //Safari will otherwise scale the whole viewport down to fit the headline
+  max-width: calc(100% - var(--layout-gutter)*2);
+  overflow: hidden;
+
   transition-property: padding background-color box-shadow;
   transition-timing-function: var(--transition-timing-functino);
   transition-duration: var(--transition-duration-out);
