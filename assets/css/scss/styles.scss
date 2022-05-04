@@ -1,4 +1,4 @@
-// Styles 
+// Styles
 @use "components/_foundation";
 @use "components/_A-link";
 @use "components/_A-floaters";
@@ -7,6 +7,7 @@
 @use "components/_A-pubdate";
 @use "components/_A-breadbrumb-navigation";
 
+@use "components/_o-h2";
 @use "components/_O-home-splash";
 @use "components/_O-header";
 
@@ -14,7 +15,7 @@
 
 main {
 	height: 200vh;
-	
+
 	section.splash {
 		&#home-splash {
 			background-color: var(--color-accent-1);

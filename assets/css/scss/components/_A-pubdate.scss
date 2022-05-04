@@ -3,8 +3,6 @@
 
 .pubdate {
 	display: block;
-	@include foundation.layout-full-width;
-	margin-top: calc(var(--line-height-M) * -1);
 	text-align: right;
 	position: relative;
 	z-index: 1;
