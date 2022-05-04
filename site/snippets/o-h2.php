@@ -11,7 +11,7 @@
 		//https://forum.getkirby.com/t/translating-date-formats/23435
 ?>
 		<div class="pubdate">
-			<time datetime="<?= $page->published()->toDate('d.m.Y') ?>" pubdate="pubdate"><?= $page->published()->toDate('F l, Y') ?></time>
+			<time datetime="<?= $page->published()->toDate('d.m.Y') ?>" pubdate="pubdate"><?= $page->published()->toDate('F j, Y') ?></time>
 		</div>
 <?php
 		} //endif page has pubdate
