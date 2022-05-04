@@ -16,15 +16,15 @@ h1, h2 {
 	@media (max-width: 744px) {
 		font-size: 10.6vw;
 	}
-	
+
 /*	@media (max-width: #{foundation.$layout-breakpoint-M}) {
 		font-size: 3rem;
 	}
-	
+
 	@media (max-width: #{foundation.$layout-breakpoint-S}) {
 		font-size: 2rem;
 	} */
-	
+
 	color: var(--color-text-high-contrast);
 	line-height: 111%;
 	margin: 0 0 var(--layout-vertical-margin-M) 0;
@@ -39,10 +39,20 @@ h2 {
 	margin-top: 0;
 	margin-bottom: var(--layout-vertical-margin-L);
 	@include foundation.layout-full-width;
-	background-color: var(--color-element-background);
-	box-sizing: border-box;
-	padding: 0 1rem;
-	box-shadow: 0 0 var(--layout-vertical-margin-XS) var(--color-shadow-strong);
-	
+  box-sizing: border-box;
+
+  transition-property: padding background-color box-shadow;
+  transition-timing-function: var(--transition-timing-functino);
+  transition-duration: var(--transition-duration-out);
+
+  &:hover {
+    transition-duration: var(--transition-duration-in);
+    background-color: var(--color-element-background);
+    box-sizing: border-box;
+    padding: 0 1rem;
+    box-shadow: 0 0 var(--layout-vertical-margin-XS) var(--color-shadow-strong);
+  }
+
+  text-shadow: 0 0 var(--layout-vertical-margin-XS) var(--color-shadow-strong);
 	text-transform: uppercase;
 }
