@@ -310,7 +310,7 @@ p {
   font-style: normal;
   font-size: 1rem;
   letter-spacing: 0.02em;
-  line-height: 1.5em;
+  line-height: var(--line-height-M);
 }
 h1 + p.teaser {
   font-size: 1.33rem;
