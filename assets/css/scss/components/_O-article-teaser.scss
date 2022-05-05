@@ -25,6 +25,8 @@ article.teaser {
 		}
 		height: auto;
 		align-self: start;
+		
+		border-radius: var(--border-radius-S);
 	}
 	.column {
 		order: 1;
@@ -40,6 +42,7 @@ article.teaser {
 		flex-direction: column;
 		
 		a.button {
+			align-self: flex-start;
 			margin-top: auto;
 		}
 	}
