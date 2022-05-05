@@ -10,37 +10,65 @@ $layout-breakpoint-S: 480px;
 	--line-height-M: 2rem;
 	--line-height-S: 1.3rem;
 
-	--color-accent-1: RGB(112, 174, 61); //re-mapped to sRGB
+  //sRGB color variables
+	--color-accent-1: RGB(112, 174, 61);
 	--color-accent-1-transparent: rgba(112, 174, 61, 0.8);
 
-	--color-accent-1-hover: RGB(138, 197, 89); //re-mapped to sRGB
-	--color-accent-1-hover-fill: RGB(119, 183, 67); //re-mapped to sRGB
-	--color-accent-1-darkened-fill: RGB(104, 162, 57); //re-mapped to sRGB
+	--color-accent-1-hover: RGB(138, 197, 89);
+	--color-accent-1-hover-fill: RGB(119, 183, 67);
+	--color-accent-1-darkened-fill: RGB(104, 162, 57);
 
   --color-accent-2: RGB(253, 186, 26);
 
 	@supports (color: color(display-p3 1 1 1)) {
-		--color-accent-1: color(display-p3 0.4392 0.6823 0.2392); //P3
+    //Color variables expanded to use P3 gamut
+
+		--color-accent-1: color(display-p3 0.4392 0.6823 0.2392);
 		--color-accent-1-transparent: color(display-p3 0.4392 0.6823 0.2392 / 0.8);
-		--color-accent-1-hover: color(display-p3 0.5411 0.7725 0.349); //P3
-		--color-accent-1-hover-fill: color(display-p3 0.476 0.735 0.265); //P3
-		--color-accent-1-darkened-fill: color(display-p3 0.409 0.636 0.224); //P3
+
+		--color-accent-1-hover: color(display-p3 0.5411 0.7725 0.349);
+		--color-accent-1-hover-fill: color(display-p3 0.476 0.735 0.265);
+		--color-accent-1-darkened-fill: color(display-p3 0.409 0.636 0.224);
 
     --color-accent-2: color(display-p3 0.9922 0.7294 0.1019);
 	}
 
+  //sRGB color variables
 	--color-background: #31302e;
   --color-background-transparent: rgba(49, 48, 46, 0.6);
 	--color-element-background: rgb(58, 57, 54);
+  --color-element-background-hover: rgb(71, 70, 66);
+
+  @supports (color: color(display-p3 1 1 1)) {
+  //Color variables expanded to use P3 gamut
+    --color-background: color(display-p3 0.1921 0.1882 0.1804);
+    --color-background-transparent: color( display-p3 0.1922 0.1882 0.1804 / 0.6);
+    --color-element-background: color(display-p3 0.2275 0.2235 0.2118);
+    --color-element-background-hover: color(display-p3 0.2784 0.2745 0.2588);
+  }
 
 	--color-text: #cdc6c6;
 	--color-text-high-contrast: white;
+  --color-text-low-contrast: RGB(155, 140, 140);
   --color-text-inverted: var(--color-background);
-
   --color-text-selection: var(--color-accent-1);
+
+  @supports (color: color(display-p3 1 1 1)) {
+    //Color variables expanded to use P3 gamut
+    --color-text: color(display-p3 0.8039 0.7764 0.7764);
+    --color-text-high-contrast: color(display-p3 1 1 1);
+    --color-text-low-contrast: color(display-p3 0.6078 0.549 0.549);
+  }
+
+//sRGB color variables
 	--color-shadow: rgba(0,0,0,0.06);
 	--color-shadow-strong: rgba(0,0,0,0.27);
 	--color-glow: rgba(255,255,255,0.06);
+
+  @supports (color: color(display-p3 1 1 1)) {
+    //Color variables expanded to use P3 gamut
+    --color-glow: color(display-p3 1 1 1 / 0.06);
+  }
 
 	--color-ukraineFlag-top: #005abb;
 	--color-ukraineFlag-bottom: #fdd400;
