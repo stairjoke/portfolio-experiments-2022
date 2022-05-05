@@ -17,12 +17,16 @@ $layout-breakpoint-S: 480px;
 	--color-accent-1-hover-fill: RGB(119, 183, 67); //re-mapped to sRGB
 	--color-accent-1-darkened-fill: RGB(104, 162, 57); //re-mapped to sRGB
 
+  --color-accent-2: RGB(253, 186, 26);
+
 	@supports (color: color(display-p3 1 1 1)) {
 		--color-accent-1: color(display-p3 0.4392 0.6823 0.2392); //P3
 		--color-accent-1-transparent: color(display-p3 0.4392 0.6823 0.2392 / 0.8);
 		--color-accent-1-hover: color(display-p3 0.5411 0.7725 0.349); //P3
 		--color-accent-1-hover-fill: color(display-p3 0.476 0.735 0.265); //P3
 		--color-accent-1-darkened-fill: color(display-p3 0.409 0.636 0.224); //P3
+
+    --color-accent-2: color(display-p3 0.9922 0.7294 0.1019);
 	}
 
 	--color-background: #31302e;
@@ -31,6 +35,8 @@ $layout-breakpoint-S: 480px;
 
 	--color-text: #cdc6c6;
 	--color-text-high-contrast: white;
+  --color-text-inverted: var(--color-background);
+
   --color-text-selection: var(--color-accent-1);
 	--color-shadow: rgba(0,0,0,0.06);
 	--color-shadow-strong: rgba(0,0,0,0.27);
@@ -41,8 +47,9 @@ $layout-breakpoint-S: 480px;
 
   --transition-duration-in: 110ms;
   --transition-duration-out: 250ms;
-  --transition-timing-functino: ease-out;
+  --transition-timing-function: ease-out;
 
+  --border-radius-S: 2px;
 	--border-radius-M: 0.5rem;
 
 	//Default: 11 columns

@@ -46,7 +46,7 @@ h2 {
   overflow: hidden;
 
   transition-property: padding background-color box-shadow;
-  transition-timing-function: var(--transition-timing-functino);
+  transition-timing-function: var(--transition-timing-function);
   transition-duration: var(--transition-duration-out);
 
   &:hover {
