@@ -7,10 +7,7 @@ $layout-breakpoint-nav-2: 413px;
 $layout-breakpoint-S: 480px;
 
 :root {
-	--line-height-M: 2rem;
-	--line-height-S: 1.3rem;
-
-  //sRGB color variables
+	//sRGB color variables
 	--color-accent-1: RGB(112, 174, 61);
 	--color-accent-1-transparent: rgba(112, 174, 61, 0.8);
 
@@ -73,12 +70,18 @@ $layout-breakpoint-S: 480px;
 	--color-ukraineFlag-top: #005abb;
 	--color-ukraineFlag-bottom: #fdd400;
 
+  //Transition Variables
   --transition-duration-in: 110ms;
   --transition-duration-out: 250ms;
   --transition-timing-function: ease-out;
 
+  //Spacing & Sizing Variables
+  --line-height-M: 2rem;
+  --line-height-S: 1.3rem;
+
   --border-radius-S: 2px;
 	--border-radius-M: 0.5rem;
+  --border-radius-L: 50%;
 
 	//Default: 11 columns
 	--layout-gutter: 2rem;
