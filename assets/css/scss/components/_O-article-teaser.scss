@@ -16,6 +16,7 @@ article.teaser {
 	}
 	
 	.graphic-column {
+		
 		order: 2;
 		flex: 2;
 		
@@ -32,6 +33,7 @@ article.teaser {
 			border-radius: var(--border-radius-S);
 			width: 100%;
 			height: auto;
+			display: block;
 		}
 	}
 	.text-column {
@@ -46,15 +48,11 @@ article.teaser {
 		margin-right: var(--layout-gutter);
 		align-self: stretch;
 		
-		/*
-		//Aligning the button at the bottom edge of the column
-		display: flex;
-		flex-direction: column;
-		
+		padding-bottom: var(--layout-vertical-margin-M);
+		border-bottom: solid 2px var(--color-element-background);
+				
 		a.button {
-			align-self: flex-start;
-			margin-top: auto;
+			margin-top: var(--layout-vertical-margin-S);
 		}
-		*/
 	}
 }

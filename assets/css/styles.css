@@ -690,6 +690,7 @@ article.teaser .graphic-column img {
   border-radius: var(--border-radius-S);
   width: 100%;
   height: auto;
+  display: block;
 }
 article.teaser .text-column {
   order: 1;
@@ -697,22 +698,17 @@ article.teaser .text-column {
   min-width: 26ch;
   margin-right: var(--layout-gutter);
   align-self: stretch;
-  /*
-  //Aligning the button at the bottom edge of the column
-  display: flex;
-  flex-direction: column;
-
-  a.button {
-  	align-self: flex-start;
-  	margin-top: auto;
-  }
-  */
+  padding-bottom: var(--layout-vertical-margin-M);
+  border-bottom: solid 2px var(--color-element-background);
 }
 @media (max-width: 600px) {
   article.teaser .text-column {
     order: 2;
     margin-top: var(--layout-vertical-margin-M);
   }
+}
+article.teaser .text-column a.button {
+  margin-top: var(--layout-vertical-margin-S);
 }
 
 main {
