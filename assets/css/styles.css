@@ -1,6 +1,4 @@
 :root {
-  --line-height-M: 2rem;
-  --line-height-S: 1.3rem;
   --color-accent-1: RGB(112, 174, 61);
   --color-accent-1-transparent: rgba(112, 174, 61, 0.8);
   --color-accent-1-hover: RGB(138, 197, 89);
@@ -10,8 +8,10 @@
   --color-background: #31302e;
   --color-background-transparent: rgba(49, 48, 46, 0.6);
   --color-element-background: rgb(58, 57, 54);
+  --color-element-background-hover: rgb(71, 70, 66);
   --color-text: #cdc6c6;
   --color-text-high-contrast: white;
+  --color-text-low-contrast: RGB(155, 140, 140);
   --color-text-inverted: var(--color-background);
   --color-text-selection: var(--color-accent-1);
   --color-shadow: rgba(0,0,0,0.06);
@@ -22,8 +22,11 @@
   --transition-duration-in: 110ms;
   --transition-duration-out: 250ms;
   --transition-timing-function: ease-out;
+  --line-height-M: 2rem;
+  --line-height-S: 1.3rem;
   --border-radius-S: 2px;
   --border-radius-M: 0.5rem;
+  --border-radius-L: 1000px;
   --layout-gutter: 2rem;
   --layout-column: calc((100vw - (12*var(--layout-gutter)))/11);
   --layout-vertical-margin-XXS: 0.3333rem;
@@ -41,6 +44,26 @@
     --color-accent-1-hover-fill: color(display-p3 0.476 0.735 0.265);
     --color-accent-1-darkened-fill: color(display-p3 0.409 0.636 0.224);
     --color-accent-2: color(display-p3 0.9922 0.7294 0.1019);
+  }
+}
+@supports (color: color(display-p3 1 1 1)) {
+  :root {
+    --color-background: color(display-p3 0.1921 0.1882 0.1804);
+    --color-background-transparent: color( display-p3 0.1922 0.1882 0.1804 / 0.6);
+    --color-element-background: color(display-p3 0.2275 0.2235 0.2118);
+    --color-element-background-hover: color(display-p3 0.2784 0.2745 0.2588);
+  }
+}
+@supports (color: color(display-p3 1 1 1)) {
+  :root {
+    --color-text: color(display-p3 0.8039 0.7764 0.7764);
+    --color-text-high-contrast: color(display-p3 1 1 1);
+    --color-text-low-contrast: color(display-p3 0.6078 0.549 0.549);
+  }
+}
+@supports (color: color(display-p3 1 1 1)) {
+  :root {
+    --color-glow: color(display-p3 1 1 1 / 0.06);
   }
 }
 @media (max-width: 1400px) {
@@ -397,6 +420,46 @@ button[disabled], input[type=button][disabled], input[type=submit][disabled], a.
 button[disabled]:hover, button[disabled]:focus, button[disabled]:active, input[type=button][disabled]:hover, input[type=button][disabled]:focus, input[type=button][disabled]:active, input[type=submit][disabled]:hover, input[type=submit][disabled]:focus, input[type=submit][disabled]:active, a.button[disabled]:hover, a.button[disabled]:focus, a.button[disabled]:active {
   color: var(--color-text);
   background-color: var(--color-element-background);
+}
+
+ul.m-tag-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 1rem;
+  letter-spacing: var(--layout-vertical-margin-XS);
+}
+ul.m-tag-list li {
+  display: inline;
+  letter-spacing: 0;
+}
+ul.m-tag-list li a {
+  font-size: 1rem;
+  display: inline-block;
+  line-height: var(--line-height-M);
+  padding: 0 var(--layout-vertical-margin-XS);
+  margin: var(--layout-vertical-margin-XXS) 0;
+  border-radius: var(--border-radius-L);
+  background-color: var(--color-element-background);
+  transition-property: background-color;
+  transition-duration: var(--transition-duration-out);
+  transition-timing-function: var(--transition-timing-function);
+}
+ul.m-tag-list li a, ul.m-tag-list li a:link, ul.m-tag-list li a:hover, ul.m-tag-list li a:focus, ul.m-tag-list li a:active {
+  color: var(--color-text);
+  text-decoration: none;
+}
+ul.m-tag-list li a:before, ul.m-tag-list li a:link:before, ul.m-tag-list li a:hover:before, ul.m-tag-list li a:focus:before, ul.m-tag-list li a:active:before {
+  display: inline-block;
+  color: var(--color-text-low-contrast);
+  content: "#";
+}
+ul.m-tag-list li a:hover, ul.m-tag-list li a:focus, ul.m-tag-list li a:active {
+  background-color: var(--color-element-background-hover);
+  transition-duration: var(--transition-duration-in);
+}
+ul.m-tag-list li a:hover .tag, ul.m-tag-list li a:focus .tag, ul.m-tag-list li a:active .tag {
+  text-decoration: underline;
 }
 
 .o-h2 {

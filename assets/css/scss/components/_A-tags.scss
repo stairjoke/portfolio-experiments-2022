@@ -1,0 +1,45 @@
+// Tags
+ul.m-tag-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 1rem;
+  letter-spacing: var(--layout-vertical-margin-XS);
+
+	li {
+    display: inline;
+    letter-spacing: 0;
+
+    a {
+      font-size: 1rem;
+      display: inline-block;
+      line-height: var(--line-height-M);
+      padding: 0 var(--layout-vertical-margin-XS);
+      margin: var(--layout-vertical-margin-XXS) 0;
+      border-radius: var(--border-radius-L);
+
+      background-color: var(--color-element-background);
+      transition-property: background-color;
+      transition-duration: var(--transition-duration-out);
+      transition-timing-function: var(--transition-timing-function);
+
+      &, &:link, &:hover, &:focus, &:active {
+        color: var(--color-text);
+        text-decoration: none;
+
+        &:before {
+            display: inline-block;
+            color: var(--color-text-low-contrast);
+            content: "#";
+        }
+      }
+      &:hover, &:focus, &:active {
+        background-color: var(--color-element-background-hover);
+        transition-duration: var(--transition-duration-in);
+        .tag {
+          text-decoration: underline;
+        }
+      }
+    }
+	}
+}

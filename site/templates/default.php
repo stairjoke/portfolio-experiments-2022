@@ -26,7 +26,7 @@
 					<img src="content/home/atomic-design-teaser.jpg" alt="Photo of the printed book 'Designing for Atomic Design'">
 					<div class="column">
 						<h3>Designing for Atomic Design</h3>
-						<ul class="tag-list">
+						<ul class="m-tag-list">
 							<li><a href="">Design Systems</a></li>
 							<li><a href="">Editorial & Print</a></li>
 							<li><a href="">Front-End Development</a></li>
