@@ -655,7 +655,7 @@ article.teaser {
   margin-right: auto;
   width: calc(var(--layout-column) * 9 + var(--layout-gutter) * 8);
   display: flex;
-  overflow: hidden;
+  overflow: visible;
   width: calc(var(--layout-column) * 9 + var(--layout-gutter) * 8);
 }
 @media (max-width: 600px) {

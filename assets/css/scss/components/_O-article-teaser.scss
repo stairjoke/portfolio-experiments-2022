@@ -9,7 +9,7 @@ article.teaser {
 		display: block;
 	}
 	
-	overflow: hidden;
+	overflow: visible;
 	width: calc(var(--layout-column)*9 + var(--layout-gutter)*8);
 	@media (max-width: #{foundation.$layout-breakpoint-M}) {
 		width: calc(var(--layout-column)*3 + var(--layout-gutter)*2);
