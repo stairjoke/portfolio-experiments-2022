@@ -31,7 +31,7 @@
   --layout-column: calc((100vw - (12*var(--layout-gutter)))/11);
   --layout-vertical-margin-XXS: 0.3333rem;
   --layout-vertical-margin-XS: calc(var(--layout-vertical-margin-XXS)*2);
-  --layout-vertical-margin-S: calc(var(--layout-vertical-margin-XS)*2);
+  --layout-vertical-margin-S: 1rem;
   --layout-vertical-margin-M: calc(var(--layout-vertical-margin-S)*2);
   --layout-vertical-margin-L: calc(var(--layout-vertical-margin-M)*2);
   --layout-vertical-margin-XL: calc(var(--layout-vertical-margin-L)*2);
@@ -311,6 +311,7 @@ p {
   font-size: 1rem;
   letter-spacing: 0.02em;
   line-height: var(--line-height-M);
+  margin: var(--layout-vertical-margin-S) 0;
 }
 h1 + p.teaser {
   font-size: 1.33rem;
