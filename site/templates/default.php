@@ -22,9 +22,11 @@
 			<section>
 				<?php snippet('o-h2'); ?>
 				<article class="teaser">
-					<!-- !!! URL !!! -->
-					<img src="content/home/atomic-design-teaser.jpg" alt="Photo of the printed book 'Designing for Atomic Design'">
-					<div class="column">
+					<div class="graphic-column">
+						<!-- !!! URL !!! -->
+						<img src="content/home/atomic-design-teaser.jpg" alt="Photo of the printed book 'Designing for Atomic Design'">
+					</div>
+					<div class="text-column">
 						<h3>Designing for Atomic Design</h3>
 						<ul class="m-tag-list">
 							<li><a href="">Design Systems</a></li>

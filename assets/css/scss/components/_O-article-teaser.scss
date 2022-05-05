@@ -15,21 +15,30 @@ article.teaser {
 		width: calc(var(--layout-column)*3 + var(--layout-gutter)*2);
 	}
 	
-	img {
+	.graphic-column {
 		order: 2;
+		flex: 2;
 		
 		width: calc(var(--layout-column)*6 + var(--layout-gutter)*5);
 		@media (max-width: #{foundation.$layout-breakpoint-M}) {
 			order: 1;
 			width: calc(var(--layout-column)*3 + var(--layout-gutter)*2);
 		}
-		height: auto;
+		// Add breakpoint to reduce image size on medium small screens!
+		
 		align-self: start;
 		
-		border-radius: var(--border-radius-S);
+		img {
+			border-radius: var(--border-radius-S);
+			width: 100%;
+			height: auto;
+		}
 	}
-	.column {
+	.text-column {
 		order: 1;
+		flex: 1;
+		min-width: 26ch;
+		
 		@media (max-width: #{foundation.$layout-breakpoint-M}) {
 			order: 2;
 			margin-top: var(--layout-vertical-margin-M);
