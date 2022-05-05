@@ -1,0 +1,45 @@
+// Atom - button
+
+// Buttons
+button, input[type=button], input[type=submit], a.button {
+	font-weight: 500;
+	font-size: 1rem;
+	padding: 0 var(--layout-vertical-margin-XS);
+	line-height: var(--line-height-M);
+	
+	color: var(--color-text-high-contrast);
+	background-color: var(--color-accent-1);
+
+	border-radius: var(--border-radius-S);
+	border: none;
+	outline: none;
+	
+	transition-property: background-color;
+	transition-duration: var(--transition-duration-out);
+	transition-timing-function: var(--transition-timing-function);
+	
+	&:hover, &:focus, &:active {
+		color: var(--color-text-high-contrast);
+		background-color: var(--color-accent-1-hover-fill);
+		text-decoration: none;
+		transition-duration: var(--transition-duration-in);
+	}
+	
+	&.error, .error & {
+		color: var(--color-text-inverted);
+		background-color: var(--color-accent-2);
+		&:hover, &:focus, &:active {
+			color: var(--color-text-inverted);
+			background-color: var(--color-accent-2);
+		}
+	}
+	
+	&[disabled] {
+		color: var(--color-text);
+		background-color: var(--color-element-background);
+		&:hover, &:focus, &:active {
+			color: var(--color-text);
+			background-color: var(--color-element-background);
+		}
+	}
+}

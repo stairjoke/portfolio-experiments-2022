@@ -6,11 +6,13 @@
   --color-accent-1-hover: RGB(138, 197, 89);
   --color-accent-1-hover-fill: RGB(119, 183, 67);
   --color-accent-1-darkened-fill: RGB(104, 162, 57);
+  --color-accent-2: RGB(253, 186, 26);
   --color-background: #31302e;
   --color-background-transparent: rgba(49, 48, 46, 0.6);
   --color-element-background: rgb(58, 57, 54);
   --color-text: #cdc6c6;
   --color-text-high-contrast: white;
+  --color-text-inverted: var(--color-background);
   --color-text-selection: var(--color-accent-1);
   --color-shadow: rgba(0,0,0,0.06);
   --color-shadow-strong: rgba(0,0,0,0.27);
@@ -19,7 +21,8 @@
   --color-ukraineFlag-bottom: #fdd400;
   --transition-duration-in: 110ms;
   --transition-duration-out: 250ms;
-  --transition-timing-functino: ease-out;
+  --transition-timing-function: ease-out;
+  --border-radius-S: 2px;
   --border-radius-M: 0.5rem;
   --layout-gutter: 2rem;
   --layout-column: calc((100vw - (12*var(--layout-gutter)))/11);
@@ -37,6 +40,7 @@
     --color-accent-1-hover: color(display-p3 0.5411 0.7725 0.349);
     --color-accent-1-hover-fill: color(display-p3 0.476 0.735 0.265);
     --color-accent-1-darkened-fill: color(display-p3 0.409 0.636 0.224);
+    --color-accent-2: color(display-p3 0.9922 0.7294 0.1019);
   }
 }
 @media (max-width: 1400px) {
@@ -169,12 +173,10 @@ main .splash {
 a, a:link, a:active, a:visited {
   text-decoration: none;
   color: var(--color-accent-1);
-  color: var(--color-accent-1);
 }
 
 a:hover, a:focus {
   text-decoration: underline;
-  color: var(--color-accent-1-hover);
   color: var(--color-accent-1-hover);
 }
 
@@ -240,7 +242,7 @@ h2 {
   max-width: calc(100% - var(--layout-gutter) * 2);
   overflow: hidden;
   transition-property: padding background-color box-shadow;
-  transition-timing-function: var(--transition-timing-functino);
+  transition-timing-function: var(--transition-timing-function);
   transition-duration: var(--transition-duration-out);
   text-shadow: 0 0 var(--layout-vertical-margin-XS) var(--color-shadow-strong);
   text-transform: uppercase;
@@ -360,6 +362,43 @@ nav.breadcrumb li a:hover, nav.breadcrumb li a:focus {
   text-decoration: underline;
 }
 
+button, input[type=button], input[type=submit], a.button {
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0 var(--layout-vertical-margin-XS);
+  line-height: var(--line-height-M);
+  color: var(--color-text-high-contrast);
+  background-color: var(--color-accent-1);
+  border-radius: var(--border-radius-S);
+  border: none;
+  outline: none;
+  transition-property: background-color;
+  transition-duration: var(--transition-duration-out);
+  transition-timing-function: var(--transition-timing-function);
+}
+button:hover, button:focus, button:active, input[type=button]:hover, input[type=button]:focus, input[type=button]:active, input[type=submit]:hover, input[type=submit]:focus, input[type=submit]:active, a.button:hover, a.button:focus, a.button:active {
+  color: var(--color-text-high-contrast);
+  background-color: var(--color-accent-1-hover-fill);
+  text-decoration: none;
+  transition-duration: var(--transition-duration-in);
+}
+button.error, .error button, input[type=button].error, .error input[type=button], input[type=submit].error, .error input[type=submit], a.button.error, .error a.button {
+  color: var(--color-text-inverted);
+  background-color: var(--color-accent-2);
+}
+button.error:hover, button.error:focus, button.error:active, .error button:hover, .error button:focus, .error button:active, input[type=button].error:hover, input[type=button].error:focus, input[type=button].error:active, .error input[type=button]:hover, .error input[type=button]:focus, .error input[type=button]:active, input[type=submit].error:hover, input[type=submit].error:focus, input[type=submit].error:active, .error input[type=submit]:hover, .error input[type=submit]:focus, .error input[type=submit]:active, a.button.error:hover, a.button.error:focus, a.button.error:active, .error a.button:hover, .error a.button:focus, .error a.button:active {
+  color: var(--color-text-inverted);
+  background-color: var(--color-accent-2);
+}
+button[disabled], input[type=button][disabled], input[type=submit][disabled], a.button[disabled] {
+  color: var(--color-text);
+  background-color: var(--color-element-background);
+}
+button[disabled]:hover, button[disabled]:focus, button[disabled]:active, input[type=button][disabled]:hover, input[type=button][disabled]:focus, input[type=button][disabled]:active, input[type=submit][disabled]:hover, input[type=submit][disabled]:focus, input[type=submit][disabled]:active, a.button[disabled]:hover, a.button[disabled]:focus, a.button[disabled]:active {
+  color: var(--color-text);
+  background-color: var(--color-element-background);
+}
+
 .o-h2 {
   margin: var(--layout-vertical-margin-XL) auto var(--layout-vertical-margin-L) auto;
 }
@@ -420,7 +459,7 @@ nav.breadcrumb li a:hover, nav.breadcrumb li a:focus {
   color: var(--color-text-high-contrast);
   text-align: center;
   background-color: var(--color-accent-1-darkened-fill);
-  border-radius: 2px;
+  border-radius: var(--border-radius-S);
   box-shadow: 0 0 var(--layout-vertical-margin-L) var(--color-accent-1-hover-fill);
   cursor: url("../img/cursor-heart.png"), auto;
   cursor: -webkit-image-set(url("../img/cursor-heart.png") 1x, url("../img/cursor-heart@2x.png") 2x, url("../img/cursor-heart@3x.png") 3x), auto;
@@ -575,6 +614,7 @@ article.teaser img {
   width: calc(var(--layout-column) * 6 + var(--layout-gutter) * 5);
   height: auto;
   align-self: start;
+  border-radius: var(--border-radius-S);
 }
 @media (max-width: 600px) {
   article.teaser img {
@@ -596,6 +636,7 @@ article.teaser .column {
   }
 }
 article.teaser .column a.button {
+  align-self: flex-start;
   margin-top: auto;
 }
 
