@@ -105,7 +105,7 @@ $layout-breakpoint-S: 480px;
 
 	--layout-vertical-margin-XXS: 0.3333rem;
 	--layout-vertical-margin-XS: calc(var(--layout-vertical-margin-XXS)*2);
-	--layout-vertical-margin-S: calc(var(--layout-vertical-margin-XS)*2);
+	--layout-vertical-margin-S: 1rem;
 	--layout-vertical-margin-M: calc(var(--layout-vertical-margin-S)*2);
 	--layout-vertical-margin-L: calc(var(--layout-vertical-margin-M)*2);
 	--layout-vertical-margin-XL: calc(var(--layout-vertical-margin-L)*2);
