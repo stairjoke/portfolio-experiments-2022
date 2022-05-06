@@ -154,6 +154,10 @@ main {
     position: relative;
     z-index: 101;
 	}
+  #home-splash {
+    background-color: var(--color-accent-1);
+    color: var(--color-text-high-contrast);
+  }
 }
 
 .inline-icon {

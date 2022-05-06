@@ -117,6 +117,10 @@ main .splash {
   position: relative;
   z-index: 101;
 }
+main #home-splash {
+  background-color: var(--color-accent-1);
+  color: var(--color-text-high-contrast);
+}
 
 .inline-icon {
   height: var(--line-height-M);
@@ -663,6 +667,7 @@ article {
   margin-left: auto;
   margin-right: auto;
   width: calc(var(--layout-column) * 9 + var(--layout-gutter) * 8);
+  margin-bottom: var(--layout-vertical-margin-XL);
 }
 @media (max-width: 600px) {
   article {
@@ -722,14 +727,6 @@ article .block .text-column a.button {
 article.teaser .text-column {
   padding-bottom: var(--layout-vertical-margin-M);
   border-bottom: solid 2px var(--color-element-background);
-}
-
-main {
-  height: 200vh;
-}
-main section.splash#home-splash {
-  background-color: var(--color-accent-1);
-  color: var(--color-text-high-contrast);
 }
 
 /*# sourceMappingURL=styles.css.map */

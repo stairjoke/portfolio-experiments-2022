@@ -34,10 +34,8 @@
 								<li><a href="">Editorial & Print</a></li>
 								<li><a href="">Front-End Development</a></li>
 							</ul>
-							<section>
 								<p>In my Bachelor Thesis (Dec 2020), I re-interpreted the Atomic Design workflow by Brad Frost from a designer's perspective. In my thesis abstract I put it like this:</p>
 								<p>"This thesis deals with two mutually reinforcing problems: designing for a variable viewport size and design-development coordination."</p>
-							</section>
 							<a href="" class="button">view project</a>
 						</div>
 					</div>
@@ -46,7 +44,7 @@
 					<div class="block">
 						<div class="graphic-column">
 							<!-- !!! URL !!! -->
-							<img src="content/home/atomic-design-teaser.jpg" alt="Screnshot of the home view of the application 'Proximity'.">
+							<img src="content/home/proximity-teaser.png" alt="Screnshot of the home view of the application 'Proximity'.">
 						</div>
 						<div class="text-column">
 							<h3 class="L">Proximity</h3>
@@ -56,16 +54,15 @@
 								<li><a href="">UI Design</a></li>
 								<li><a href="">Documentation</a></li>
 							</ul>
-							<section>
 								<p>Proximity is a university project. It is a privacy-first social network designed to connect people, local businesses, and the city. The app concept provides a fourth dimension, a meta-layer for our world, but does so with an elementary medium: a map on your phone.</p>
 							<p>You can discover groups of friends (crowds) around you, browse digital storefronts, and see information for areas marked by your municipality.</p>
-							</section>
 							<a href="" class="button">view project</a>
 						</div>
 					</div>
 				</article>
 			</section>
 		</main>
+		<?php snippet('o-footer'); ?>
 		<section id="layout-viz">
 			<div class="column" id="c1">
 				1

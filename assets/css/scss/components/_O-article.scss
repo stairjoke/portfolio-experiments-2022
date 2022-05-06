@@ -3,6 +3,7 @@
 
 article {
 	@include foundation.layout-full-width;
+  margin-bottom: var(--layout-vertical-margin-XL);
 
   .block {
     display: flex;
