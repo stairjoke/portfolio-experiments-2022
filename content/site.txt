@@ -1,1 +1,21 @@
-Title: Wenzel's Portsolio
+Title: Wenzel's Portfolio
+
+----
+
+FooterTitle: Let's stay in touch
+
+----
+
+FooterColumn1Title: Social Media 
+
+----
+
+FooterSocials: [Twitter](https://twitter.com/stairjoke), [LinkedIn](https://www.linkedin.com/in/wenzel-massag-b85400168/), [Codepen](http://codepen.io/stairjoke/), [Github](https://github.com/stairjoke), [Instagram](https://www.instagram.com/stairjoke/)
+
+----
+
+FooterColumn2Title: Contact
+
+----
+
+FooterColumn3Title: Newsletter 
