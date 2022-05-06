@@ -666,6 +666,7 @@ article .block {
   display: flex;
   width: calc(var(--layout-column) * 9 + var(--layout-gutter) * 8);
   overflow: visible;
+  margin-bottom: var(--layout-vertical-margin-XL);
 }
 @media (max-width: 600px) {
   article .block {
@@ -694,9 +695,6 @@ article .block .graphic-column img {
   width: 100%;
   height: auto;
   display: block;
-}
-article .block .graphic-column img.oversize {
-  transform: scale(1.0444);
 }
 article .block .text-column {
   order: 1;

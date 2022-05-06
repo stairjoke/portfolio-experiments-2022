@@ -16,6 +16,8 @@ article {
     // Ensure things like cags can align based on text. not on bounds:
     overflow: visible;
 
+    margin-bottom: var(--layout-vertical-margin-XL);
+
     .graphic-column {
 
       order: 2;
@@ -35,10 +37,6 @@ article {
         width: 100%;
         height: auto;
         display: block;
-
-        &.oversize {
-          transform: scale(1.0444);
-        }
       }
     }
     .text-column {
