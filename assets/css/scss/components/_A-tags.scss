@@ -1,6 +1,6 @@
 // Tags
 ul.m-tag-list {
-	margin: 0 calc(var(--layout-vertical-margin-XS) * (-1));
+	margin: var(--layout-vertical-margin-M) calc(var(--layout-vertical-margin-XS) * (-1));
 	padding: 0;
 	list-style: none;
 	font-size: 1rem;

@@ -74,4 +74,6 @@ h3 {
   @media (max-width: #{foundation.$layout-breakpoint-L}) {
     font-size: 2rem;
   }
+
+  margin-bottom: var(--layout-vertical-margin-M);
 }
