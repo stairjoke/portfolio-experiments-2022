@@ -466,6 +466,7 @@ ul.m-tag-list li a:hover .tag, ul.m-tag-list li a:focus .tag, ul.m-tag-list li a
 
 .o-h2 {
   margin: var(--layout-vertical-margin-XL) auto var(--layout-vertical-margin-L) auto;
+  cursor: copy;
 }
 .o-h2:has(.pubdate) {
   margin-top: calc(var(--layout-vertical-margin-XL) - var(--line-height-M));
