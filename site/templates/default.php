@@ -49,7 +49,7 @@
 							<img src="content/home/atomic-design-teaser.jpg" alt="Screnshot of the home view of the application 'Proximity'.">
 						</div>
 						<div class="text-column">
-							<h3>Proximity</h3>
+							<h3 class="L">Proximity</h3>
 							<ul class="m-tag-list">
 								<li><a href="">UX Research</a></li>
 								<li><a href="">UX Design</a></li>

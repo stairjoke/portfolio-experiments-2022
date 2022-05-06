@@ -285,6 +285,7 @@ h2:hover {
 h3 {
   font-size: 4rem;
   line-height: 1.3em;
+  margin-bottom: var(--layout-vertical-margin-M);
 }
 h3.S {
   font-size: 2rem;
@@ -293,6 +294,9 @@ h3.S {
   h3 {
     font-size: 3rem;
   }
+  h3.L {
+    font-size: 4rem;
+  }
   h3.S {
     font-size: 1rem;
   }
@@ -300,6 +304,9 @@ h3.S {
 @media (max-width: 1400px) {
   h3 {
     font-size: 2rem;
+  }
+  h3.L {
+    font-size: 3rem;
   }
 }
 
@@ -425,7 +432,7 @@ button[disabled]:hover, button[disabled]:focus, button[disabled]:active, input[t
 }
 
 ul.m-tag-list {
-  margin: 0 calc(var(--layout-vertical-margin-XS) * -1);
+  margin: var(--layout-vertical-margin-M) calc(var(--layout-vertical-margin-XS) * -1);
   padding: 0;
   list-style: none;
   font-size: 1rem;
