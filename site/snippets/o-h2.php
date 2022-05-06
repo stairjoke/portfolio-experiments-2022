@@ -5,7 +5,7 @@
 <?php
 	if($page->headline()->exists()) {
 ?>
-	<div class="o-h2">
+	<div class="o-h2" onClick="alert('implement copy page URL')">
 <?php
 		if($page->published()->exists()) {
 		//https://forum.getkirby.com/t/translating-date-formats/23435
