@@ -652,64 +652,68 @@ header a:hover, header a:focus {
   color: var(--color-text-high-contrast);
 }
 
-article.teaser {
+article {
   margin-left: auto;
   margin-right: auto;
   width: calc(var(--layout-column) * 9 + var(--layout-gutter) * 8);
-  display: flex;
-  overflow: visible;
-  width: calc(var(--layout-column) * 9 + var(--layout-gutter) * 8);
 }
 @media (max-width: 600px) {
-  article.teaser {
+  article {
     width: calc(var(--layout-column) * 3 + var(--layout-gutter) * 2);
   }
 }
+article .block {
+  display: flex;
+  width: calc(var(--layout-column) * 9 + var(--layout-gutter) * 8);
+  overflow: visible;
+}
 @media (max-width: 600px) {
-  article.teaser {
+  article .block {
     display: block;
   }
 }
 @media (max-width: 600px) {
-  article.teaser {
+  article .block {
     width: calc(var(--layout-column) * 3 + var(--layout-gutter) * 2);
   }
 }
-article.teaser .graphic-column {
+article .block .graphic-column {
   order: 2;
   flex: 2;
   width: calc(var(--layout-column) * 6 + var(--layout-gutter) * 5);
   align-self: start;
 }
 @media (max-width: 600px) {
-  article.teaser .graphic-column {
+  article .block .graphic-column {
     order: 1;
     width: calc(var(--layout-column) * 3 + var(--layout-gutter) * 2);
   }
 }
-article.teaser .graphic-column img {
+article .block .graphic-column img {
   border-radius: var(--border-radius-S);
   width: 100%;
   height: auto;
   display: block;
 }
-article.teaser .text-column {
+article .block .text-column {
   order: 1;
   flex: 1;
   min-width: 26ch;
   margin-right: var(--layout-gutter);
   align-self: stretch;
-  padding-bottom: var(--layout-vertical-margin-M);
-  border-bottom: solid 2px var(--color-element-background);
 }
 @media (max-width: 600px) {
-  article.teaser .text-column {
+  article .block .text-column {
     order: 2;
     margin-top: var(--layout-vertical-margin-M);
   }
 }
-article.teaser .text-column a.button {
+article .block .text-column a.button {
   margin-top: var(--layout-vertical-margin-S);
+}
+article.teaser .text-column {
+  padding-bottom: var(--layout-vertical-margin-M);
+  border-bottom: solid 2px var(--color-element-background);
 }
 
 main {
