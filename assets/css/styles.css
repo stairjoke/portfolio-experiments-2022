@@ -695,6 +695,9 @@ article .block .graphic-column img {
   height: auto;
   display: block;
 }
+article .block .graphic-column img.oversize {
+  transform: scale(1.0444);
+}
 article .block .text-column {
   order: 1;
   flex: 1;

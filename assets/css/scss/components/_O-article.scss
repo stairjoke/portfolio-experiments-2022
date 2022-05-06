@@ -35,6 +35,10 @@ article {
         width: 100%;
         height: auto;
         display: block;
+
+        &.oversize {
+          transform: scale(1.0444);
+        }
       }
     }
     .text-column {
