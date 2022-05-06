@@ -17,6 +17,7 @@
   --color-shadow: rgba(0,0,0,0.06);
   --color-shadow-strong: rgba(0,0,0,0.27);
   --color-glow: rgba(255,255,255,0.06);
+  --color-glow-strong: rgba(255,255,255,0.27);
   --color-ukraineFlag-top: #005abb;
   --color-ukraineFlag-bottom: #fdd400;
   --transition-duration-in: 110ms;
@@ -64,6 +65,7 @@
 @supports (color: color(display-p3 1 1 1)) {
   :root {
     --color-glow: color(display-p3 1 1 1 / 0.06);
+    --color-glow-strong: color(display-p3 1 1 1 / 0.27);
   }
 }
 @media (max-width: 1400px) {
@@ -405,16 +407,18 @@ button, input[type=button], input[type=submit], a.button {
   line-height: var(--line-height-M);
   color: var(--color-text-high-contrast);
   background-color: var(--color-accent-1);
+  box-shadow: 0 0 var(--layout-vertical-margin-S) transparent;
   border-radius: var(--border-radius-S);
   border: none;
   outline: none;
-  transition-property: background-color;
+  transition-property: background-color box-shadow;
   transition-duration: var(--transition-duration-out);
   transition-timing-function: var(--transition-timing-function);
 }
 button:hover, button:focus, button:active, input[type=button]:hover, input[type=button]:focus, input[type=button]:active, input[type=submit]:hover, input[type=submit]:focus, input[type=submit]:active, a.button:hover, a.button:focus, a.button:active {
   color: var(--color-text-high-contrast);
   background-color: var(--color-accent-1-hover-fill);
+  box-shadow: 0 0 var(--layout-vertical-margin-M) var(--color-glow);
   text-decoration: none;
   transition-duration: var(--transition-duration-in);
 }
@@ -454,7 +458,8 @@ ul.m-tag-list li a {
   margin: var(--layout-vertical-margin-XXS) 0;
   border-radius: var(--border-radius-L);
   background-color: var(--color-element-background);
-  transition-property: background-color;
+  box-shadow: 0 0 var(--layout-vertical-margin-S) transparent;
+  transition-property: background-color box-shadow;
   transition-duration: var(--transition-duration-out);
   transition-timing-function: var(--transition-timing-function);
 }
@@ -469,6 +474,7 @@ ul.m-tag-list li a:before, ul.m-tag-list li a:link:before, ul.m-tag-list li a:ho
 }
 ul.m-tag-list li a:hover, ul.m-tag-list li a:focus, ul.m-tag-list li a:active {
   background-color: var(--color-element-background-hover);
+  box-shadow: 0 0 var(--layout-vertical-margin-M) var(--color-glow);
   transition-duration: var(--transition-duration-in);
 }
 ul.m-tag-list li a:hover .tag, ul.m-tag-list li a:focus .tag, ul.m-tag-list li a:active .tag {
@@ -556,6 +562,9 @@ ul.m-tag-list li a:hover .tag, ul.m-tag-list li a:focus .tag, ul.m-tag-list li a
 }
 
 header {
+  position: relative;
+  z-index: 101;
+  top: 0;
   padding: var(--layout-gutter);
   box-sizing: border-box;
   display: flex;
@@ -569,8 +578,8 @@ header.accent {
 header.sticky {
   position: sticky;
   z-index: 100;
-  top: 0;
   background-color: var(--color-background);
+  box-shadow: 0 0 var(--layout-vertical-margin-S) var(--color-shadow-strong);
 }
 @supports (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)) {
   header.sticky {
@@ -609,13 +618,6 @@ header nav li {
 }
 header nav li a#logo {
   height: var(--line-height-M);
-  /*
-  &:hover span {
-  	transform: translateX(calc(var(--line-height-M) * 1.29)); //1.29 = aspect ratio of logo
-  	opacity: 1;
-  	background-color: var(--color-element-background);
-  }
-  */
 }
 header nav li a#logo span {
   display: inline-block;
@@ -628,26 +630,28 @@ header nav li a#logo svg {
   fill: url(#ukraineFlag);
   margin-right: 0.75rem;
   transition-property: transform;
-  transition-duration: 250ms;
-  transition-timing-function: ease-out;
+  transition-duration: var(--transition-duration-in);
+  transition-timing-function: var(--transition-timing-function);
 }
 header nav li a#logo:hover svg, header nav li a#logo:focus svg {
   transform: scale(0.75);
-  transition-duration: 250ms;
+  transition-duration: var(--transition-duration-out);
   transition-timing-function: cubic-bezier(0.5, 2.5, 0.75, 0.5);
 }
 header nav li a {
   display: inline-block;
   padding: 0 0.75rem;
   background-color: transparent;
+  box-shadow: 0 0 var(--layout-vertical-margin-S) transparent;
   border-radius: var(--border-radius-M);
-  transition-property: background-color;
-  transition-duration: 250ms;
+  transition-property: background-color box-shadow;
+  transition-duration: var(--transition-duration-out);
   transition-timing-function: ease-out;
 }
 header nav li a:hover, header nav li a:focus {
   background-color: rgba(255, 255, 255, 0.16);
-  transition-duration: 110ms;
+  box-shadow: 0 0 var(--layout-vertical-margin-M) var(--color-glow);
+  transition-duration: var(--transition-duration-in);
 }
 header nav li:first-child a {
   margin-left: -0.75rem;

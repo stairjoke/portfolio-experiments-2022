@@ -61,10 +61,12 @@ $layout-breakpoint-S: 480px;
 	--color-shadow: rgba(0,0,0,0.06);
 	--color-shadow-strong: rgba(0,0,0,0.27);
 	--color-glow: rgba(255,255,255,0.06);
+  --color-glow-strong: rgba(255,255,255,0.27);
 
   @supports (color: color(display-p3 1 1 1)) {
     //Color variables expanded to use P3 gamut
     --color-glow: color(display-p3 1 1 1 / 0.06);
+    --color-glow-strong: color(display-p3 1 1 1 / 0.27);
   }
 
 	--color-ukraineFlag-top: #005abb;

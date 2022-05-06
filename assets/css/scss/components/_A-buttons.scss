@@ -11,18 +11,20 @@ button, input[type=button], input[type=submit], a.button {
 
 	color: var(--color-text-high-contrast);
 	background-color: var(--color-accent-1);
+  box-shadow: 0 0 var(--layout-vertical-margin-S) transparent;
 
 	border-radius: var(--border-radius-S);
 	border: none;
 	outline: none;
 
-	transition-property: background-color;
+	transition-property: background-color box-shadow;
 	transition-duration: var(--transition-duration-out);
 	transition-timing-function: var(--transition-timing-function);
 
 	&:hover, &:focus, &:active {
 		color: var(--color-text-high-contrast);
 		background-color: var(--color-accent-1-hover-fill);
+    box-shadow: 0 0 var(--layout-vertical-margin-M) var(--color-glow);
 		text-decoration: none;
 		transition-duration: var(--transition-duration-in);
 	}

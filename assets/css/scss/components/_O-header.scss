@@ -2,6 +2,11 @@
 @use "foundation";
 
 header {
+  position: relative;
+  //Place just below splash, but above everything else on page
+  z-index: 101;
+  top: 0;
+
 	padding: var(--layout-gutter);
 	box-sizing: border-box;
   &.accent {
@@ -10,18 +15,17 @@ header {
 
   &.sticky {
     position: sticky;
-
-    //Place just below splash, but above everything else on page
     z-index: 100;
-    top: 0;
 
     background-color: var(--color-background);
 
     @supports (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)) {
-        -webkit-backdrop-filter: blur(10px); //Safari still uses the prefix
-        backdrop-filter: blur(10px);
-        background-color: var(--color-background-transparent);
-      }
+      -webkit-backdrop-filter: blur(10px); //Safari still uses the prefix
+      backdrop-filter: blur(10px);
+      background-color: var(--color-background-transparent);
+    }
+
+    box-shadow: 0 0 var(--layout-vertical-margin-S) var(--color-shadow-strong);
   }
 
 	display: flex;
@@ -65,21 +69,7 @@ header {
 				span {
 					display: inline-block;
 					vertical-align: top;
-					//transform: translateX(calc(var(--line-height-M) * 1.29 * .7));
-					//opacity: 0;
-					//transition-property: opacity transform;
-					//transition-duration: 180ms;
-					//transition-timing-function: ease-out;
-					//padding: 0 0.5rem;
-					//border-radius: var(--border-radius-M);
 				}
-				/*
-				&:hover span {
-					transform: translateX(calc(var(--line-height-M) * 1.29)); //1.29 = aspect ratio of logo
-					opacity: 1;
-					background-color: var(--color-element-background);
-				}
-				*/
 				svg {
 					height: var(--line-height-M);
 					aspect-ratio: 1;
@@ -89,13 +79,13 @@ header {
 					margin-right: .75rem;
 
 					transition-property: transform;
-					transition-duration: 250ms;
-					transition-timing-function: ease-out;
+					transition-duration: var(--transition-duration-in);
+					transition-timing-function: var(--transition-timing-function);
 				}
 				&:hover, &:focus {
 					svg {
 						transform: scale(.75);
-						transition-duration: 250ms;
+						transition-duration: var(--transition-duration-out);
 						transition-timing-function: cubic-bezier(.5,2.5,.75,.5);
 					}
 				}
@@ -104,13 +94,15 @@ header {
 				display: inline-block;
 				padding: 0 0.75rem;
 				background-color: transparent;
+        box-shadow: 0 0 var(--layout-vertical-margin-S) transparent;
 				border-radius: var(--border-radius-M);
-				transition-property: background-color;
-				transition-duration: 250ms;
+				transition-property: background-color box-shadow;
+				transition-duration: var(--transition-duration-out);
 				transition-timing-function: ease-out;
 				&:hover, &:focus {
 					background-color: rgba(255,255,255,0.16);
-					transition-duration: 110ms;
+          box-shadow: 0 0 var(--layout-vertical-margin-M) var(--color-glow);
+					transition-duration: var(--transition-duration-in);
 				}
 			}
 			//Pull first and last item "out" towards the edge by the same amount as they have internal padding.
