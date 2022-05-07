@@ -3,7 +3,7 @@
 ?>
 
 <?php
-	if($page->headline()->exists()) {
+	if($page->Headline()->exists()) {
 ?>
 	<div class="o-h2" onClick="alert('implement copy page URL')">
 <?php
@@ -16,7 +16,7 @@
 <?php
 		} //endif page has pubdate
 ?>
-		<h2><?= ($page->has('Headline')) ? $page->headline() : '' ?></h2>
+		<h2><?= ($page->Headline()->exists()) ? $page->Headline() : '' ?></h2>
 		<nav class="breadcrumb">
 			<ol>
 				<li>
