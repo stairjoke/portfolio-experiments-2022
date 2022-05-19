@@ -3,7 +3,6 @@
 
 .o-h2 {
 	margin: var(--layout-vertical-margin-XL) auto var(--layout-vertical-margin-L) auto;
-  cursor: copy;
 
 	&:has(.pubdate) {
 		//If this organism contains a .pubdate component, it's margin-top shall be reduced by 1 line-height-M

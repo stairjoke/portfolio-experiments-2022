@@ -18,4 +18,16 @@ FooterColumn2Title: Contact
 
 ----
 
+ContactEmail: hello@wenzels.website
+
+----
+
+ContactPhone: 0031682746212
+
+----
+
+ContactPhoneHumanFriendly: +31 682 746 212
+
+----
+
 FooterColumn3Title: Newsletter 
