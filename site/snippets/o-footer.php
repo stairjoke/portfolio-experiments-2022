@@ -22,6 +22,7 @@
 						<svg class="icon">
 							<use xlink:href="#<?= strtolower($words) ?>"></use>
 						</svg> <?= $words ?>
+						</a>
 					</li>
 					<?php
 				}
