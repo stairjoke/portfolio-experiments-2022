@@ -31,3 +31,15 @@ ContactPhoneHumanFriendly: +31 682 746 212
 ----
 
 FooterColumn3Title: Newsletter 
+
+----
+
+NewsletterDescription: Occasionally, I publish a personal newsletter where I share what I've learned. I haven't started yet, but I expect it'll be once a month.
+
+----
+
+NewsletterDisclaimer: I use Mailchimp.com to send this newsletter, for more information please read the Privacy Policy.
+
+----
+
+NewsletterSignupButtonLabel: I understand, subscribe for free.

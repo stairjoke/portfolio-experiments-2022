@@ -28,33 +28,46 @@
 	</div>
 	<div class="column">
 		<h3><?= $site->FooterColumn2Title() ?></h3>
+		<p>
 		<?php
-			if($site->has('ContactEmail') or $site->has('ContactPhone')):
-				echo('<p>');
-				if($site->has('ContactEmail')):
+			if($site->has('ContactEmail')):
 		?>
 		email: <a href="mailto:<?= $site->ContactEmail()->value() ?>"><?= $site->ContactEmail() ?></a><br>
 		<?php
-				endif; //contact email
-				if($site->has('ContactPhone')):
+			endif; //contact email
+			if($site->has('ContactPhone')):
 		?>
 		phone: <a href="tel:<?= $site->ContactPhone()->value() ?>"><?php
-				if($site->ContactPhoneHumanFriendly()->exists()):
-						echo($site->ContactPhoneHumanFriendly());
-					else:
-						echo($site->ContactPhone());
-					endif;
+			if($site->ContactPhoneHumanFriendly()->exists()):
+					echo($site->ContactPhoneHumanFriendly());
+				else:
+					echo($site->ContactPhone());
+				endif;
 					?></a><br>
 		<?php
-				endif;
-				echo('</p>');
 			endif;
 		?>
+		</p>
 		<form>
-			
+			<p>Contact Form</p>
 		</form>
 	</div>
 	<div class="column">
 		<h3><?= $site->FooterColumn3Title() ?></h3>
+		<?=
+				kirbytext($site->NewsletterDescription());
+		?>
+		<form>
+			<p>email input</p>
+			<?=
+					kirbytext($site->NewsletterDisclaimer());
+			?>
+			<p>
+				Signup button
+			</p>
+		</form>
+	</div>
+	<div>
+		<p><a href="">Imprint,</a> <a href="">Privacy Policy.</a> &copy; (Copyright) 2021 Wenzel Massag, all rights reserved.</p>
 	</div>
 </footer>
