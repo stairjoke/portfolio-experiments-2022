@@ -16,12 +16,14 @@
 					preg_match($pattern, $social, $matches);
 					$words = $matches[1];
 					$url   = $matches[2];
-					/*
-					<svg class="icon">
-						<use xlink:href="#twitter"></use>
-					</svg>
-					*/
-					echo("<li>Words: $words, URL: $url</li>");
+					?>
+					<li>
+						<a href="<?= $url ?>">
+						<svg class="icon">
+							<use xlink:href="#<?= strtolower($words) ?>"></use>
+						</svg> <?= $words ?>
+					</li>
+					<?php
 				}
 			?>
 		</div>
