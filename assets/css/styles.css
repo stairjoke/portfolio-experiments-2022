@@ -398,6 +398,7 @@ button, input[type=button], input[type=submit], a.button {
   font-weight: 500;
   font-size: 1rem;
   padding: 0 var(--layout-vertical-margin-XS);
+  box-sizing: border-box;
   line-height: var(--line-height-M);
   color: var(--color-text-high-contrast);
   background-color: var(--color-accent-1);
