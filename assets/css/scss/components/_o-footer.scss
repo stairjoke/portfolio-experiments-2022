@@ -8,6 +8,10 @@ footer {
     flex-wrap: wrap;
     @include foundation.layout-full-width;
 
+    @media (max-width: #{foundation.$layout-breakpoint-M}) {
+      display: block;
+    }
+
    .column {
      flex: 1;
      max-width: calc(var(--layout-column) * 3 + var(--layout-gutter) * 2);

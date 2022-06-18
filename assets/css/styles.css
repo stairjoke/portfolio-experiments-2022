@@ -739,6 +739,11 @@ footer .columns {
     width: calc(var(--layout-column) * 3 + var(--layout-gutter) * 2);
   }
 }
+@media (max-width: 600px) {
+  footer .columns {
+    display: block;
+  }
+}
 footer .columns .column {
   flex: 1;
   max-width: calc(var(--layout-column) * 3 + var(--layout-gutter) * 2);
