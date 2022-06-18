@@ -8,7 +8,7 @@
 	<div class="columns">
 		<div class="column">
 			<h3><?= $site->FooterColumn1Title() ?></h3>
-			<div class="griddy">
+			<ul class="griddy">
 				<?php
 					$socials = explode(', ', htmlspecialchars($site->FooterSocials()->value()));
 					$pattern_square = '\[(.*?)\]';
@@ -30,7 +30,7 @@
 						<?php
 					}
 				?>
-			</div>
+			</ul>
 		</div>
 		<div class="column">
 			<h3><?= $site->FooterColumn2Title() ?></h3>
