@@ -2,13 +2,13 @@
 
 .floater {
 	position: relative;
-	
+
 	&.center-center {
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%, 0);
 	}
-	
+
 	&.center-Y {
 		top: 50%;
 		transform: translateY(-50%);

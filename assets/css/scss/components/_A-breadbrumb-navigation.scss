@@ -6,9 +6,9 @@ nav.breadcrumb {
 		margin-top: calc((var(--layout-vertical-margin-L) *(-1)) + var(--layout-vertical-margin-XS));
 		margin-bottom: var(--layout-vertical-margin-L);
 	}
-	
+
 	@include foundation.layout-full-width;
-	
+
 	ul, ol, li {
 		display: inline-block;
 		list-style: none;
@@ -20,21 +20,21 @@ nav.breadcrumb {
 	li {
 		display: inline-block;
 		font-size: 1rem;
-		
+
 		a {
 			display: inline-block;
 			padding: 0 var(--layout-vertical-margin-XXS);
 			line-height: var(--line-height-M);
 			vertical-align: top;
-			
+
 			color: var(--color-text);
 			text-decoration: underline;
-			
+
 			&:link, &:active, &:visited {
 				color: var(--color-text-high-contrast);
 				text-decoration: none;
 			}
-			
+
 			&:hover, &:focus {
 				text-decoration: underline;
 			}
