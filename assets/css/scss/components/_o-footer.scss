@@ -1,0 +1,23 @@
+// Organism — Footer
+@use "foundation";
+
+footer {
+  .columns {
+    display: flex;
+    gap: var(--layout-gutter);
+    flex-wrap: wrap;
+    @include foundation.layout-full-width;
+
+   .column {
+     flex: 1;
+     max-width: calc(var(--layout-column) * 3 + var(--layout-gutter) * 2);
+
+     .griddy {
+
+     }
+   }
+  }
+  .legal {
+    @include foundation.layout-full-width;
+  }
+}
