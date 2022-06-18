@@ -165,6 +165,10 @@ main {
 .inline-icon {
 	height: var(--line-height-M);
 
+  &._1
+  {
+    aspect-ratio: 1;
+  }
 	&._12-36 {
 		aspect-ratio: 12 / 36;
 	}
