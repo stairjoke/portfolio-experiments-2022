@@ -182,53 +182,54 @@ main {
 	position: absolute;
 	z-index: 1000;
 	display: block;
+
 	.column {
 		display: block;
-		background-color: rgba(255,0,0,0.1);
-		outline: solid rgba(200,0,0,0.2) 1px;
+		background-color: rgba(255,0,0,0.05);
+		outline: solid rgba(255,0,0,0.5) 1px;
 		position: fixed;
 		top: 0;
 		bottom: 0;
-		width: var(--layout-column);
+		width: calc(var(--layout-column) - 2px);
 		pointer-events: none;
 		text-align: center;
 		color: rgba(255,255,255,.5);
 	}
 	#c1 {
-		left: var(--layout-gutter);
+		left: calc(var(--layout-gutter) + 1px);
 	}
 	#c2 {
-		left: calc(var(--layout-gutter)*2 + var(--layout-column));
+		left: calc(var(--layout-gutter)*2 + var(--layout-column) + 1px);
 	}
 	#c3 {
-		left: calc(var(--layout-gutter)*3 + var(--layout-column)*2);
+		left: calc(var(--layout-gutter)*3 + var(--layout-column)*2 + 1px);
 	}
 	#c4 {
-		left: calc(var(--layout-gutter)*4 + var(--layout-column)*3);
+		left: calc(var(--layout-gutter)*4 + var(--layout-column)*3 + 1px);
 	}
 	#c5 {
-		left: calc(var(--layout-gutter)*5 + var(--layout-column)*4);
+		left: calc(var(--layout-gutter)*5 + var(--layout-column)*4 + 1px);
 	}
 	#c6 {
-		left: calc(var(--layout-gutter)*6 + var(--layout-column)*5);
+		left: calc(var(--layout-gutter)*6 + var(--layout-column)*5 + 1px);
 	}
 	#c7 {
-		left: calc(var(--layout-gutter)*7 + var(--layout-column)*6);
+		left: calc(var(--layout-gutter)*7 + var(--layout-column)*6 + 1px);
 	}
 	#c8 {
-		left: calc(var(--layout-gutter)*8 + var(--layout-column)*7);
+		left: calc(var(--layout-gutter)*8 + var(--layout-column)*7 + 1px);
 	}
 	#c9 {
-		left: calc(var(--layout-gutter)*9 + var(--layout-column)*8);
+		left: calc(var(--layout-gutter)*9 + var(--layout-column)*8 + 1px);
 	}
 	#c10 {
-		left: calc(var(--layout-gutter)*10 + var(--layout-column)*9);
+		left: calc(var(--layout-gutter)*10 + var(--layout-column)*9 + 1px);
 		@media (max-width: #{$layout-breakpoint-L}) {
 			display: none;
 		}
 	}
 	#c11 {
-		left: calc(var(--layout-gutter)*11 + var(--layout-column)*10);
+		left: calc(var(--layout-gutter)*11 + var(--layout-column)*10 + 1px);
 		@media (max-width: #{$layout-breakpoint-L}) {
 			display: none;
 		}
