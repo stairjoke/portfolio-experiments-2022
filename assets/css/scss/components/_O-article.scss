@@ -7,6 +7,8 @@ article {
 
   .block {
     display: flex;
+    gap: var(--layout-gutter);
+
     @media (max-width: #{foundation.$layout-breakpoint-M}) {
       display: block;
     }
@@ -14,7 +16,7 @@ article {
     @media (max-width: #{foundation.$layout-breakpoint-M}) {
       width: calc(var(--layout-column)*3 + var(--layout-gutter)*2);
     }
-    // Ensure things like cags can align based on text. not on bounds:
+    // Ensure things like categories can align based on text. not on bounds:
     overflow: visible;
 
     margin-bottom: var(--layout-vertical-margin-XL);
@@ -22,9 +24,8 @@ article {
     .graphic-column {
 
       order: 2;
-      flex: 2;
+      flex: 1;
 
-      width: calc(var(--layout-column)*6 + var(--layout-gutter)*5);
       @media (max-width: #{foundation.$layout-breakpoint-M}) {
         order: 1;
         width: calc(var(--layout-column)*3 + var(--layout-gutter)*2);
@@ -42,14 +43,14 @@ article {
     }
     .text-column {
       order: 1;
-      flex: 1;
       min-width: 26ch;
+
+      width: calc(var(--layout-column)*3 + var(--layout-gutter)*2);
 
       @media (max-width: #{foundation.$layout-breakpoint-M}) {
         order: 2;
         margin-top: var(--layout-vertical-margin-M);
       }
-      margin-right: var(--layout-gutter);
       align-self: stretch;
 
       a.button {
