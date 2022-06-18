@@ -22,7 +22,7 @@
 						?>
 						<li>
 							<a href="<?= $url ?>">
-							<svg class="icon">
+							<svg class="inline-icon _1">
 								<use xlink:href="#<?= strtolower($words) ?>"></use>
 							</svg> <?= $words ?>
 							</a>
