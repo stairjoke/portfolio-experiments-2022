@@ -127,6 +127,9 @@ main #home-splash {
 .inline-icon {
   height: var(--line-height-M);
 }
+.inline-icon._1 {
+  aspect-ratio: 1;
+}
 .inline-icon._12-36 {
   aspect-ratio: 12/36;
 }
@@ -747,6 +750,29 @@ footer .columns {
 footer .columns .column {
   flex: 1;
   max-width: calc(var(--layout-column) * 3 + var(--layout-gutter) * 2);
+}
+footer .columns .column ul.griddy {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--layout-gutter);
+  row-gap: var(--line-height-M);
+}
+footer .columns .column ul.griddy li {
+  margin: 0;
+  padding: 0;
+  min-width: var(--layout-column);
+}
+footer .columns .column ul.griddy li a {
+  vertical-align: middle;
+  color: var(--color-text-high-contrast);
+}
+footer .columns .column ul.griddy li a svg {
+  vertical-align: middle;
+  padding-right: var(--layout-vertical-margin-XXS);
+  fill: var(--color-accent-1);
 }
 footer .legal {
   margin-left: auto;

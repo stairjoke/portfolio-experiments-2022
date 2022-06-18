@@ -12,14 +12,37 @@ footer {
       display: block;
     }
 
-   .column {
-     flex: 1;
-     max-width: calc(var(--layout-column) * 3 + var(--layout-gutter) * 2);
+    .column {
+      flex: 1;
+      max-width: calc(var(--layout-column) * 3 + var(--layout-gutter) * 2);
 
-     .griddy {
+      ul.griddy {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--layout-gutter);
+        row-gap: var(--line-height-M);
 
-     }
-   }
+        li {
+          margin: 0;
+          padding: 0;
+          min-width: var(--layout-column);
+
+          a {
+            vertical-align: middle;
+            color: var(--color-text-high-contrast);
+
+            svg {
+              vertical-align: middle;
+              padding-right: var(--layout-vertical-margin-XXS);
+              fill: var(--color-accent-1);
+            }
+          }
+        }
+      }
+    }
   }
   .legal {
     @include foundation.layout-full-width;
