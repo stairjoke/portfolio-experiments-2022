@@ -4,6 +4,7 @@
 footer {
   .columns {
     display: flex;
+    align-items: stretch;
     gap: var(--layout-gutter);
     flex-wrap: wrap;
     @include foundation.layout-full-width;
@@ -15,20 +16,28 @@ footer {
     .column {
       flex: 1;
       max-width: calc(var(--layout-column) * 3 + var(--layout-gutter) * 2);
+      //border-left: solid 2px var(--color-element-background);
+      background-color: var(--color-element-background);
+
+      padding: var(--layout-vertical-margin-S);
+      box-sizing: border-box;
+
+      border-radius: var(--border-radius-M);
+      transition-property: border-radius;
+      &:hover, &:focus-within {
+        border-radius: var(--border-radius-M);
+      }
 
       ul.griddy {
         margin: 0;
         padding: 0;
         list-style: none;
-        display: flex;
-        flex-wrap: wrap;
-        gap: var(--layout-gutter);
-        row-gap: var(--line-height-M);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
 
         li {
-          margin: 0;
-          padding: 0;
-          min-width: var(--layout-column);
+          margin: 0 var(--layout-vertical-margin-S)  var(--line-height-M) 0;
 
           a {
             vertical-align: middle;
