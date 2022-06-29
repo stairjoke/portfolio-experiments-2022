@@ -55,7 +55,16 @@
 			?>
 			</p>
 			<form>
-				<p>Contact Form</p>
+				<form>
+					<input type="text" minlength="2" id="name" name=name />
+					<input type="text" minlength="2" id="honeypot" value="Name" name="honeypot" />
+					<input type="email" minlength="5" id="email" name="email" />
+					<textarea id="message" name="message"></textarea>
+					<p>
+						Your contact information and the contents of your message will only be used to repond to you. For more information please red the <a href="privacy">Privacy Policy.</a>
+					</p>
+					<input type="submit" name="submit" value="I agree, send." />
+				</form>
 			</form>
 		</div>
 		<div class="column">
