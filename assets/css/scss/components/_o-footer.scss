@@ -9,18 +9,22 @@ footer {
     flex-wrap: wrap;
     @include foundation.layout-full-width;
 
-    @media (max-width: #{foundation.$layout-breakpoint-M}) {
+    @media (max-width: #{foundation.$layout-breakpoint-S}) {
       display: block;
     }
 
     .column {
-      flex: 1;
-      max-width: calc(var(--layout-column) * 3 + var(--layout-gutter) * 2);
-      //border-left: solid 2px var(--color-element-background);
+      flex: 1 0 calc((var(--layout-column) * 3) + (var(--layout-gutter) * 2));
+      box-sizing: border-box;
+
+      @media (max-width: #{foundation.$layout-breakpoint-M - 1px }) {
+        flex: 1 0 50%;
+      }
+
+      margin-bottom: var(--layout-vertical-margin-S);
       background-color: var(--color-element-background);
 
       padding: var(--layout-vertical-margin-S);
-      box-sizing: border-box;
 
       border-radius: var(--border-radius-M);
       transition-property: border-radius;
