@@ -751,7 +751,7 @@ footer .columns {
 footer .columns .column {
   flex: 1 0 calc(var(--layout-column) * 3 + var(--layout-gutter) * 2);
   box-sizing: border-box;
-  margin-bottom: var(--layout-vertical-margin-S);
+  margin-bottom: var(--layout-gutter);
   background-color: var(--color-element-background);
   padding: var(--layout-vertical-margin-S);
   border-radius: var(--border-radius-M);
@@ -789,6 +789,7 @@ footer .legal {
   margin-left: auto;
   margin-right: auto;
   width: calc(var(--layout-column) * 9 + var(--layout-gutter) * 8);
+  padding-bottom: var(--layout-gutter);
 }
 @media (max-width: 600px) {
   footer .legal {
