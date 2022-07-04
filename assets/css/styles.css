@@ -755,15 +755,20 @@ footer .columns .column {
   background-color: var(--color-element-background);
   padding: var(--layout-vertical-margin-S);
   border-radius: var(--border-radius-M);
-  transition-property: border-radius;
+  transition-property: background-color;
+  transition-duration: var(--transition-duration-out);
+  transition-timing-function: var(--transition-timing-function);
 }
 @media (max-width: 599px) {
   footer .columns .column {
     flex: 1 0 50%;
   }
 }
-footer .columns .column:hover, footer .columns .column:focus-within {
-  border-radius: var(--border-radius-M);
+footer .columns .column:hover, footer .columns .column:focus, footer .columns .column:focus-within {
+  transition-duration: var(--transition-duration-in);
+}
+footer .columns .column:hover, footer .columns .column:focus, footer .columns .column:focus-within {
+  background-color: var(--color-element-background-hover);
 }
 footer .columns .column ul.griddy {
   margin: 0;
