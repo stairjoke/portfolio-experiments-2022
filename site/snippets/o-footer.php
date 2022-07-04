@@ -56,10 +56,13 @@
 			</p>
 			<form>
 				<form>
-					<input type="text" minlength="2" id="name" name=name />
-					<input type="text" minlength="2" id="honeypot" value="Name" name="honeypot" />
-					<input type="email" minlength="5" id="email" name="email" />
-					<textarea id="message" name="message"></textarea>
+					<label for="name">Name, how should I address you?</label>
+					<input type="text" minlength="2" id="name" name=name placeholder="Your Name" />
+					<input type="text" minlength="2" id="honeypot" value="Name" name="honeypot" aria-hidden="true" placeholder="Last Name" />
+					<label for="email">Reply email address</label>
+					<input type="email" minlength="5" id="email" name="email" placeholder="your@email.address" />
+					<label for="message">Your message</label>
+					<textarea id="message" name="message" placeholder="Your Message"></textarea>
 					<p>
 						Your contact information and the contents of your message will only be used to repond to you. For more information please red the <a href="privacy">Privacy Policy.</a>
 					</p>
