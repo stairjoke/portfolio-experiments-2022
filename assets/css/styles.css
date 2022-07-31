@@ -130,6 +130,18 @@ main .splash-scroll-indicator {
   animation-duration: 12s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
+  transition-property: opacity;
+  transition-duration: var(--transition-duration-out);
+  transition-timing-function: var(--transition-timing-function);
+}
+main .splash-scroll-indicator:hover, main .splash-scroll-indicator:focus, main .splash-scroll-indicator:focus-within {
+  transition-duration: var(--transition-duration-in);
+}
+main .splash-scroll-indicator.hide {
+  opacity: 0;
+}
+main .splash-scroll-indicator.hidden {
+  display: none;
 }
 
 @keyframes CTA-scroll-up-vh-centered {

@@ -179,6 +179,15 @@ main {
     animation-duration: 12s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
+    transition-property: opacity;
+    @include transition-properties-default;
+
+    &.hide {
+      opacity: 0;
+    }
+    &.hidden {
+      display: none;
+    }
   }
 }
 
