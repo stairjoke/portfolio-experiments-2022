@@ -120,44 +120,7 @@ main #home-splash {
   background-color: var(--color-accent-1);
   color: var(--color-text-high-contrast);
 }
-main .splash-scroll-indicator {
-  position: absolute;
-  bottom: 5vh;
-  left: 50%;
-  width: 2rem;
-  height: 2rem;
-  animation-name: CTA-scroll-up-vh-centered;
-  animation-duration: 12s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-  transition-property: opacity;
-  transition-duration: var(--transition-duration-out);
-  transition-timing-function: var(--transition-timing-function);
-}
-main .splash-scroll-indicator:hover, main .splash-scroll-indicator:focus, main .splash-scroll-indicator:focus-within {
-  transition-duration: var(--transition-duration-in);
-}
-main .splash-scroll-indicator.hide {
-  opacity: 0;
-}
-main .splash-scroll-indicator.hidden {
-  display: none;
-}
 
-@keyframes CTA-scroll-up-vh-centered {
-  0%, 100% {
-    fill: var(--color-text-low-contrast);
-    transform: translate(-50%, 100%);
-  }
-  70% {
-    transform: translate(-50%, 100%);
-    fill: var(--color-text-low-contrast);
-  }
-  75% {
-    transform: translate(-50%, 0%);
-    fill: var(--color-text);
-  }
-}
 .inline-icon {
   height: var(--line-height-M);
 }
@@ -471,6 +434,44 @@ button[disabled]:hover, button[disabled]:focus, button[disabled]:active, input[t
   background-color: var(--color-element-background);
 }
 
+.splash-scroll-indicator {
+  position: absolute;
+  bottom: 5vh;
+  left: 50%;
+  width: 2rem;
+  height: 2rem;
+  animation-name: CTA-scroll-up-vh-centered;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  transition-property: opacity;
+  transition-duration: var(--transition-duration-out);
+  transition-timing-function: var(--transition-timing-function);
+}
+.splash-scroll-indicator:hover, .splash-scroll-indicator:focus, .splash-scroll-indicator:focus-within {
+  transition-duration: var(--transition-duration-in);
+}
+.splash-scroll-indicator.hide {
+  opacity: 0;
+}
+.splash-scroll-indicator.hidden {
+  display: none;
+}
+
+@keyframes CTA-scroll-up-vh-centered {
+  0%, 100% {
+    fill: var(--color-text-low-contrast);
+    transform: translate(-50%, 100%);
+  }
+  70% {
+    transform: translate(-50%, 100%);
+    fill: var(--color-text-low-contrast);
+  }
+  75% {
+    transform: translate(-50%, 0%);
+    fill: var(--color-text);
+  }
+}
 ul.m-tag-list {
   margin: var(--layout-vertical-margin-M) 0 var(--layout-vertical-margin-M) calc(var(--layout-vertical-margin-XS) * -1);
   padding: 0;

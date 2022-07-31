@@ -1,0 +1,38 @@
+// Atom: Splash Scroll Indicator
+@use "foundation";
+
+.splash-scroll-indicator {
+	position: absolute;
+	bottom: 5vh;
+	left: 50%;
+	width: 2rem;
+	height: 2rem;
+	animation-name: CTA-scroll-up-vh-centered;
+	animation-duration: 12s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	transition-property: opacity;
+	@include foundation.transition-properties-default;
+
+	&.hide {
+	  opacity: 0;
+	}
+	&.hidden {
+	  display: none;
+	}
+  }
+
+@keyframes CTA-scroll-up-vh-centered {
+  0%, 100% {
+	fill: var(--color-text-low-contrast);
+	transform: translate(-50%, 100%);
+  }
+  70% {
+	transform: translate(-50%, 100%);
+	fill: var(--color-text-low-contrast);
+  }
+  75% {
+	transform: translate(-50%, 0%);
+	fill: var(--color-text);
+  }
+}
