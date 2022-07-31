@@ -1,31 +1,37 @@
 // Header
 @use "foundation";
-
 header {
-  position: relative;
-  //Place just below splash, but above everything else on page
-  z-index: 101;
+  position: sticky;
+  z-index: 1000; //nav is always on top
   top: 0;
 
 	padding: var(--layout-gutter);
 	box-sizing: border-box;
-  &.accent {
-    background-color: var(--color-accent-1);
+  //The height of the header is 2x[--layout-gutter]+[--line-height-M]
+  //The header will not take up any vertical space:
+  margin-bottom: calc(-2 * var(--layout-gutter) - var(--line-height-M));
+
+  background-color: var(--color-background);
+  box-shadow: 0 0 var(--layout-vertical-margin-S) var(--color-shadow-strong);
+
+  transition-property: box-shadow background-color;
+  @include foundation.transition-properties-default;
+
+  &.transparent {
+    background-color: transparent;
+    box-shadow: 0 0 var(--layout-vertical-margin-S) var(--color-shadow);
   }
-
-  &.sticky {
-    position: sticky;
-    z-index: 100;
-
-    background-color: var(--color-background);
-
-    @supports (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)) {
-      -webkit-backdrop-filter: blur(10px); //Safari still uses the prefix
-      backdrop-filter: blur(10px);
-      background-color: var(--color-background-transparent);
+  @supports (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)) {
+    -webkit-backdrop-filter: blur(10px); //Safari still uses the prefix
+    backdrop-filter: blur(10px);
+    background-color: var(--color-background-transparent);
+    &.transparent {
+      background-color: transparent;
+      box-shadow: none;
+      &:hover {
+        box-shadow: 0 0 var(--layout-vertical-margin-S) var(--color-shadow);
+      }
     }
-
-    box-shadow: 0 0 var(--layout-vertical-margin-S) var(--color-shadow-strong);
   }
 
 	display: flex;

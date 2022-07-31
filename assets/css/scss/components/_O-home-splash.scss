@@ -7,7 +7,7 @@
 	padding-bottom: var(--layout-vertical-margin-L);
 
   //height of splash = 90vh - height of Header
-	min-height: calc(90vh - var(--layout-gutter)*2 - var(--line-height-M));
+	min-height: 90vh;
 	transition-property: min-height;
 	transition-duration: 2s;
 	transition-timing-function: ease-in-out;

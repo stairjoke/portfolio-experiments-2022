@@ -3,19 +3,17 @@
 	<?php snippet('html-head') ?>
 	<body>
 		<?php snippet('svg-sprite') ?>
-		<?php
-			if($page->splash()->exists()) {
-				snippet('static-header');
-			}
-		?>
 		<main>
 			<?php snippet('sticky-header'); ?>
 			<?php
 				if($page->splash()->exists()){
 				?>
-				<section class=splash id="<?= $page->splash() ?>">
-					<?php snippet('splash_' . $page->splash()->value()); ?>
+				<section class="makeRoomForStickyNav" id="<?= $page->splash() ?>">
+						<?php snippet('splash_' . $page->splash()->value()); ?>
 				</section>
+				<svg class="splash-scroll-indicator">
+					<use xlink:href="#scroll-up"></use>
+				</svg>
 				<?php
 				}
 			?>

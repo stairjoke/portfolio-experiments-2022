@@ -54,11 +54,11 @@
 	</symbol>
 	<symbol viewBox="0 0 12 36" id="hierarchy-icon">
 		<title>hierarchy icon</title>
-		<polygon id="Path" fill="#CDC6C6" points="3.91421356 13 9.57106781 18.6568542 3.91421356 24.3137085 2.5 22.8994949 6.74264069 18.6568542 2.5 14.4142136"></polygon>
+		<polygon fill="#CDC6C6" points="3.91421356 13 9.57106781 18.6568542 3.91421356 24.3137085 2.5 22.8994949 6.74264069 18.6568542 2.5 14.4142136"></polygon>
 	</symbol>
 	<symbol viewBox="0 0 12 36" id="number-icon">
 		<title>number icon</title>
-		<g id="#" transform="translate(0.612000, 11.994000)">
+		<g transform="translate(0.612000, 11.994000)">
 			<path d="M6.48,12.006 L7.056,8.28 L9.036,8.28 L9.216,7.092 L7.236,7.092 L7.596,4.698 L9.576,4.698 L9.756,3.51 L7.776,3.51 L8.316,0 L7.002,0 L6.462,3.51 L4.014,3.51 L4.554,0 L3.24,0 L2.7,3.51 L0.72,3.51 L0.54,4.698 L2.52,4.698 L2.16,7.092 L0.18,7.092 L0,8.28 L1.98,8.28 L1.404,12.006 L2.718,12.006 L3.294,8.28 L5.742,8.28 L5.166,12.006 L6.48,12.006 Z M5.922,7.092 L3.474,7.092 L3.834,4.698 L6.282,4.698 L5.922,7.092 Z"></path>
 		</g>
 	</symbol>
@@ -67,5 +67,10 @@
 		<g id="all/x/icons/inline/12-36/spacer">
 			<circle cx="6" cy="18" r="4"></circle>
 		</g>
+	</symbol>
+	<symbol viewBox="0 0 54 31" id="scroll-up">
+		<title>scroll up icon</title>
+		<g>
+			<path d="M27,7.10542736e-14 L54,27 L49.499,31.5 L27,9 L4.5,31.5 L-3.90798505e-14,27 L27,7.10542736e-14 Z" id="Combined-Shape"></path>
 	</symbol>
 </svg>

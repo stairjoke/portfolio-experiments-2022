@@ -161,18 +161,39 @@ header, main, footer {
 	margin: 0 auto;
 }
 main {
-	.splash {
-    //Pull on top of sticky navigation
-		margin-top: calc(var(--layout-gutter)*-2 - var(--line-height-M));
-		padding-top: calc(var(--layout-gutter)*2 + var(--line-height-M));
-
-    //Place above sticky header navigation
-    position: relative;
-    z-index: 101;
-	}
+  .makeRoomForStickyNav {
+    //The height of the header is 2x[--layout-gutter]+[--line-height-M] and it uses negative margin to use up no vertical space
+    padding-top: calc(2 * var(--layout-gutter) + var(--line-height-M));
+  }
   #home-splash {
     background-color: var(--color-accent-1);
     color: var(--color-text-high-contrast);
+  }
+  .splash-scroll-indicator {
+    position: absolute;
+    bottom: 5vh;
+    left: 50%;
+    width: 2rem;
+    height: 2rem;
+    animation-name: CTA-scroll-up-vh-centered;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+}
+
+@keyframes CTA-scroll-up-vh-centered {
+  0%, 100% {
+    fill: var(--color-text-low-contrast);
+    transform: translate(-50%, 100%);
+  }
+  70% {
+    transform: translate(-50%, 100%);
+    fill: var(--color-text-low-contrast);
+  }
+  75% {
+    transform: translate(-50%, 0%);
+    fill: var(--color-text);
   }
 }
 

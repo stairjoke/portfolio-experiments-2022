@@ -10,7 +10,7 @@ Splash: home-splash
 
 ----
 
-Static_Header_Appearance: Accent
+SplashThemeOverride: Accent-1
 
 ----
 
