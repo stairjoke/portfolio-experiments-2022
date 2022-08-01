@@ -27,7 +27,8 @@
   --line-height-S: 1.3rem;
   --border-radius-S: 2px;
   --border-radius-M: 0.5rem;
-  --border-radius-L: 1000px;
+  --border-radius-L: 1rem;
+  --border-radius-XL: 1000px;
   --layout-gutter: 2rem;
   --layout-column: calc((100vw - (12*var(--layout-gutter)))/11);
   --layout-vertical-margin-XXS: 0.3333rem;
@@ -803,7 +804,7 @@ footer .columns .column {
   margin-bottom: var(--layout-gutter);
   background-color: var(--color-element-background);
   padding: var(--layout-vertical-margin-S);
-  border-radius: var(--border-radius-M);
+  border-radius: var(--border-radius-L);
 }
 @media (max-width: 599px) {
   footer .columns .column {
