@@ -33,17 +33,17 @@ $layout-breakpoint-nav-2: 413px;
 	}
 
   //sRGB color variables
-	--color-background: #31302e;
-  --color-background-transparent: rgba(49, 48, 46, 0.6);
-	--color-element-background: rgb(58, 57, 54);
-  --color-element-background-hover: rgb(71, 70, 66);
+	--color-background: #191815;
+  --color-background-transparent: rgba(25, 24, 21, 0.6);
+	--color-element-background: rgb(48, 47, 44);
+  --color-element-background-hover: rgb(80, 77, 68);
 
   @supports (color: color(display-p3 1 1 1)) {
   //Color variables expanded to use P3 gamut
-    --color-background: color(display-p3 0.1921 0.1882 0.1804);
-    --color-background-transparent: color( display-p3 0.1922 0.1882 0.1804 / 0.6);
-    --color-element-background: color(display-p3 0.2275 0.2235 0.2118);
-    --color-element-background-hover: color(display-p3 0.2784 0.2745 0.2588);
+    --color-background: color(display-p3 0.0981 0.0941 0.0824);
+    --color-background-transparent: color( display-p3 0.0981 0.0941 0.0824 / 0.6);
+    --color-element-background: color(display-p3 0.1882 0.1843 0.1725);
+    --color-element-background-hover: color(display-p3 0.3137 0.3020 0.2667);
   }
 
 	--color-text: #cdc6c6;
