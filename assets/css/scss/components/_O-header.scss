@@ -53,6 +53,10 @@ header {
 		li {
 			display: inline-block;
 			font-size: 1rem;
+      margin: 0 var(--layout-vertical-margin-XXS) 0 0;
+      &:last-child {
+        margin: 0;
+      }
 
 			&.optional-1, & .optional-1 {
 				@media (max-width: #{foundation.$layout-breakpoint-nav-1}){
@@ -98,13 +102,12 @@ header {
 				background-color: transparent;
         box-shadow: 0 0 var(--layout-vertical-margin-S) transparent;
 				border-radius: var(--border-radius-M);
-				transition-property: background-color box-shadow;
-				transition-duration: var(--transition-duration-out);
-				transition-timing-function: ease-out;
+        box-shadow: 0 0 0 var(--color-shadow);
+        @include foundation.transition-properties-default;
+        transition-property: background-color box-shadow;
 				&:hover, &:focus {
-					background-color: rgba(255,255,255,0.16);
-          box-shadow: 0 0 var(--layout-vertical-margin-M) var(--color-glow);
-					transition-duration: var(--transition-duration-in);
+					background-color: var(--color-glow);
+          box-shadow: var(--layout-vertical-margin-XXS) var(--layout-vertical-margin-XXS) 0 var(--color-shadow);
 				}
 			}
 			//Pull first and last item "out" towards the edge by the same amount as they have internal padding.
