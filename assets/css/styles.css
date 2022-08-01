@@ -563,21 +563,19 @@ ul.m-tag-list li a:hover .tag, ul.m-tag-list li a:focus .tag, ul.m-tag-list li a
   width: calc(var(--layout-column) * 3 + var(--layout-gutter) * 2);
   line-height: 3em;
   margin: 0 auto;
-  margin-top: var(--layout-vertical-margin-S);
+  margin-top: var(--layout-vertical-margin-L);
   border: none;
   outline: none;
-  background: transparent;
-  background-color: transparent;
   transition-property: background-color box-shadow transform;
-  transition-duration: 500ms;
-  transition-timing-function: ease-out;
+  transition-duration: var(--transition-duration-out);
+  transition-timing-function: var(--transition-timing-function);
   font-family: futura-pt, sans-serif;
   font-size: 1.33rem;
   color: var(--color-text-high-contrast);
   text-align: center;
-  background-color: var(--color-accent-1-darkened-fill);
-  border-radius: var(--border-radius-S);
-  box-shadow: 0 0 var(--layout-vertical-margin-L) var(--color-accent-1-hover-fill);
+  background-color: var(--color-accent-1-hover-fill);
+  border-radius: var(--border-radius-M);
+  box-shadow: var(--layout-vertical-margin-XS) var(--layout-vertical-margin-XS) 0 var(--color-accent-1-darkened-fill);
   cursor: url("../img/cursor-heart.png"), auto;
   cursor: -webkit-image-set(url("../img/cursor-heart.png") 1x, url("../img/cursor-heart@2x.png") 2x, url("../img/cursor-heart@3x.png") 3x), auto;
 }
@@ -586,13 +584,13 @@ ul.m-tag-list li a:hover .tag, ul.m-tag-list li a:focus .tag, ul.m-tag-list li a
     width: calc(var(--layout-column) * 5 + var(--layout-gutter) * 4);
   }
 }
+#home-splash a.button:hover, #home-splash a.button:focus, #home-splash a.button:focus-within {
+  transition-duration: var(--transition-duration-in);
+}
 #home-splash a.button:hover, #home-splash a.button:focus {
   transform: scale(1.02);
-  background-color: var(--color-accent-1-hover-fill);
-  transition-duration: 110ms;
   text-decoration: none;
-  transition-timing-function: ease-in;
-  box-shadow: 0 0 var(--layout-vertical-margin-L) var(--color-accent-1-darkened-fill);
+  box-shadow: var(--layout-vertical-margin-S) var(--layout-vertical-margin-S) 0 var(--color-accent-1-darkened-fill);
 }
 
 header {

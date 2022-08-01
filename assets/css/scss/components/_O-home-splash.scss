@@ -50,25 +50,22 @@
 		line-height: 3em;
 
 		margin: 0 auto;
-		margin-top: var(--layout-vertical-margin-S);
+		margin-top: var(--layout-vertical-margin-L);
 
 		border: none;
 		outline: none;
-		background: transparent;
-		background-color: transparent;
 		transition-property: background-color box-shadow transform;
-		transition-duration: 500ms;
-		transition-timing-function: ease-out;
+    @include foundation.transition-properties-default;
 
 		font-family: futura-pt,sans-serif;
 		font-size: 1.33rem;
 		color: var(--color-text-high-contrast);
 		text-align: center;
 
-		background-color: var(--color-accent-1-darkened-fill);
-		border-radius: var(--border-radius-S);
+		background-color: var(--color-accent-1-hover-fill);
+		border-radius: var(--border-radius-M);
 
-		box-shadow: 0 0 var(--layout-vertical-margin-L) var(--color-accent-1-hover-fill);
+		box-shadow: var(--layout-vertical-margin-XS) var(--layout-vertical-margin-XS) 0 var(--color-accent-1-darkened-fill);
 
 		cursor: url('../img/cursor-heart.png'), auto;
 		cursor: -webkit-image-set(
@@ -79,11 +76,8 @@
 
 		&:hover, &:focus {
 			transform: scale(1.02);
-			background-color: var(--color-accent-1-hover-fill);
-			transition-duration: 110ms;
 			text-decoration: none;
-			transition-timing-function: ease-in;
-			box-shadow: 0 0 var(--layout-vertical-margin-L) var(--color-accent-1-darkened-fill);
+			box-shadow: var(--layout-vertical-margin-S) var(--layout-vertical-margin-S) 0 var(--color-accent-1-darkened-fill);
 		}
 	}
 }
