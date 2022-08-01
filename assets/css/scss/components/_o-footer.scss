@@ -28,12 +28,6 @@ footer {
 
       border-radius: var(--border-radius-M);
 
-      transition-property: background-color;
-      @include foundation.transition-properties-default;
-      &:hover, &:focus, &:focus-within {
-        background-color: var(--color-element-background-hover);
-      }
-
       ul.griddy {
         margin: 0;
         padding: 0;

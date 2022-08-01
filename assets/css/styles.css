@@ -5,10 +5,10 @@
   --color-accent-1-hover-fill: RGB(119, 183, 67);
   --color-accent-1-darkened-fill: RGB(104, 162, 57);
   --color-accent-2: RGB(253, 186, 26);
-  --color-background: #31302e;
-  --color-background-transparent: rgba(49, 48, 46, 0.6);
-  --color-element-background: rgb(58, 57, 54);
-  --color-element-background-hover: rgb(71, 70, 66);
+  --color-background: #191815;
+  --color-background-transparent: rgba(25, 24, 21, 0.6);
+  --color-element-background: rgb(48, 47, 44);
+  --color-element-background-hover: rgb(80, 77, 68);
   --color-text: #cdc6c6;
   --color-text-high-contrast: white;
   --color-text-low-contrast: RGB(155, 140, 140);
@@ -49,10 +49,10 @@
 }
 @supports (color: color(display-p3 1 1 1)) {
   :root {
-    --color-background: color(display-p3 0.1921 0.1882 0.1804);
-    --color-background-transparent: color( display-p3 0.1922 0.1882 0.1804 / 0.6);
-    --color-element-background: color(display-p3 0.2275 0.2235 0.2118);
-    --color-element-background-hover: color(display-p3 0.2784 0.2745 0.2588);
+    --color-background: color(display-p3 0.0981 0.0941 0.0824);
+    --color-background-transparent: color( display-p3 0.0981 0.0941 0.0824 / 0.6);
+    --color-element-background: color(display-p3 0.1882 0.1843 0.1725);
+    --color-element-background-hover: color(display-p3 0.3137 0.3020 0.2667);
   }
 }
 @supports (color: color(display-p3 1 1 1)) {
@@ -395,8 +395,10 @@ nav.breadcrumb li a:hover, nav.breadcrumb li a:focus {
 
 button, input[type=button], input[type=submit], a.button {
   display: inline-block;
+  font-family: futura-pt, sans-serif;
   font-weight: 500;
   font-size: 1rem;
+  font-style: normal;
   padding: 0 var(--layout-vertical-margin-XS);
   box-sizing: border-box;
   line-height: var(--line-height-M);
@@ -615,7 +617,7 @@ header:hover, header:focus, header:focus-within {
 }
 header.transparent {
   background-color: transparent;
-  box-shadow: 0 0 var(--layout-vertical-margin-S) var(--color-shadow);
+  box-shadow: none;
 }
 @supports (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)) {
   header {
@@ -625,10 +627,6 @@ header.transparent {
   }
   header.transparent {
     background-color: transparent;
-    box-shadow: none;
-  }
-  header.transparent:hover {
-    box-shadow: 0 0 var(--layout-vertical-margin-S) var(--color-shadow);
   }
 }
 header nav {
@@ -801,20 +799,11 @@ footer .columns .column {
   background-color: var(--color-element-background);
   padding: var(--layout-vertical-margin-S);
   border-radius: var(--border-radius-M);
-  transition-property: background-color;
-  transition-duration: var(--transition-duration-out);
-  transition-timing-function: var(--transition-timing-function);
 }
 @media (max-width: 599px) {
   footer .columns .column {
     flex: 1 0 50%;
   }
-}
-footer .columns .column:hover, footer .columns .column:focus, footer .columns .column:focus-within {
-  transition-duration: var(--transition-duration-in);
-}
-footer .columns .column:hover, footer .columns .column:focus, footer .columns .column:focus-within {
-  background-color: var(--color-element-background-hover);
 }
 footer .columns .column ul.griddy {
   margin: 0;
