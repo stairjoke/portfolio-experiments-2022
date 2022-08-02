@@ -107,7 +107,7 @@ header {
         transition-property: background-color box-shadow;
 				&:hover, &:focus {
 					background-color: var(--color-glow);
-          box-shadow: var(--layout-vertical-margin-XXS) var(--layout-vertical-margin-XXS) 0 var(--color-shadow);
+          box-shadow: var(--layout-vertical-margin-XXS) var(--layout-vertical-margin-XXS) 0 var(--color-shadow-strong);
 				}
 			}
 			//Pull first and last item "out" towards the edge by the same amount as they have internal padding.
@@ -119,6 +119,11 @@ header {
 			}
 		}
 	}
+  &.transparent {
+    nav li a:hover, nav li a:focus {
+      box-shadow: var(--layout-vertical-margin-XXS) var(--layout-vertical-margin-XXS) 0 var(--color-shadow);
+    }
+  }
 	a, a:link, a:active, a:visited {
 		color: var(--color-text-high-contrast);
 	}

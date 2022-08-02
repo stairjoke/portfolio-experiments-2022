@@ -15,7 +15,7 @@ button, input[type=button], input[type=submit], a.button {
 
 	color: var(--color-text-high-contrast);
 	background-color: var(--color-accent-1);
-  box-shadow: 0 0 var(--layout-vertical-margin-S) transparent;
+  box-shadow: 0 0 0 transparent;
 
 	border-radius: var(--border-radius-M);
 	border: none;
@@ -28,7 +28,7 @@ button, input[type=button], input[type=submit], a.button {
 	&:hover, &:focus, &:active {
 		color: var(--color-text-high-contrast);
 		background-color: var(--color-accent-1-hover-fill);
-    box-shadow: 0 0 var(--layout-vertical-margin-M) var(--color-glow);
+    box-shadow: var(--layout-vertical-margin-XXS) var(--layout-vertical-margin-XXS) 0 var(--color-shadow-strong);
 		text-decoration: none;
 		transition-duration: var(--transition-duration-in);
 	}
