@@ -5,8 +5,8 @@
   --color-accent-1-hover-fill: RGB(119, 183, 67);
   --color-accent-1-darkened-fill: RGB(104, 162, 57);
   --color-accent-2: RGB(253, 186, 26);
-  --color-background: #191815;
-  --color-background-transparent: rgba(25, 24, 21, 0.6);
+  --color-background: #1D1D1B;
+  --color-background-transparent: rgba(29, 29, 27, 0.6);
   --color-element-background: rgb(48, 47, 44);
   --color-element-background-hover: rgb(80, 77, 68);
   --color-text: #cdc6c6;
@@ -50,8 +50,8 @@
 }
 @supports (color: color(display-p3 1 1 1)) {
   :root {
-    --color-background: color(display-p3 0.0981 0.0941 0.0824);
-    --color-background-transparent: color( display-p3 0.0981 0.0941 0.0824 / 0.6);
+    --color-background: color(display-p3 0.1137 0.1137 0.1059);
+    --color-background-transparent: color( display-p3 0.1137 0.1137 0.1059 / 0.6);
     --color-element-background: color(display-p3 0.1882 0.1843 0.1725);
     --color-element-background-hover: color(display-p3 0.3137 0.3020 0.2667);
   }
@@ -405,7 +405,7 @@ button, input[type=button], input[type=submit], a.button {
   line-height: var(--line-height-M);
   color: var(--color-text-high-contrast);
   background-color: var(--color-accent-1);
-  box-shadow: 0 0 var(--layout-vertical-margin-S) transparent;
+  box-shadow: 0 0 0 transparent;
   border-radius: var(--border-radius-M);
   border: none;
   outline: none;
@@ -416,7 +416,7 @@ button, input[type=button], input[type=submit], a.button {
 button:hover, button:focus, button:active, input[type=button]:hover, input[type=button]:focus, input[type=button]:active, input[type=submit]:hover, input[type=submit]:focus, input[type=submit]:active, a.button:hover, a.button:focus, a.button:active {
   color: var(--color-text-high-contrast);
   background-color: var(--color-accent-1-hover-fill);
-  box-shadow: 0 0 var(--layout-vertical-margin-M) var(--color-glow);
+  box-shadow: var(--layout-vertical-margin-XXS) var(--layout-vertical-margin-XXS) 0 var(--color-shadow-strong);
   text-decoration: none;
   transition-duration: var(--transition-duration-in);
 }
@@ -698,13 +698,16 @@ header nav li a:hover, header nav li a:focus, header nav li a:focus-within {
 }
 header nav li a:hover, header nav li a:focus {
   background-color: var(--color-glow);
-  box-shadow: var(--layout-vertical-margin-XXS) var(--layout-vertical-margin-XXS) 0 var(--color-shadow);
+  box-shadow: var(--layout-vertical-margin-XXS) var(--layout-vertical-margin-XXS) 0 var(--color-shadow-strong);
 }
 header nav li:first-child a {
   margin-left: -0.75rem;
 }
 header nav li:last-child a {
   margin-right: -0.75rem;
+}
+header.transparent nav li a:hover, header.transparent nav li a:focus {
+  box-shadow: var(--layout-vertical-margin-XXS) var(--layout-vertical-margin-XXS) 0 var(--color-shadow);
 }
 header a, header a:link, header a:active, header a:visited {
   color: var(--color-text-high-contrast);
