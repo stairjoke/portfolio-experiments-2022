@@ -19,9 +19,9 @@ ul.m-tag-list {
       border-radius: var(--border-radius-L);
 
       background-color: var(--color-element-background);
-      box-shadow: 0 0 var(--layout-vertical-margin-S) transparent;
+      box-shadow: 0 0 0 transparent;
 
-      transition-property: background-color box-shadow;
+      transition-property: background-color box-shadow transform;
       transition-duration: var(--transition-duration-out);
       transition-timing-function: var(--transition-timing-function);
 
@@ -37,7 +37,7 @@ ul.m-tag-list {
       }
       &:hover, &:focus, &:active {
         background-color: var(--color-element-background-hover);
-        box-shadow: 0 0 var(--layout-vertical-margin-M) var(--color-glow);
+        box-shadow: var(--layout-vertical-margin-XXXS) var(--layout-vertical-margin-XXXS) 0 var(--color-shadow-strong);
 
         transition-duration: var(--transition-duration-in);
         .tag {

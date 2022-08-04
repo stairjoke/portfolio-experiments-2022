@@ -14,8 +14,8 @@ $layout-breakpoint-nav-2: 413px;
 	--color-accent-1-transparent: rgba(112, 174, 61, 0.8);
 
 	--color-accent-1-hover: RGB(138, 197, 89);
-	--color-accent-1-hover-fill: RGB(119, 183, 67);
-	--color-accent-1-darkened-fill: RGB(104, 162, 57);
+	--color-accent-1-hover-fill: rgb(109, 194, 56);
+	--color-accent-1-darkened-fill: rgb(87, 136, 47);
 
   --color-accent-2: RGB(253, 186, 26);
 
@@ -26,8 +26,8 @@ $layout-breakpoint-nav-2: 413px;
 		--color-accent-1-transparent: color(display-p3 0.4392 0.6823 0.2392 / 0.8);
 
 		--color-accent-1-hover: color(display-p3 0.5411 0.7725 0.349);
-		--color-accent-1-hover-fill: color(display-p3 0.476 0.735 0.265);
-		--color-accent-1-darkened-fill: color(display-p3 0.409 0.636 0.224);
+		--color-accent-1-hover-fill: color(display-p3 0.508 0.751 0.309);
+		--color-accent-1-darkened-fill: color(display-p3 0.343 0.532 0.188);
 
     --color-accent-2: color(display-p3 0.9922 0.7294 0.1019);
 	}
@@ -36,14 +36,14 @@ $layout-breakpoint-nav-2: 413px;
 	--color-background: #1D1D1B;
   --color-background-transparent: rgba(29, 29, 27, 0.6);
 	--color-element-background: rgb(48, 47, 44);
-  --color-element-background-hover: rgb(80, 77, 68);
+  --color-element-background-hover: rgb(72, 71, 66);
 
   @supports (color: color(display-p3 1 1 1)) {
   //Color variables expanded to use P3 gamut
     --color-background: color(display-p3 0.1137 0.1137 0.1059);
     --color-background-transparent: color( display-p3 0.1137 0.1137 0.1059 / 0.6);
     --color-element-background: color(display-p3 0.1882 0.1843 0.1725);
-    --color-element-background-hover: color(display-p3 0.3137 0.3020 0.2667);
+    --color-element-background-hover: color(display-p3 0.2824 0.2784 0.2588);
   }
 
 	--color-text: #cdc6c6;
@@ -60,15 +60,12 @@ $layout-breakpoint-nav-2: 413px;
   }
 
   //sRGB color variables
-	--color-shadow: rgba(0,0,0,0.06);
-	--color-shadow-strong: rgba(0,0,0,0.27);
-	--color-glow: rgba(255,255,255,0.06);
-  --color-glow-strong: rgba(255,255,255,0.27);
+	--color-shadow: rgba(0,0,0,0.27);
+	--color-glow: rgba(255,255,255,0.27);
 
   @supports (color: color(display-p3 1 1 1)) {
     //Color variables expanded to use P3 gamut
-    --color-glow: color(display-p3 1 1 1 / 0.06);
-    --color-glow-strong: color(display-p3 1 1 1 / 0.27);
+    --color-glow: color(display-p3 1 1 1 / 0.27);
   }
 
 	--color-ukraineFlag-top: #005abb;
@@ -108,7 +105,8 @@ $layout-breakpoint-nav-2: 413px;
 		--layout-column: calc((100vw - (4*var(--layout-gutter)))/3);
 	}
 
-	--layout-vertical-margin-XXS: 0.3333rem;
+	--layout-vertical-margin-XXXS: 0.1556rem;
+  --layout-vertical-margin-XXS: 0.3333rem;
 	--layout-vertical-margin-XS: calc(var(--layout-vertical-margin-XXS)*2);
 	--layout-vertical-margin-S: 1rem;
 	--layout-vertical-margin-M: calc(var(--layout-vertical-margin-S)*2);

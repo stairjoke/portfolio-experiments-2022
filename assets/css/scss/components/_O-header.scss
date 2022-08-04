@@ -12,7 +12,7 @@ header {
   margin-bottom: calc(-2 * var(--layout-gutter) - var(--line-height-M));
 
   background-color: var(--color-background);
-  box-shadow: 0 0 var(--layout-vertical-margin-S) var(--color-shadow-strong);
+  box-shadow: 0 0 var(--layout-vertical-margin-S) var(--color-shadow);
 
   transition-property: box-shadow background-color;
   @include foundation.transition-properties-default;
@@ -103,11 +103,17 @@ header {
         box-shadow: 0 0 var(--layout-vertical-margin-S) transparent;
 				border-radius: var(--border-radius-M);
         box-shadow: 0 0 0 var(--color-shadow);
+        border: 1px solid transparent;
+
         @include foundation.transition-properties-default;
         transition-property: background-color box-shadow;
 				&:hover, &:focus {
-					background-color: var(--color-glow);
-          box-shadow: var(--layout-vertical-margin-XXS) var(--layout-vertical-margin-XXS) 0 var(--color-shadow-strong);
+					background-color: rgba(255, 255, 255, 0.06);
+          backdrop-filter: blur(calc(var(--line-height-M)/2));
+          -webkit-backdrop-filter: blur(calc(var(--line-height-M)/2));
+          box-shadow: var(--layout-vertical-margin-XXS) var(--layout-vertical-margin-XXS) 0 var(--color-shadow);
+          border-top: 1px solid var(--color-glow);
+          border-left: 1px solid var(--color-glow);
 				}
 			}
 			//Pull first and last item "out" towards the edge by the same amount as they have internal padding.
@@ -119,11 +125,6 @@ header {
 			}
 		}
 	}
-  &.transparent {
-    nav li a:hover, nav li a:focus {
-      box-shadow: var(--layout-vertical-margin-XXS) var(--layout-vertical-margin-XXS) 0 var(--color-shadow);
-    }
-  }
 	a, a:link, a:active, a:visited {
 		color: var(--color-text-high-contrast);
 	}

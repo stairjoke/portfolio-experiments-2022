@@ -18,17 +18,20 @@ button, input[type=button], input[type=submit], a.button {
   box-shadow: 0 0 0 transparent;
 
 	border-radius: var(--border-radius-M);
-	border: none;
+	border: 1px solid transparent;
 	outline: none;
 
-	transition-property: background-color box-shadow;
+	transition-property: background-color box-shadow transform;
 	transition-duration: var(--transition-duration-out);
 	transition-timing-function: var(--transition-timing-function);
 
 	&:hover, &:focus, &:active {
 		color: var(--color-text-high-contrast);
 		background-color: var(--color-accent-1-hover-fill);
-    box-shadow: var(--layout-vertical-margin-XXS) var(--layout-vertical-margin-XXS) 0 var(--color-shadow-strong);
+    transform: scale(1.014);
+    box-shadow: var(--layout-vertical-margin-XXS) var(--layout-vertical-margin-XXS) 0 var(--color-shadow);
+    border-top: 1px solid var(--color-glow);
+    border-left: 1px solid var(--color-glow);
 		text-decoration: none;
 		transition-duration: var(--transition-duration-in);
 	}

@@ -52,7 +52,7 @@
 		margin: 0 auto;
 		margin-top: var(--layout-vertical-margin-L);
 
-		border: none;
+		border: 1px solid transparent;
 		outline: none;
 		transition-property: background-color box-shadow transform;
     @include foundation.transition-properties-default;
@@ -65,7 +65,7 @@
 		background-color: var(--color-accent-1-hover-fill);
 		border-radius: var(--border-radius-M);
 
-		box-shadow: var(--layout-vertical-margin-XS) var(--layout-vertical-margin-XS) 0 var(--color-accent-1-darkened-fill);
+		box-shadow: var(--layout-vertical-margin-XS) var(--layout-vertical-margin-XS) 0 var(--color-shadow);
 
 		cursor: url('../img/cursor-heart.png'), auto;
 		cursor: -webkit-image-set(
@@ -77,7 +77,9 @@
 		&:hover, &:focus {
 			transform: scale(1.02);
 			text-decoration: none;
-			box-shadow: var(--layout-vertical-margin-S) var(--layout-vertical-margin-S) 0 var(--color-accent-1-darkened-fill);
+			box-shadow: var(--layout-vertical-margin-S) var(--layout-vertical-margin-S) 0 var(--color-shadow);
+      border-top: 1px solid var(--color-glow);
+      border-left: 1px solid var(--color-glow);
 		}
 	}
 }
