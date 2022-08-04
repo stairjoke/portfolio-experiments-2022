@@ -14,7 +14,7 @@ header {
   background-color: var(--color-background);
   box-shadow: 0 0 var(--layout-vertical-margin-S) var(--color-shadow);
 
-  transition-property: box-shadow background-color;
+  transition-property: box-shadow background-color border;
   @include foundation.transition-properties-default;
 
   &.transparent {

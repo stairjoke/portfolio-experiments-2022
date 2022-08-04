@@ -8,13 +8,6 @@
 
   //height of splash = 90vh - height of Header
 	min-height: 90vh;
-	transition-property: min-height;
-	transition-duration: 2s;
-	transition-timing-function: ease-in-out;
-
-  .scrolled & {
-		min-height: 0;
-	}
 
 	display: flex;
 	align-items: center;
@@ -54,7 +47,7 @@
 
 		border: 1px solid transparent;
 		outline: none;
-		transition-property: background-color box-shadow transform;
+		transition-property: background-color box-shadow transform border;
     @include foundation.transition-properties-default;
 
 		font-family: futura-pt,sans-serif;

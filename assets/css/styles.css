@@ -407,7 +407,7 @@ button, input[type=button], input[type=submit], a.button {
   border-radius: var(--border-radius-M);
   border: 1px solid transparent;
   outline: none;
-  transition-property: background-color box-shadow transform;
+  transition-property: background-color box-shadow transform border;
   transition-duration: var(--transition-duration-out);
   transition-timing-function: var(--transition-timing-function);
 }
@@ -529,17 +529,11 @@ ul.m-tag-list li a:hover .tag, ul.m-tag-list li a:focus .tag, ul.m-tag-list li a
   --color-text-selection: black;
   padding-bottom: var(--layout-vertical-margin-L);
   min-height: 90vh;
-  transition-property: min-height;
-  transition-duration: 2s;
-  transition-timing-function: ease-in-out;
   display: flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
   overflow: hidden;
-}
-.scrolled #home-splash {
-  min-height: 0;
 }
 #home-splash h1 {
   max-width: calc(var(--layout-column) * 9 + var(--layout-gutter) * 8);
@@ -568,7 +562,7 @@ ul.m-tag-list li a:hover .tag, ul.m-tag-list li a:focus .tag, ul.m-tag-list li a
   margin-top: var(--layout-vertical-margin-L);
   border: 1px solid transparent;
   outline: none;
-  transition-property: background-color box-shadow transform;
+  transition-property: background-color box-shadow transform border;
   transition-duration: var(--transition-duration-out);
   transition-timing-function: var(--transition-timing-function);
   font-family: futura-pt, sans-serif;
@@ -606,7 +600,7 @@ header {
   margin-bottom: calc(-2 * var(--layout-gutter) - var(--line-height-M));
   background-color: var(--color-background);
   box-shadow: 0 0 var(--layout-vertical-margin-S) var(--color-shadow);
-  transition-property: box-shadow background-color;
+  transition-property: box-shadow background-color border;
   transition-duration: var(--transition-duration-out);
   transition-timing-function: var(--transition-timing-function);
   display: flex;

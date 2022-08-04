@@ -21,7 +21,7 @@ button, input[type=button], input[type=submit], a.button {
 	border: 1px solid transparent;
 	outline: none;
 
-	transition-property: background-color box-shadow transform;
+	transition-property: background-color box-shadow transform border;
 	transition-duration: var(--transition-duration-out);
 	transition-timing-function: var(--transition-timing-function);
 
