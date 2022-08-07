@@ -17,6 +17,10 @@
 		} //endif page has pubdate
 ?>
 		<h2><?= ($page->Headline()->exists()) ? $page->Headline() : '' ?></h2>
+		<!--
+			
+			⚠️ Missing implementation of: Page is child of… for breadcrumb navigation
+			
 		<nav class="breadcrumb">
 			<ol>
 				<li>
@@ -39,6 +43,6 @@
 					<a>Current Page</a>
 				</li>
 			</ol>
-		</nav>
+		</nav>-->
 	</div>
 <?php } //endif page has headline ?>
