@@ -10,10 +10,10 @@ $layout-breakpoint-nav-2: 413px;
 
 :root {
 	//sRGB color variables
-	--color-accent-1: RGB(112, 174, 61);
+	--color-accent-1: rgb(112, 174, 61);
 	--color-accent-1-transparent: rgba(112, 174, 61, 0.8);
 
-	--color-accent-1-hover: RGB(138, 197, 89);
+	--color-accent-1-hover: rgb(138, 197, 89);
 	--color-accent-1-hover-fill: rgb(109, 194, 56);
 	--color-accent-1-darkened-fill: rgb(87, 136, 47);
 
@@ -48,7 +48,7 @@ $layout-breakpoint-nav-2: 413px;
 
 	--color-text: #cdc6c6;
 	--color-text-high-contrast: white;
-  --color-text-low-contrast: RGB(155, 140, 140);
+  --color-text-low-contrast: rgb(155, 140, 140);
   --color-text-inverted: var(--color-background);
   --color-text-selection: var(--color-accent-1);
 
