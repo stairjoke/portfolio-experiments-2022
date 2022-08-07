@@ -5,7 +5,8 @@
 	<link rel="stylesheet" href="https://use.typekit.net/xyc8fjn.css">
 	<?= css('assets/css/styles.css') ?>
 	
-	<meta name="theme-color" content="#31302e" media="(prefers-color-scheme: light)">
-	<meta name="theme-color" content="#31302e" media="(prefers-color-scheme: dark)">
+	<meta name="theme-color" content="color(display-p3 .4392 .6824 .2392)">
+	<!--<meta name="theme-color" content="#70AE3D" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="#70AE3D" media="(prefers-color-scheme: dark)">-->
 	
 </head>
