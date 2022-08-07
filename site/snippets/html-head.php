@@ -1,7 +1,7 @@
 <head>
 	<title><?= $page->title() ?>, <?= $site->title() ?></title>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover" />
 	<link rel="stylesheet" href="https://use.typekit.net/xyc8fjn.css">
 	<?= css('assets/css/styles.css') ?>
 	
