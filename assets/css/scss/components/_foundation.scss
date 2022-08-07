@@ -77,8 +77,7 @@ $layout-breakpoint-nav-2: 413px;
   --transition-timing-function: ease-out;
 
   //Spacing & Sizing Variables
-  --line-height-M: 2rem;
-  --line-height-S: 1.3rem;
+  --line-height: 2rem;
 
   --border-radius-S: 2px;
 	--border-radius-M: 0.5rem;
@@ -146,7 +145,7 @@ html {
 	font-size: 1.0625em; //assuming 16px default, this is 17px
 	margin: 0;
 	padding: 0;
-	line-height: var(--line-height-S);
+	line-height: var(--line-height);
 	accent-color: var(--color-accent-1);
 }
 body {
@@ -161,8 +160,7 @@ header, main, footer {
 }
 main {
   .makeRoomForStickyNav {
-    //The height of the header is 2x[--layout-gutter]+[--line-height-M] and it uses negative margin to use up no vertical space
-    padding-top: calc(2 * var(--layout-gutter) + var(--line-height-M));
+    padding-top: calc(2 * var(--layout-gutter) + var(--line-height));
   }
   #home-splash {
     background-color: var(--color-accent-1);
@@ -171,7 +169,7 @@ main {
 }
 
 .inline-icon {
-	height: var(--line-height-M);
+	height: var(--line-height);
 
   &._1
   {

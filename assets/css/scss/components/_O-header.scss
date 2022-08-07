@@ -7,9 +7,9 @@ header {
 
 	padding: var(--layout-gutter);
 	box-sizing: border-box;
-  //The height of the header is 2x[--layout-gutter]+[--line-height-M]
+  //The height of the header is 2x[--layout-gutter]+[--line-height]
   //The header will not take up any vertical space:
-  margin-bottom: calc(-2 * var(--layout-gutter) - var(--line-height-M));
+  margin-bottom: calc(-2 * var(--layout-gutter) - var(--line-height));
 
   background-color: var(--color-background);
   box-shadow: 0 0 var(--layout-vertical-margin-S) var(--color-shadow);
@@ -33,7 +33,7 @@ header {
 	display: flex;
 	flex-wrap: nowrap;
 	justify-content: space-between;
-	line-height: var(--line-height-M);
+	line-height: var(--line-height);
 
 	nav {
 		&.flex-grow {
@@ -41,7 +41,7 @@ header {
 		}
 		text-align: right;
 
-		height: var(--line-height-M);
+		height: var(--line-height);
 
 		ul, li {
 			list-style: none;
@@ -70,14 +70,14 @@ header {
 			}
 
 			a#logo {
-				height: var(--line-height-M);
+				height: var(--line-height);
 
 				span {
 					display: inline-block;
 					vertical-align: top;
 				}
 				svg {
-					height: var(--line-height-M);
+					height: var(--line-height);
 					aspect-ratio: 1;
 					display: inline-block;
 					//fill: var(--color-text);
@@ -109,8 +109,8 @@ header {
         transition-property: background-color box-shadow;
 				&:hover, &:focus {
 					background-color: rgba(255, 255, 255, 0.06);
-          backdrop-filter: blur(calc(var(--line-height-M)/2));
-          -webkit-backdrop-filter: blur(calc(var(--line-height-M)/2));
+          backdrop-filter: blur(calc(var(--line-height)/2));
+          -webkit-backdrop-filter: blur(calc(var(--line-height)/2));
           box-shadow: var(--layout-vertical-margin-XXS) var(--layout-vertical-margin-XXS) 0 var(--color-shadow);
           border-top: 1px solid var(--color-glow);
           border-left: 1px solid var(--color-glow);

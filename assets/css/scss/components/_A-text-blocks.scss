@@ -6,7 +6,7 @@ p {
 	font-style: normal;
 	font-size: 1rem;
 	letter-spacing: 0.02em;
-	line-height: var(--line-height-M);
+	line-height: var(--line-height);
   margin: var(--layout-vertical-margin-S) 0;
 
 	h1 + &.teaser {

@@ -21,8 +21,7 @@
   --transition-duration-in: 110ms;
   --transition-duration-out: 250ms;
   --transition-timing-function: ease-out;
-  --line-height-M: 2rem;
-  --line-height-S: 1.3rem;
+  --line-height: 2rem;
   --border-radius-S: 2px;
   --border-radius-M: 0.5rem;
   --border-radius-L: 1rem;
@@ -96,7 +95,7 @@ html {
   font-size: 1.0625em;
   margin: 0;
   padding: 0;
-  line-height: var(--line-height-S);
+  line-height: var(--line-height);
   accent-color: var(--color-accent-1);
 }
 
@@ -113,7 +112,7 @@ header, main, footer {
 }
 
 main .makeRoomForStickyNav {
-  padding-top: calc(2 * var(--layout-gutter) + var(--line-height-M));
+  padding-top: calc(2 * var(--layout-gutter) + var(--line-height));
 }
 main #home-splash {
   background-color: var(--color-accent-1);
@@ -121,7 +120,7 @@ main #home-splash {
 }
 
 .inline-icon {
-  height: var(--line-height-M);
+  height: var(--line-height);
 }
 .inline-icon._1 {
   aspect-ratio: 1;
@@ -283,7 +282,7 @@ h2 {
 
 h3 {
   font-size: 4rem;
-  line-height: 1.3em;
+  line-height: 111%;
   margin-bottom: var(--layout-vertical-margin-M);
 }
 h3.S {
@@ -316,7 +315,7 @@ p {
   font-style: normal;
   font-size: 1rem;
   letter-spacing: 0.02em;
-  line-height: var(--line-height-M);
+  line-height: var(--line-height);
   margin: var(--layout-vertical-margin-S) 0;
 }
 h1 + p.teaser {
@@ -342,7 +341,7 @@ h1 + p.teaser {
 
 time[pubdate=pubdate] {
   display: inline-block;
-  line-height: var(--line-height-M);
+  line-height: var(--line-height);
   /*
    padding: 0 var(--layout-vertical-margin-XS);
   background-color: var(--color-element-background);
@@ -379,7 +378,7 @@ nav.breadcrumb li {
 nav.breadcrumb li a {
   display: inline-block;
   padding: 0 var(--layout-vertical-margin-XXS);
-  line-height: var(--line-height-M);
+  line-height: var(--line-height);
   vertical-align: top;
   color: var(--color-text);
   text-decoration: underline;
@@ -400,7 +399,7 @@ button, input[type=button], input[type=submit], a.button {
   font-style: normal;
   padding: 0 var(--layout-vertical-margin-XS);
   box-sizing: border-box;
-  line-height: var(--line-height-M);
+  line-height: var(--line-height);
   color: var(--color-text-high-contrast);
   background-color: var(--color-accent-1);
   box-shadow: 0 0 0 transparent;
@@ -490,7 +489,7 @@ ul.m-tag-list li {
 ul.m-tag-list li a {
   font-size: 1rem;
   display: inline-block;
-  line-height: var(--line-height-M);
+  line-height: var(--line-height);
   padding: 0 var(--layout-vertical-margin-XS);
   margin: var(--layout-vertical-margin-XXS) 0;
   border-radius: var(--border-radius-L);
@@ -522,7 +521,7 @@ ul.m-tag-list li a:hover .tag, ul.m-tag-list li a:focus .tag, ul.m-tag-list li a
   margin: var(--layout-vertical-margin-XL) auto var(--layout-vertical-margin-L) auto;
 }
 .o-h2:has(.pubdate) {
-  margin-top: calc(var(--layout-vertical-margin-XL) - var(--line-height-M));
+  margin-top: calc(var(--layout-vertical-margin-XL) - var(--line-height));
 }
 
 #home-splash {
@@ -597,7 +596,7 @@ header {
   top: 0;
   padding: var(--layout-gutter);
   box-sizing: border-box;
-  margin-bottom: calc(-2 * var(--layout-gutter) - var(--line-height-M));
+  margin-bottom: calc(-2 * var(--layout-gutter) - var(--line-height));
   background-color: var(--color-background);
   box-shadow: 0 0 var(--layout-vertical-margin-S) var(--color-shadow);
   transition-property: box-shadow background-color border;
@@ -606,7 +605,7 @@ header {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  line-height: var(--line-height-M);
+  line-height: var(--line-height);
 }
 header:hover, header:focus, header:focus-within {
   transition-duration: var(--transition-duration-in);
@@ -627,7 +626,7 @@ header.transparent {
 }
 header nav {
   text-align: right;
-  height: var(--line-height-M);
+  height: var(--line-height);
 }
 header nav.flex-grow {
   flex-grow: 1;
@@ -658,14 +657,14 @@ header nav li:last-child {
   }
 }
 header nav li a#logo {
-  height: var(--line-height-M);
+  height: var(--line-height);
 }
 header nav li a#logo span {
   display: inline-block;
   vertical-align: top;
 }
 header nav li a#logo svg {
-  height: var(--line-height-M);
+  height: var(--line-height);
   aspect-ratio: 1;
   display: inline-block;
   fill: url(#ukraineFlag);
@@ -696,8 +695,8 @@ header nav li a:hover, header nav li a:focus, header nav li a:focus-within {
 }
 header nav li a:hover, header nav li a:focus {
   background-color: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(calc(var(--line-height-M) / 2));
-  -webkit-backdrop-filter: blur(calc(var(--line-height-M) / 2));
+  backdrop-filter: blur(calc(var(--line-height) / 2));
+  -webkit-backdrop-filter: blur(calc(var(--line-height) / 2));
   box-shadow: var(--layout-vertical-margin-XXS) var(--layout-vertical-margin-XXS) 0 var(--color-shadow);
   border-top: 1px solid var(--color-glow);
   border-left: 1px solid var(--color-glow);
@@ -822,7 +821,7 @@ footer .columns .column ul.griddy {
   grid-template-rows: repeat(3, 1fr);
 }
 footer .columns .column ul.griddy li {
-  margin: 0 var(--layout-vertical-margin-S) var(--line-height-M) 0;
+  margin: 0 var(--layout-vertical-margin-S) var(--line-height) 0;
 }
 footer .columns .column ul.griddy li a {
   vertical-align: middle;

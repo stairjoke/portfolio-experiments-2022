@@ -6,6 +6,6 @@
 
 	&:has(.pubdate) {
 		//If this organism contains a .pubdate component, it's margin-top shall be reduced by 1 line-height-M
-		margin-top: calc(var(--layout-vertical-margin-XL) - var(--line-height-M));
+		margin-top: calc(var(--layout-vertical-margin-XL) - var(--line-height));
 	}
 }
