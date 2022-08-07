@@ -6,8 +6,4 @@ Splash: home-splash
 
 ----
 
-SplashThemeOverride: Accent-1
-
-----
-
 Headline: Latest Content

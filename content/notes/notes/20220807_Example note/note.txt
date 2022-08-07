@@ -1,4 +1,4 @@
-Title: Welcome
+Title: Why using a website builder is a good and a bad idea
 
 ----
 
@@ -6,12 +6,4 @@ Published: 2022-04-24
 
 ----
 
-Splash: home-splash
-
-----
-
-SplashThemeOverride: Accent-1
-
-----
-
-Headline: Latest Content
+Headline: Example Note
