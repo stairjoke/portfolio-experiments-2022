@@ -11,8 +11,7 @@ if($page->splash()->exists()){
 		// Otherwise, ensure the class is not applied.
 		
 		function stickyHeaderClassTrigger() {
-			//_o-home-splash.scss -> Splash height is 90vh
-			const triggerYPosition = window.innerHeight * 0.9
+			const triggerYPosition = document.querySelector('section.splash').offsetHeight
 			const scrollYposition = window.pageYOffset;
 			
 			if(scrollYposition < triggerYPosition){

@@ -8,7 +8,7 @@
 			<?php
 				if($page->splash()->exists()){
 				?>
-				<section class="makeRoomForStickyNav" id="<?= $page->splash() ?>">
+				<section class="makeRoomForStickyNav splash" id="<?= $page->splash() ?>">
 						<?php snippet('splash_' . $page->splash()->value()); ?>
 				</section>
 				<?php
